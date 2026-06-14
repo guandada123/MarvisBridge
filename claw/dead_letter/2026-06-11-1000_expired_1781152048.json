@@ -1,0 +1,15 @@
+{
+  "task_id": "2026-06-11-1000",
+  "project": "claw",
+  "type": "data_collection",
+  "source": "marvis",
+  "title": "盘中监控截图-1000完成",
+  "params": {
+    "output_dir": "shared/market_data/",
+    "filename": "snapshot_1000.png"
+  },
+  "idempotency_key": "claw:data_collection:2026:盘中监控截图-1000完成",
+  "dead_letter_reason": "WorkBuddy 未在 3600s 内消费，已过期回收",
+  "dead_letter_at": "2026-06-11T04:27:28Z",
+  "status": "dead_lettered"
+}

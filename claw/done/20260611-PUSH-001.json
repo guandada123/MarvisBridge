@@ -1,0 +1,16 @@
+{
+  "task_id": "20260611-PUSH-001",
+  "project": "bridge",
+  "type": "notify",
+  "source": "marvis",
+  "priority": "high",
+  "title": "飞书推送: 今日工作总结",
+  "description": "Marvis → WorkBuddy 飞书推送测试",
+  "created_at": "2026-06-11T08:20:00+08:00",
+  "action": "feishu_push",
+  "payload": {
+    "format": "markdown",
+    "content": "## Marvis 工作日报 (2026-06-11)\n\n### 全局状态\n| 指标 | 值 |\n|------|-----|\n| 可见项目 | 8 |\n| 自动化 | 31/31 ACTIVE |\n| 数据源 | 7 (主备双活) |\n| 健康度 | 72% |\n\n### 今日完成\n- Bridge v3.1 直连模式上线\n- STATUS.md 重写 (8项目/13阻塞/P0映射)\n- P0 自动转化规则生效\n- 飞书推送链路打通\n\n### 当前 P0\n- Claw 现金枯竭 (¥596) → 任务已派发\n\n### 待办\n- WorkBuddy 消费 P0-001 止损评估\n- 飞书推送 QR 码授权 (accounts.feishu.cn)"
+  },
+  "idempotency_key": "marvis:daily:20260611:feishu_push"
+}

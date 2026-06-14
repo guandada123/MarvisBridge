@@ -1,0 +1,28 @@
+{
+  "task_id": "20260611-P0-001",
+  "project": "claw",
+  "type": "fix",
+  "source": "marvis",
+  "priority": "critical",
+  "title": "解决 P0 阻塞: Claw 模拟账户现金枯竭",
+  "description": "现金仅 ¥596，无法开新仓。两个持仓均亏损（士兰微 -4.43%、紫光国微 -5.00%），行业集中度 100% 半导体。",
+  "created_at": "2026-06-11T08:10:00+08:00",
+  "blocker_ref": "STATUS.md §二",
+  "context": {
+    "holdings": {
+      "600460": {"name": "士兰微", "shares": 400, "cost": 35.08, "current": 33.53, "pnl_pct": -4.43, "market_value": 13412},
+      "002049": {"name": "紫光国微", "shares": 200, "cost": 76.86, "current": 73.00, "pnl_pct": -5.00, "market_value": 14600}
+    },
+    "cash": 596,
+    "total_asset": 28608,
+    "monthly_return_pct": -4.64
+  },
+  "action_items": [
+    "评估士兰微(600460)是否可在当前价位 ¥33.53 止损卖出，释放 ¥13,412 现金",
+    "若止损，推荐 2-3 只非半导体行业候选股（单股价 < ¥50，分散行业风险）",
+    "若不止损，计算士兰微回本需涨幅及概率",
+    "提出现金注入方案：建议用户补充 ¥X 模拟资金至可操作水平（推荐 ¥20,000+）"
+  ],
+  "notify_feishu": true,
+  "idempotency_key": "claw:fix:20260611:P0_cash_depleted"
+}

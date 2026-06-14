@@ -1,0 +1,9 @@
+{
+  "task": "fetch_data",
+  "status": "failed",
+  "date": "2026-06-11",
+  "script": "/Users/guan/WorkBuddy/QuantTradingSystem/scripts/fetch_data.py",
+  "error": "ModuleNotFoundError: No module named 'tushare'",
+  "log_file": "/Users/guan/workbuddy_marvis_bridge/quant/raw_data/fetch_log_20260611.txt",
+  "action_required": "pip install tushare 或检查 Python 环境"
+}

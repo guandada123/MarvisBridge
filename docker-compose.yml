@@ -1,0 +1,45 @@
+# ============================================================
+# Marvis Bridge — Docker Compose v1.1
+# monitor + sync 双守护进程容器化部署
+# (watcher 需要 fswatch，Docker alpine 不可用，monitor 轮询替代)
+# ============================================================
+
+services:
+  # ---- 队列消费者：轮询 trigger_queue → workbuddy_pending ----
+  monitor:
+    build: .
+    image: marvis-bridge:latest
+    container_name: bridge-monitor
+    restart: unless-stopped
+    command: ["bash", "scripts/bridge_monitor.sh"]
+    volumes:
+      - bridge_data:/home/bridge/workbuddy_marvis_bridge/status
+      - bridge_logs:/home/bridge/workbuddy_marvis_bridge/logs
+      - ./claw:/home/bridge/workbuddy_marvis_bridge/claw
+      - ./quant:/home/bridge/workbuddy_marvis_bridge/quant
+    healthcheck:
+      test: ["CMD", "bash", "scripts/health_check.sh", "--quiet"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+
+  # ---- 任务同步器：claw/tasks → workbuddy_pending 定期同步 ----
+  sync:
+    build: .
+    image: marvis-bridge:latest
+    container_name: bridge-sync
+    restart: unless-stopped
+    command: ["bash", "scripts/task_sync.sh"]
+    volumes:
+      - bridge_data:/home/bridge/workbuddy_marvis_bridge/status
+      - bridge_logs:/home/bridge/workbuddy_marvis_bridge/logs
+      - ./claw:/home/bridge/workbuddy_marvis_bridge/claw
+    depends_on:
+      monitor:
+        condition: service_started
+
+volumes:
+  bridge_data:
+    driver: local
+  bridge_logs:
+    driver: local

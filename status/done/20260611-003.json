@@ -1,0 +1,31 @@
+{
+  "task_id": "20260611-003",
+  "project": "claw",
+  "type": "custom",
+  "source": "marvis",
+  "title": "持仓监控与调仓判断：士兰微/紫光国微",
+  "priority": "high",
+  "created_at": "2026-06-11T07:35:00+08:00",
+  "description": "根据当前模拟持仓状态，判断调仓时机并执行。",
+  "context": {
+    "holdings": {
+      "002049": {"name": "紫光国微", "shares": 200, "cost": 76.86, "current": 73.00, "pnl_pct": -5.00},
+      "600460": {"name": "士兰微", "shares": 400, "cost": 35.08, "current": 33.53, "pnl_pct": -4.43}
+    },
+    "cash": 596,
+    "total_asset": 28608,
+    "monthly_return": -4.64,
+    "issues": [
+      "行业集中度 100% 半导体",
+      "现金枯竭无法开新仓"
+    ]
+  },
+  "action_items": [
+    "检查士兰微(600460)是否触及回本价 ¥35.08，触及则卖出",
+    "若士兰微卖出释放资金，评估杰瑞股份(002353)和沪电股份(002463)买入时机",
+    "紫光国微(002049)继续持有等待反弹",
+    "更新模拟持仓记录"
+  ],
+  "notify_feishu": true,
+  "idempotency_key": "claw:custom:20260611:position_monitor_and_rebalance"
+}

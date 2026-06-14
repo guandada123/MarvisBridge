@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/guan/WorkBuddy/QuantTradingSystem/scripts/fetch_data.py", line 8, in <module>
+    from sqlalchemy import create_engine, text
+ModuleNotFoundError: No module named 'sqlalchemy'

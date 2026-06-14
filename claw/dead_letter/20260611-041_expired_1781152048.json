@@ -1,0 +1,17 @@
+{
+  "task_id": "20260611-041",
+  "project": "claw",
+  "type": "data_collection",
+  "source": "marvis",
+  "title": "盘中监控截图+OCR-1000",
+  "params": {
+    "screenshot": "shared/market_data/snapshot_1000.png",
+    "ocr_text": "180688|科创50|1654.74|+0.15%|2.52\n399006|创业板指|3855.32|+0.01%|0.53\n399330|深证100|6512.22|-0.08%|-5.04\n399601|深证成指|14923.96|-0.20%|-30.14\n399300|沪深300|4736.57|-0.25%|-12.02\nHSI|恒生指数|24342.41|-0.26%|-63.75\n1A0001|上证指数|3980.26|-0.32%|-12.97\nSPX|标普500指数|7266.990|-1.62%|-119.660\nDJI|道琼斯工业平均指数|45918.780|-1.87%|-953.330\nIXIC|纳斯达克综合指数|25169.500|-1.98%|-509.320"
+  },
+  "created_at": "2026-06-11T10:00:00+08:00",
+  "status": "dead_lettered",
+  "notify_feishu": true,
+  "idempotency_key": "claw:data_collection:20260611:盘中监控截图+OCR-1000",
+  "dead_letter_reason": "WorkBuddy 未在 3600s 内消费，已过期回收",
+  "dead_letter_at": "2026-06-11T04:27:28Z"
+}

@@ -1,0 +1,262 @@
+{
+  "bridge_version": "3.0.0",
+  "updated_at": "2026-06-11T08:04:00+08:00",
+  "projects": {
+    "claw": {
+      "target_dir": "/Users/guan/WorkBuddy/Claw/",
+      "feishu_tag": "[Claw]",
+      "enabled": true,
+      "description": "A股投资辅助系统"
+    },
+    "quant": {
+      "target_dir": "/Users/guan/WorkBuddy/QuantTradingSystem/",
+      "feishu_tag": "[Quant]",
+      "enabled": true,
+      "description": "A股量化交易系统"
+    },
+    "dashboard": {
+      "target_dir": "/Users/guan/WorkBuddy/2026-06-11-06-53-32/",
+      "feishu_tag": "[Dashboard]",
+      "enabled": true,
+      "description": "项目进度驾驶舱"
+    },
+    "shared": {
+      "target_dir": "/Users/guan/workbuddy_marvis_bridge/shared/",
+      "feishu_tag": "[Bridge]",
+      "enabled": false,
+      "description": "共享资源"
+    },
+    "stock_insight": {
+      "target_dir": "/Users/guan/WorkBuddy/stock-insight/",
+      "feishu_tag": "[StockInsight]",
+      "enabled": true,
+      "description": "A股全链路量化分析平台（借鉴参考项目）",
+      "repo": "https://github.com/nguyenchunghieu799-blip/stock-insight"
+    }
+  },
+  "valid_types": [
+    "data_collection",
+    "code_review",
+    "data_analysis",
+    "report_generation",
+    "deploy",
+    "test",
+    "maintenance",
+    "custom",
+    "market_snapshot",
+    "github_token_request",
+    "github_ci_check",
+    "github_pr_review",
+    "social_post",
+    "content_publish",
+    "wechat_notify",
+    "wechat_push",
+    "literature_search",
+    "data_collect",
+    "research"
+  ],
+  "valid_sources": [
+    "marvis",
+    "workbuddy",
+    "manual"
+  ],
+  "valid_priorities": [
+    "high",
+    "medium",
+    "low"
+  ],
+  "valid_statuses": [
+    "pending",
+    "processing",
+    "completed",
+    "failed",
+    "dead_lettered"
+  ],
+  "required_fields": [
+    "task_id",
+    "project",
+    "type",
+    "source",
+    "title"
+  ],
+  "feishu": {
+    "chat_id": "oc_9ee5303497f5e0e71666b610d6bdc346",
+    "notify_on_task": true,
+    "notify_on_complete": true,
+    "notify_on_error": true,
+    "escalation_after_failures": 3
+  },
+  "automation": {
+    "scan_interval_seconds": 120,
+    "watcher_heartbeat_interval_seconds": 60,
+    "watcher_max_restarts": 10,
+    "watcher_restart_window_seconds": 300,
+    "watcher_dead_threshold_seconds": 180
+  },
+  "idempotency": {
+    "enabled": true,
+    "check_done_dir": true,
+    "allow_retry": true,
+    "retry_max": 3,
+    "use_business_key": true,
+    "key_format": "{project}:{type}:{date}:{business_id}"
+  },
+  "dead_letter_queue": {
+    "enabled": true,
+    "retention_days": 30,
+    "recovery_paths": [
+      "retry_with_upgrade",
+      "manual_review",
+      "permanent_discard"
+    ],
+    "auto_discard_after_failures": 5,
+    "notify_on_dlq": true
+  },
+  "circuit_breaker": {
+    "enabled": true,
+    "failure_window_minutes": 30,
+    "failure_rate_threshold": 0.5,
+    "circuit_open_minutes": 30,
+    "half_open_max_probes": 3,
+    "monitor_by_type": true
+  },
+  "event_driven": {
+    "enabled": true,
+    "trigger_next_support": true,
+    "daily_review_trigger": "daily_review",
+    "market_snapshot_trigger": "market_snapshot"
+  },
+  "workbuddy_pending": {
+    "ttl_seconds": 3600,
+    "description": "WorkBuddy 待处理任务的超时时间，超时后自动回收到死信队列"
+  },
+  "retry": {
+    "default_max_retries": 3,
+    "retry_delay_seconds": 60,
+    "escalation_enabled": true
+  },
+  "tasks_sequence": {
+    "enabled": true,
+    "validate_completeness": true
+  },
+  "agent_registry": {
+    "enabled": true,
+    "registry_path": "status/agents.json",
+    "validate_target_agent": true
+  },
+  "tracing": {
+    "enabled": true,
+    "trace_id_field": "trace_id",
+    "span_format": "{timestamp}|{trace_id}|{agent}|{action}|{status}"
+  },
+  "cron_optimization": {
+    "earnings_collection_17pm_disabled": true,
+    "weekend_holiday_check_enabled": true
+  },
+  "data_sources": {
+    "strategy": "direct_api",
+    "screenshot_deprecated": true,
+    "available": {
+      "tdx_connector": {
+        "type": "mcp",
+        "mcp_name": "tdx-connector",
+        "capabilities": [
+          "realtime_quote",
+          "kline",
+          "tick_data",
+          "market_depth",
+          "block_data"
+        ],
+        "markets": [
+          "a_stock"
+        ],
+        "latency": "real-time",
+        "note": "通达信 MCP，主数据源"
+      },
+      "stock_realtime_quote": {
+        "type": "skill",
+        "skill_name": "stock-realtime-quote",
+        "capabilities": [
+          "realtime_quote"
+        ],
+        "markets": [
+          "a_stock"
+        ],
+        "latency": "3-5s",
+        "note": "腾讯财经 API，免费稳定"
+      },
+      "a_stock_data": {
+        "type": "skill",
+        "skill_name": "a-stock-data",
+        "capabilities": [
+          "kline",
+          "financials",
+          "research_report",
+          "money_flow",
+          "block_analysis"
+        ],
+        "markets": [
+          "a_stock"
+        ],
+        "latency": "minute-level",
+        "note": "AKShare + 东财 + 同花顺全栈数据"
+      },
+      "westockdata": {
+        "type": "skill",
+        "skill_name": "westockdata",
+        "capabilities": [
+          "kline",
+          "financials",
+          "money_flow",
+          "technical_indicator",
+          "shareholder",
+          "etf_data",
+          "index_data"
+        ],
+        "markets": [
+          "a_stock",
+          "hk_stock",
+          "us_stock"
+        ],
+        "latency": "minute-level",
+        "note": "东方财富全市场覆盖"
+      },
+      "stock_analyzer": {
+        "type": "skill",
+        "skill_name": "stock-analyzer",
+        "capabilities": [
+          "fundamental_analysis",
+          "news_analysis",
+          "money_flow_analysis",
+          "investment_advice"
+        ],
+        "markets": [
+          "a_stock",
+          "hk_stock",
+          "us_stock"
+        ],
+        "latency": "minute-level",
+        "note": "三维综合分析（基本面+新闻+资金面）"
+      }
+    },
+    "routing": {
+      "realtime_quote": "tdx_connector",
+      "kline_daily": "tdx_connector",
+      "kline_minute": "a_stock_data",
+      "financials": "a_stock_data",
+      "research_report": "a_stock_data",
+      "money_flow": "westockdata",
+      "block_heat": "tdx_connector",
+      "index_data": "westockdata",
+      "stock_analysis": "stock_analyzer",
+      "backup_quote": "stock_realtime_quote"
+    }
+  },
+  "deprecated_types": {
+    "market_snapshot": {
+      "reason": "已切换为直接 API 数据采集",
+      "migrate_to": "data_collection",
+      "since": "2026-06-10"
+    }
+  }
+}

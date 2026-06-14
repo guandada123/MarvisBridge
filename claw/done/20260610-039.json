@@ -1,0 +1,17 @@
+{
+  "task_id": "20260610-039",
+  "project": "claw",
+  "type": "data_collection",
+  "source": "marvis",
+  "title": "盘中监控截图+OCR-1400",
+  "params": {
+    "screenshot": "shared/market_data/snapshot_1400.png",
+    "ocr_text": "DJI 道琼斯工业平均指数 50872.110 +0.17% +86.100\nSPX 标普普尔500指数 7386.650 -0.26% -19.080\n180688 科创50 1657.16 -0.36% -5.95\n1A0001 上证指数 3990.05 -0.50% -19.98\nHSI 恒生指数 24344.77 -0.90% -221.13\nIXIC 纳斯达克综合指数 25678.820 -0.97% -250.840\n399300 沪深300 4750.32 -1.07% -51.49\n399001 深证成指 14957.23 -2.04% -311.48\n399030 深证100 6526.84 -2.27% -151.27\n399006 创业板指 3858.93 -2.60% -102.82"
+  },
+  "created_at": "2026-06-10T14:00:00+08:00",
+  "status": "completed",
+  "notify_feishu": true,
+  "idempotency_key": "claw:data_collection:20260610:盘中监控截图+OCR-1400",
+  "completed_at": "2026-06-10T16:25:36.183376",
+  "result": "OCR text extracted to /Users/guan/workbuddy_marvis_bridge/shared/market_data/snapshot_1400.txt"
+}

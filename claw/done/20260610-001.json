@@ -1,0 +1,20 @@
+{
+  "task_id": "20260610-001",
+  "project": "claw",
+  "type": "data_collection",
+  "source": "marvis",
+  "priority": "high",
+  "title": "端到端测试-桥接系统连通性验证",
+  "description": "Marvis 侧写入的测试任务，验证 WorkBuddy 能否正确读取、执行并回写结果。此任务模拟财经数据采集流程。",
+  "target_dir": "/Users/guan/WorkBuddy/Claw/",
+  "params": {
+    "test_mode": true,
+    "description": "验证桥接目录读写、任务校验、结果回写、飞书推送全链路"
+  },
+  "notify_feishu": true,
+  "feishu_chat_id": "oc_9ee5303497f5e0e71666b610d6bdc346",
+  "feishu_tag": "[Bridge-Test]",
+  "created_at": "2026-06-10T00:35:00+08:00",
+  "status": "completed",
+  "result_file": "/Users/guan/workbuddy_marvis_bridge/claw/results/20260610-001.md"
+}

@@ -1,0 +1,1 @@
+{"task_id": "bridge:signal", "status": "established", "convention": "done_{task_id}.json", "format": {"task_id": "str", "project": "claw|quant|bridge", "completed_at": "ISO8601", "result_file": "abs_path"}}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/guan/WorkBuddy/QuantTradingSystem/scripts/fetch_data.py", line 6, in <module>
+    import tushare as ts
+ModuleNotFoundError: No module named 'tushare'
+（内容由AI生成，仅供参考）

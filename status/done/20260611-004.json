@@ -1,0 +1,21 @@
+{
+  "task_id": "20260611-004",
+  "project": "quant",
+  "type": "deploy",
+  "source": "marvis",
+  "title": "QuantTradingSystem v2.0 本地启动验证",
+  "priority": "high",
+  "created_at": "2026-06-11T07:35:00+08:00",
+  "description": "从 STATUS.md P1：git 提交所有变更，然后 docker-compose up 启动验证。",
+  "action_items": [
+    "cd /Users/guan/WorkBuddy/QuantTradingSystem",
+    "git add -A && git commit -m 'v2.0: 13 containers, K8s manifests, CI/CD ready'",
+    "docker-compose up -d 启动 13 个容器",
+    "等待所有容器 healthy，验证 8000/8001/8002 端口响应",
+    "docker-compose logs --tail=50 检查启动日志",
+    "服务健康后 docker-compose down 关闭（预生产验证，非长期运行）"
+  ],
+  "expected_outcome": "所有容器启动成功，API 端口响应正常，日志无 FATAL",
+  "notify_feishu": true,
+  "idempotency_key": "quant:deploy:20260611:docker_compose_up"
+}

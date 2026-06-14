@@ -1,0 +1,26 @@
+{
+  "custom": {
+    "state": "closed",
+    "failure_count": 0,
+    "total_count": 1,
+    "window_start": "2026-06-11T07:31:43.698905",
+    "last_updated": "2026-06-11T07:31:43.699135",
+    "failure_rate": 0.0
+  },
+  "data_collection": {
+    "state": "closed",
+    "failure_count": 0,
+    "total_count": 1,
+    "window_start": "2026-06-11T14:02:17.538442",
+    "last_updated": "2026-06-11T14:02:17.538445",
+    "failure_rate": 0.0
+  },
+  "": {
+    "state": "closed",
+    "failure_count": 1,
+    "total_count": 1,
+    "window_start": "2026-06-11T08:30:18.342042",
+    "last_updated": "2026-06-11T08:30:18.342056",
+    "failure_rate": 1.0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "task_id": "20260610-011",
+  "project": "claw",
+  "type": "test",
+  "source": "marvis",
+  "target_agent": "",
+  "priority": "high",
+  "title": "Watcher修复验证",
+  "description": "验证watcher pipe修复后能否正常消费",
+  "params": {},
+  "notify_feishu": false,
+  "created_at": "2026-06-10T10:32:00+08:00",
+  "idempotency_key": "claw:test:20260610:Watcher修复验证",
+  "status": "completed",
+  "completed_at": "2026-06-10T17:21:00+08:00"
+}

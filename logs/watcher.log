@@ -1,0 +1,320 @@
+[2026-06-10 13:31:12][watcher][INFO] ============================================
+[2026-06-10 13:31:12][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v2 启动
+[2026-06-10 13:31:12][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/claw/tasks/
+[2026-06-10 13:31:12][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/quant/tasks/
+[2026-06-10 13:31:12][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-10 13:31:12][watcher][INFO] PID: 96057
+[2026-06-10 13:31:12][watcher][INFO] ============================================
+[2026-06-10 13:31:12][watcher][INFO] 心跳进程已启动 (PID: 96080)
+[2026-06-10 13:31:12][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-10 14:02:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1400.json (项目: claw)
+❌ 校验失败 (2 个错误):
+  - 无效 type: market_snapshot，可选: ['data_collection', 'code_review', 'data_analysis', 'report_generation', 'deploy', 'test', 'maintenance', 'custom', 'github_ci_check', 'github_pr_review', 'social_post', 'content_publish', 'wechat_notify', 'wechat_push', 'literature_search', 'data_collect', 'research']
+  - task_id 格式错误: 2026-06-10-1400，应为 YYYYMMDD-NNN
+   📮 已写入死信队列: /Users/guan/workbuddy_marvis_bridge/claw/dead_letter/dlq_2026-06-10-1400_20260610_140241.json
+[2026-06-10 14:02:41][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1400.json
+[2026-06-10 14:04:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-img-test.json (项目: claw)
+❌ 校验失败 (1 个错误):
+  - task_id 格式错误: 20260610-img-test，应为 YYYYMMDD-NNN
+   📮 已写入死信队列: /Users/guan/workbuddy_marvis_bridge/claw/dead_letter/dlq_20260610-img-test_20260610_140433.json
+[2026-06-10 14:04:33][watcher][WARN] 任务校验失败，已跳过: 20260610-img-test.json
+[2026-06-10 14:05:22][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-030.json (项目: claw)
+✅ 任务 20260610-030 校验通过
+   项目: claw | 类型: test | 来源: marvis
+   🔑 幂等键: claw:test:20260610:图片识别测试-验证DeepSeek多模态
+[2026-06-10 14:05:22][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 14:05:24][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-030.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:test:20260610:图片识别测试-验证DeepSeek多模态 已在队列中
+[2026-06-10 14:05:24][watcher][WARN] 任务校验失败，已跳过: 20260610-030.json
+[2026-06-10 14:05:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-031.json (项目: claw)
+✅ 任务 20260610-031 校验通过
+   项目: claw | 类型: maintenance | 来源: marvis
+   🔑 幂等键: claw:maintenance:20260610:OCR升级-修改自动化Prompt
+[2026-06-10 14:05:30][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 14:05:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-031.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:maintenance:20260610:OCR升级-修改自动化Prompt 已在队列中
+[2026-06-10 14:05:32][watcher][WARN] 任务校验失败，已跳过: 20260610-031.json
+[2026-06-10 14:25:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-032.json (项目: claw)
+✅ 任务 20260610-032 校验通过
+   项目: claw | 类型: test | 来源: marvis
+   🔑 幂等键: claw:test:20260610:DeepSeek多模态验证-重启后测试
+[2026-06-10 14:25:26][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 14:25:28][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-032.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:test:20260610:DeepSeek多模态验证-重启后测试 已在队列中
+[2026-06-10 14:25:28][watcher][WARN] 任务校验失败，已跳过: 20260610-032.json
+[2026-06-10 15:02:02][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-031.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-031.json'
+[2026-06-10 15:02:02][watcher][WARN] 任务校验失败，已跳过: 20260610-031.json
+[2026-06-10 15:02:02][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-030.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-030.json'
+[2026-06-10 15:02:02][watcher][WARN] 任务校验失败，已跳过: 20260610-030.json
+[2026-06-10 15:02:02][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-032.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-032.json'
+[2026-06-10 15:02:02][watcher][WARN] 任务校验失败，已跳过: 20260610-032.json
+[2026-06-10 15:02:02][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-ocr-upgrade.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-ocr-upgrade.json'
+[2026-06-10 15:02:02][watcher][WARN] 任务校验失败，已跳过: 20260610-ocr-upgrade.json
+[2026-06-10 15:05:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-033.json (项目: claw)
+✅ 任务 20260610-033 校验通过
+   项目: claw | 类型: test | 来源: marvis
+   🔑 幂等键: claw:test:20260610:截图直读验证
+[2026-06-10 15:05:30][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 15:05:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-033.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:test:20260610:截图直读验证 已在队列中
+[2026-06-10 15:05:32][watcher][WARN] 任务校验失败，已跳过: 20260610-033.json
+[2026-06-10 15:06:04][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-034.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:test:20260610:截图直读验证-1505 已在队列中
+[2026-06-10 15:06:04][watcher][WARN] 任务校验失败，已跳过: 20260610-034.json
+[2026-06-10 15:23:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1000.json (项目: claw)
+❌ 校验失败 (2 个错误):
+  - 无效 type: market_snapshot，可选: ['data_collection', 'code_review', 'data_analysis', 'report_generation', 'deploy', 'test', 'maintenance', 'custom', 'github_ci_check', 'github_pr_review', 'social_post', 'content_publish', 'wechat_notify', 'wechat_push', 'literature_search', 'data_collect', 'research']
+  - task_id 格式错误: 2026-06-10-1000，应为 YYYYMMDD-NNN
+   📮 已写入死信队列: /Users/guan/workbuddy_marvis_bridge/claw/dead_letter/dlq_2026-06-10-1000_20260610_152317.json
+[2026-06-10 15:23:17][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1000.json
+[2026-06-10 15:23:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1300_20260610_152315_374.json (项目: claw)
+❌ 校验失败 (2 个错误):
+  - 无效 type: market_snapshot，可选: ['data_collection', 'code_review', 'data_analysis', 'report_generation', 'deploy', 'test', 'maintenance', 'custom', 'github_ci_check', 'github_pr_review', 'social_post', 'content_publish', 'wechat_notify', 'wechat_push', 'literature_search', 'data_collect', 'research']
+  - task_id 格式错误: 2026-06-10-1300，应为 YYYYMMDD-NNN
+   📮 已写入死信队列: /Users/guan/workbuddy_marvis_bridge/claw/dead_letter/dlq_2026-06-10-1300_20260610_152317.json
+[2026-06-10 15:23:17][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1300_20260610_152315_374.json
+[2026-06-10 15:23:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-0925.json (项目: claw)
+❌ 校验失败 (2 个错误):
+  - 无效 type: market_snapshot，可选: ['data_collection', 'code_review', 'data_analysis', 'report_generation', 'deploy', 'test', 'maintenance', 'custom', 'github_ci_check', 'github_pr_review', 'social_post', 'content_publish', 'wechat_notify', 'wechat_push', 'literature_search', 'data_collect', 'research']
+  - task_id 格式错误: 2026-06-10-0925，应为 YYYYMMDD-NNN
+   📮 已写入死信队列: /Users/guan/workbuddy_marvis_bridge/claw/dead_letter/dlq_2026-06-10-0925_20260610_152317.json
+[2026-06-10 15:23:17][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-0925.json
+[2026-06-10 15:23:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1100_20260610_152315_281.json (项目: claw)
+🔴 熔断拒绝: 熔断器开路: market_snapshot 故障率 1.0%，熔断至 2026-06-10 15:53:17.357882
+[2026-06-10 15:23:17][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1100_20260610_152315_281.json
+[2026-06-10 15:23:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1100_20260610_152315_281.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1100_20260610_152315_281.json'
+[2026-06-10 15:23:21][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1100_20260610_152315_281.json
+[2026-06-10 15:23:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1100.json (项目: claw)
+🔴 熔断拒绝: 熔断器开路: market_snapshot 故障率 1.0%，熔断至 2026-06-10 15:53:17.357882
+[2026-06-10 15:23:21][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1100.json
+[2026-06-10 15:23:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1100.json (项目: claw)
+🔴 熔断拒绝: 熔断器开路: market_snapshot 故障率 1.0%，熔断至 2026-06-10 15:53:17.357882
+[2026-06-10 15:23:21][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1100.json
+[2026-06-10 15:23:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1300_20260610_152315_374.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1300_20260610_152315_374.json'
+[2026-06-10 15:23:21][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1300_20260610_152315_374.json
+[2026-06-10 15:23:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1300.json (项目: claw)
+🔴 熔断拒绝: 熔断器开路: market_snapshot 故障率 1.0%，熔断至 2026-06-10 15:53:17.357882
+[2026-06-10 15:23:21][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1300.json
+[2026-06-10 15:23:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1300.json (项目: claw)
+🔴 熔断拒绝: 熔断器开路: market_snapshot 故障率 1.0%，熔断至 2026-06-10 15:53:17.357882
+[2026-06-10 15:23:21][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1300.json
+[2026-06-10 15:26:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-035.json (项目: claw)
+✅ 任务 20260610-035 校验通过
+   项目: claw | 类型: data_collection | 来源: marvis
+   🔑 幂等键: claw:data_collection:20260610:盘中监控截图+OCR-0925
+[2026-06-10 15:26:50][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 15:26:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-036.json (项目: claw)
+✅ 任务 20260610-036 校验通过
+   项目: claw | 类型: data_collection | 来源: marvis
+   🔑 幂等键: claw:data_collection:20260610:盘中监控截图+OCR-1000
+[2026-06-10 15:26:50][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 15:26:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-037.json (项目: claw)
+✅ 任务 20260610-037 校验通过
+   项目: claw | 类型: data_collection | 来源: marvis
+   🔑 幂等键: claw:data_collection:20260610:盘中监控截图+OCR-1100
+[2026-06-10 15:26:50][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 15:26:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-038.json (项目: claw)
+✅ 任务 20260610-038 校验通过
+   项目: claw | 类型: data_collection | 来源: marvis
+   🔑 幂等键: claw:data_collection:20260610:盘中监控截图+OCR-1300
+[2026-06-10 15:26:50][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 15:26:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-039.json (项目: claw)
+✅ 任务 20260610-039 校验通过
+   项目: claw | 类型: data_collection | 来源: marvis
+   🔑 幂等键: claw:data_collection:20260610:盘中监控截图+OCR-1400
+[2026-06-10 15:26:50][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 15:26:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-035.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:data_collection:20260610:盘中监控截图+OCR-0925 已在队列中
+[2026-06-10 15:26:52][watcher][WARN] 任务校验失败，已跳过: 20260610-035.json
+[2026-06-10 15:26:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-036.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:data_collection:20260610:盘中监控截图+OCR-1000 已在队列中
+[2026-06-10 15:26:52][watcher][WARN] 任务校验失败，已跳过: 20260610-036.json
+[2026-06-10 15:26:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-037.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:data_collection:20260610:盘中监控截图+OCR-1100 已在队列中
+[2026-06-10 15:26:52][watcher][WARN] 任务校验失败，已跳过: 20260610-037.json
+[2026-06-10 15:26:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-038.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:data_collection:20260610:盘中监控截图+OCR-1300 已在队列中
+[2026-06-10 15:26:52][watcher][WARN] 任务校验失败，已跳过: 20260610-038.json
+[2026-06-10 15:26:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-039.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:data_collection:20260610:盘中监控截图+OCR-1400 已在队列中
+[2026-06-10 15:26:52][watcher][WARN] 任务校验失败，已跳过: 20260610-039.json
+[2026-06-10 15:31:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-0925.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-0925.json'
+[2026-06-10 15:31:32][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-0925.json
+[2026-06-10 15:31:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1000.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1000.json'
+[2026-06-10 15:31:32][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1000.json
+[2026-06-10 15:31:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1100.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1100.json'
+[2026-06-10 15:31:32][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1100.json
+[2026-06-10 15:31:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1300.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1300.json'
+[2026-06-10 15:31:32][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1300.json
+[2026-06-10 15:31:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1400.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1400.json'
+[2026-06-10 15:31:32][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1400.json
+[2026-06-10 17:29:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-004.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-004.json'
+[2026-06-10 17:29:12][watcher][WARN] 任务校验失败，已跳过: 20260610-004.json
+[2026-06-10 17:29:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-005.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-005.json'
+[2026-06-10 17:29:12][watcher][WARN] 任务校验失败，已跳过: 20260610-005.json
+[2026-06-10 17:29:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-009.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-009.json'
+[2026-06-10 17:29:12][watcher][WARN] 任务校验失败，已跳过: 20260610-009.json
+[2026-06-10 17:29:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-010.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-010.json'
+[2026-06-10 17:29:12][watcher][WARN] 任务校验失败，已跳过: 20260610-010.json
+[2026-06-10 17:29:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-011.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-011.json'
+[2026-06-10 17:29:12][watcher][WARN] 任务校验失败，已跳过: 20260610-011.json
+[2026-06-10 17:29:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-012.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-012.json'
+[2026-06-10 17:29:12][watcher][WARN] 任务校验失败，已跳过: 20260610-012.json
+[2026-06-10 17:29:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-013.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-013.json'
+[2026-06-10 17:29:12][watcher][WARN] 任务校验失败，已跳过: 20260610-013.json
+[2026-06-10 17:29:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-033.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-033.json'
+[2026-06-10 17:29:12][watcher][WARN] 任务校验失败，已跳过: 20260610-033.json
+[2026-06-10 17:29:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-034.json (项目: claw)
+❌ 读取文件失败: [Errno 2] No such file or directory: '/Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-034.json'
+[2026-06-10 17:29:12][watcher][WARN] 任务校验失败，已跳过: 20260610-034.json
+Terminated: 15
+[2026-06-10 21:54:46][watcher][INFO] 文件监听器收到停止信号
+[2026-06-10 21:54:46][watcher][INFO] 文件监听器已停止
+[2026-06-10 22:12:36][watcher][INFO] ============================================
+[2026-06-10 22:12:36][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v3 启动
+[2026-06-10 22:12:36][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/claw/tasks/
+[2026-06-10 22:12:36][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/quant/tasks/
+[2026-06-10 22:12:36][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-10 22:12:36][watcher][INFO] PID: 88926
+[2026-06-10 22:12:36][watcher][INFO] ============================================
+[2026-06-10 22:12:36][watcher][INFO] 心跳进程已启动 (PID: 89043)
+[2026-06-10 22:12:36][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-10 22:16:51][watcher][INFO] ============================================
+[2026-06-10 22:16:51][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v3 启动
+[2026-06-10 22:16:51][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/claw/tasks/
+[2026-06-10 22:16:51][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/quant/tasks/
+[2026-06-10 22:16:51][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-10 22:16:51][watcher][INFO] PID: 90566
+[2026-06-10 22:16:51][watcher][INFO] ============================================
+[2026-06-10 22:16:51][watcher][INFO] 心跳进程已启动 (PID: 90590)
+[2026-06-10 22:16:51][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-11 06:56:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-001.json (项目: claw)
+[2026-06-11 06:56:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-001.json (项目: claw)
+[2026-06-11 06:56:36][watcher][WARN] 任务校验失败，已跳过: 20260611-001.json
+[2026-06-11 06:56:36][watcher][WARN] 任务校验失败，已跳过: 20260611-001.json
+[2026-06-11 07:00:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:00:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:00:34][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:00:34][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:01][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:01][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:01][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:01][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:03][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:03][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:03][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:03][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 07:31:45][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:31:45][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 07:34:21][watcher][INFO] 文件监听器收到停止信号
+[2026-06-11 07:34:21][watcher][INFO] 文件监听器收到停止信号
+[2026-06-11 07:34:21][watcher][INFO] 文件监听器已停止
+[2026-06-11 07:34:21][watcher][INFO] 文件监听器已停止
+[2026-06-11 07:39:57][watcher][INFO] ============================================
+[2026-06-11 07:39:57][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v3 启动
+[2026-06-11 07:39:57][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/claw/tasks/
+[2026-06-11 07:39:57][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/quant/tasks/
+[2026-06-11 07:39:57][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-11 07:39:57][watcher][INFO] PID: 96966
+[2026-06-11 07:39:57][watcher][INFO] ============================================
+[2026-06-11 07:39:57][watcher][INFO] 心跳进程已启动 (PID: 96995)
+[2026-06-11 07:39:57][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-11 08:06:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-earnings-am.json (项目: claw)
+[2026-06-11 08:06:26][watcher][WARN] 任务校验失败，已跳过: 2026-06-11-earnings-am.json
+[2026-06-11 08:30:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/fetch_data_failure_20260611.json (项目: claw)
+[2026-06-11 08:30:18][watcher][WARN] 任务校验失败，已跳过: fetch_data_failure_20260611.json
+[2026-06-11 08:34:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-002.json (项目: claw)
+[2026-06-11 08:34:05][watcher][WARN] 任务校验失败，已跳过: 20260611-002.json
+[2026-06-11 08:34:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-earnings-am.json (项目: claw)
+[2026-06-11 08:34:05][watcher][WARN] 任务校验失败，已跳过: 2026-06-11-earnings-am.json
+[2026-06-11 08:34:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/fetch_data_failure_20260611.json (项目: claw)
+[2026-06-11 08:34:05][watcher][WARN] 任务校验失败，已跳过: fetch_data_failure_20260611.json
+[2026-06-11 09:27:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/task_2026-06-11-0925.json (项目: claw)
+[2026-06-11 09:27:00][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-11 09:27:02][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/task_2026-06-11-0925.json (项目: claw)
+[2026-06-11 09:27:02][watcher][WARN] 任务校验失败，已跳过: task_2026-06-11-0925.json
+[2026-06-11 09:27:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/task_2026-06-11-0925.json (项目: claw)
+[2026-06-11 09:27:47][watcher][WARN] 任务校验失败，已跳过: task_2026-06-11-0925.json
+[2026-06-11 09:31:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-040.json (项目: claw)
+[2026-06-11 09:31:38][watcher][WARN] 任务校验失败，已跳过: 20260610-040.json
+[2026-06-11 10:02:06][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-1000.json (项目: claw)
+[2026-06-11 10:02:06][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-11 10:02:08][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-1000.json (项目: claw)
+[2026-06-11 10:02:08][watcher][WARN] 任务校验失败，已跳过: 2026-06-11-1000.json
+[2026-06-11 10:02:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-041.json (项目: claw)
+[2026-06-11 10:02:50][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-11 10:02:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-041.json (项目: claw)
+[2026-06-11 10:02:52][watcher][WARN] 任务校验失败，已跳过: 20260611-041.json
+[2026-06-11 11:02:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-040.json (项目: claw)
+[2026-06-11 11:02:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-11 11:02:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-040.json (项目: claw)
+[2026-06-11 11:02:35][watcher][WARN] 任务校验失败，已跳过: 2026-06-11-040.json
+[2026-06-11 12:25:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-040.json (项目: claw)
+[2026-06-11 12:25:09][watcher][WARN] 任务校验失败，已跳过: 20260610-040.json
+[2026-06-11 12:25:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-040.json (项目: claw)
+[2026-06-11 12:25:09][watcher][WARN] 任务校验失败，已跳过: 2026-06-11-040.json
+[2026-06-11 12:26:06][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-1000.json (项目: claw)
+[2026-06-11 12:26:06][watcher][WARN] 任务校验失败，已跳过: 2026-06-11-1000.json
+[2026-06-11 12:26:06][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-041.json (项目: claw)
+[2026-06-11 12:26:06][watcher][WARN] 任务校验失败，已跳过: 20260611-041.json
+[2026-06-11 12:26:06][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/task_2026-06-11-0925.json (项目: claw)
+[2026-06-11 12:26:06][watcher][WARN] 任务校验失败，已跳过: task_2026-06-11-0925.json
+[2026-06-11 13:01:04][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/task_2026-06-11-1300.json (项目: claw)
+[2026-06-11 13:01:04][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-11 13:01:06][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/task_2026-06-11-1300.json (项目: claw)
+[2026-06-11 13:01:06][watcher][WARN] 任务校验失败，已跳过: task_2026-06-11-1300.json
+[2026-06-11 13:01:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-040.json (项目: claw)
+[2026-06-11 13:01:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-11 13:01:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-040.json (项目: claw)
+[2026-06-11 13:01:35][watcher][WARN] 任务校验失败，已跳过: 2026-06-11-040.json
+[2026-06-11 14:02:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-041.json (项目: claw)
+[2026-06-11 14:02:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-11 14:02:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-041.json (项目: claw)
+[2026-06-11 14:02:19][watcher][WARN] 任务校验失败，已跳过: 2026-06-11-041.json
+[2026-06-12 06:50:45][watcher][INFO] 文件监听器收到停止信号
+[2026-06-12 06:50:45][watcher][INFO] 文件监听器已停止
+[2026-06-12 15:00:49][watcher][INFO] ============================================
+[2026-06-12 15:00:49][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v3 启动
+[2026-06-12 15:00:49][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/
+[2026-06-12 15:00:49][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-12 15:00:49][watcher][INFO] PID: 36685
+[2026-06-12 15:00:49][watcher][INFO] ============================================
+[2026-06-12 15:00:49][watcher][INFO] 心跳进程已启动 (PID: 36705)
+[2026-06-12 15:00:49][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-12 15:02:23][watcher][INFO] ============================================
+[2026-06-12 15:02:23][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v3 启动
+[2026-06-12 15:02:23][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/
+[2026-06-12 15:02:23][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-12 15:02:23][watcher][INFO] PID: 37116
+[2026-06-12 15:02:23][watcher][INFO] ============================================
+[2026-06-12 15:02:23][watcher][INFO] 心跳进程已启动 (PID: 37137)
+[2026-06-12 15:02:23][watcher][INFO] 启动 fswatch 子进程 (第 1 次)

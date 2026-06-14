@@ -1,0 +1,111 @@
+{
+  "bridge_version": "v3.3",
+  "updated_at": "2026-06-12 14:43:00",
+  "mode": "direct",
+  "description": "QClaw 已退役，所有任务由 WorkBuddy 处理",
+  "projects": {
+    "claw": {
+      "enabled": true,
+      "target_dir": "/Users/guan/WorkBuddy/Claw/",
+      "feishu_tag": "[Claw]",
+      "total_tasks": 24,
+      "completed_tasks": 21,
+      "failed_tasks": 9,
+      "pending_tasks": 0
+    },
+    "quant": {
+      "enabled": true,
+      "target_dir": "/Users/guan/WorkBuddy/QuantTradingSystem/",
+      "feishu_tag": "[Quant]",
+      "total_tasks": 1,
+      "completed_tasks": 0,
+      "failed_tasks": 0,
+      "pending_tasks": 0
+    },
+    "stock_insight": {
+      "enabled": true,
+      "target_dir": "/Users/guan/WorkBuddy/stock-insight/",
+      "feishu_tag": "[StockInsight]",
+      "total_tasks": 0,
+      "completed_tasks": 0,
+      "failed_tasks": 0,
+      "pending_tasks": 0,
+      "repo": "https://github.com/nguyenchunghieu799-blip/stock-insight",
+      "note": "借鉴参考项目，待本地克隆"
+    }
+  },
+  "feishu": {
+    "enabled": true,
+    "chat_id": "oc_9ee5303497f5e0e71666b610d6bdc346",
+    "notify_on_task": false,
+    "notify_on_complete": true,
+    "notify_on_error": true
+  },
+  "flow_v3_1": {
+    "description": "无中间层直连模式",
+    "steps": [
+      "1. Marvis 读取 shared/STATUS.md + shared/ROADMAP.md",
+      "2. Marvis 写入任务到 status/workbuddy_pending/*.json",
+      "3. WorkBuddy 轮询 workbuddy_pending/ 执行任务",
+      "4. 结果写入 claw/results/ 或 quant/results/",
+      "5. Marvis 读取结果，更新 STATUS.md"
+    ],
+    "pending_dir": "status/workbuddy_pending/",
+    "results_dirs": {
+      "claw": "claw/results/",
+      "quant": "quant/results/"
+    }
+  },
+  "environment": {
+    "platform": "macOS",
+    "sandbox": true,
+    "watcher_reliable": false,
+    "monitor_reliable": false,
+    "recommended_mode": "direct",
+    "watcher_status": "recovered_auto_restart",
+    "watcher_restart_pid": 96966
+  },
+  "roles": {
+    "workbuddy": {
+      "role": "执行者",
+      "responsibilities": [
+        "轮询 workbuddy_pending/ 执行 Marvis 派发的任务",
+        "深度推理分析、生成报告、飞书推送",
+        "数据采集：直接通过 MCP/Skill API 取数",
+        "结果写入 claw/results/ 或 quant/results/"
+      ]
+    },
+    "marvis": {
+      "role": "调度者 + 决策者",
+      "responsibilities": [
+        "每日读取 STATUS.md + ROADMAP.md",
+        "制定任务优先级，写入 workbuddy_pending/",
+        "重大技术决策和架构指导",
+        "OS 级操作（文件管理、浏览器采集等）",
+        "读取执行结果，更新 STATUS.md"
+      ]
+    }
+  },
+  "tasks_pending": 0,
+  "sla_status": "healthy",
+  "notes_fixes": {
+    "quant_fetch_data": "2026-06-12 fixed: created data/fetch_data.py + scripts/fetch_data_host.sh (docker exec wrapper)",
+    "marvis_dir_deviation": "2026-06-12 mitigated: scripts/task_sync.sh + claw/tasks/README.md, 10 orphaned tasks synced to workbuddy_pending/"
+  },
+  "last_run": {
+    "timestamp": "2026-06-11T13:09:09.234646+08:00",
+    "tasks_processed": 2,
+    "tasks_completed": 0,
+    "tasks_dead_letter_new": 0,
+    "tasks_idempotent_skip": 2,
+    "watcher": "alive",
+    "circuit_breaker": "all_closed",
+    "dead_letters": 8,
+    "heartbeat_delay_s": 60,
+    "trading_day": true
+  },
+  "last_scan": "2026-06-11T14:04:53+08:00",
+  "total_tasks": 1,
+  "idempotent_skip": 1,
+  "completed": 0
+}

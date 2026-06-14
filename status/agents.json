@@ -1,0 +1,174 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-06-10T01:55:00+08:00",
+  "agents": [
+    {
+      "id": "marvis-supervisor",
+      "name": "Marvis 主管 Agent",
+      "type": "supervisor",
+      "status": "active",
+      "capabilities": [
+        "task_decomposition",
+        "agent_routing",
+        "workflow_orchestration"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "marvis-file",
+      "name": "Marvis File Agent",
+      "type": "file",
+      "status": "active",
+      "capabilities": [
+        "semantic_search",
+        "format_convert",
+        "batch_merge",
+        "smart_archive",
+        "content_analysis"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "marvis-computer",
+      "name": "Marvis Computer Agent",
+      "type": "computer",
+      "status": "active",
+      "capabilities": [
+        "system_settings",
+        "disk_cleanup",
+        "hardware_check",
+        "startup_management",
+        "cache_cleanup"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "marvis-app",
+      "name": "Marvis App Agent",
+      "type": "app",
+      "status": "active",
+      "capabilities": [
+        "app_launch",
+        "screenshot",
+        "gui_control",
+        "cross_app_workflow"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "marvis-browser",
+      "name": "Marvis Browser Agent",
+      "type": "browser",
+      "status": "active",
+      "capabilities": [
+        "web_scrape",
+        "form_fill",
+        "login_session",
+        "price_monitor",
+        "news_collect"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "marvis-search",
+      "name": "Marvis Search Agent",
+      "type": "search",
+      "status": "active",
+      "capabilities": [
+        "web_search",
+        "info_aggregation",
+        "news_summary",
+        "calendar_check"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "workbuddy-claw",
+      "name": "WorkBuddy Claw 投顾操盘",
+      "type": "analysis",
+      "status": "active",
+      "capabilities": [
+        "stock_analysis",
+        "portfolio_mgmt",
+        "daily_review",
+        "strategy_backtest",
+        "risk_control",
+        "feishu_push"
+      ],
+      "priority": "critical"
+    },
+    {
+      "id": "workbuddy-quant",
+      "name": "WorkBuddy Quant 量化交易",
+      "type": "analysis",
+      "status": "active",
+      "capabilities": [
+        "strategy_dev",
+        "backtest",
+        "code_review",
+        "data_pipeline",
+        "docker_mgmt"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "workbuddy-assistant",
+      "name": "WorkBuddy 炒股助理",
+      "type": "analysis",
+      "status": "active",
+      "capabilities": [
+        "position_monitor",
+        "alert_push",
+        "earnings_check",
+        "article_analysis",
+        "macro_weekly"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "workbuddy-us-stock",
+      "name": "WorkBuddy 美股监控",
+      "type": "analysis",
+      "status": "active",
+      "capabilities": [
+        "us_premarket",
+        "us_intraday",
+        "us_close",
+        "us_earnings"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "routing_rules": {
+    "marvis": {
+      "description": "系统层操作 Agent，不参与深度分析",
+      "capable_of": [
+        "file_ops",
+        "system_ops",
+        "app_control",
+        "browser_auto",
+        "data_collection"
+      ],
+      "not_capable_of": [
+        "deep_analysis",
+        "decision_making",
+        "report_generation"
+      ]
+    },
+    "workbuddy": {
+      "description": "分析决策层 Agent，不参与系统操作",
+      "capable_of": [
+        "deep_analysis",
+        "decision_making",
+        "report_generation",
+        "feishu_push",
+        "code_review"
+      ],
+      "not_capable_of": [
+        "app_control",
+        "system_settings",
+        "browser_auto"
+      ]
+    }
+  }
+}

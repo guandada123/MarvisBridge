@@ -1,0 +1,18 @@
+{
+  "task_id": "20260610-034",
+  "project": "claw",
+  "type": "test",
+  "source": "marvis",
+  "priority": "high",
+  "title": "截图直读验证-1505",
+  "description": "验证WorkBuddy的DeepSeek能否直接读取截图。读取snapshot_test.png，列出所有指数名称和现价，最后说能否正常识别图片。",
+  "params": {
+    "image_path": "/Users/guan/workbuddy_marvis_bridge/shared/market_data/snapshot_test.png",
+    "action": "verify_image_reading"
+  },
+  "notify_feishu": false,
+  "created_at": "2026-06-10T15:05:00+08:00",
+  "status": "completed",
+  "idempotency_key": "claw:test:20260610:截图直读验证-1505",
+  "completed_at": "2026-06-10T17:21:00+08:00"
+}

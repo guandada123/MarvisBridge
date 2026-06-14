@@ -1,0 +1,198 @@
+用法: python3 bridge_tools.py <command>
+  sort          — 按优先级排序 pending 任务
+  lock <app>    — 获取应用操作锁
+  unlock <app>  — 释放锁
+  sla <proj> <type>  — SLA 时延检查
+  rotate [--dry-run] — 30天数据滚动清理
+  trading-day   — 检查今日是否为交易日
+  qclaw-run <task.json>  — 通过 QClaw CLI 执行任务
+  qclaw-check   — 检查 QClaw CLI 可用性
+[2026-06-10 10:37:18][monitor] Bridge Monitor 启动 (PID: 35268)
+[2026-06-10 10:37:18][monitor] WorkBuddy 任务待处理: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-011.json
+[2026-06-10 10:40:49][monitor] WorkBuddy 任务待处理: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-009.json
+[2026-06-10 10:44:49][monitor] 派发到 QClaw: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-012.json (agent=qclaw-dev)
+❌ QClaw 执行失败: Config (/Users/guan/.qclaw/openclaw.json): missing env var "QCLAW_LLM_BASE_URL" at models.providers.qclaw.baseUrl - feature using this value will be unavailable
+Config (/Users/guan/.qclaw/openclaw.json): missing env var "QCLAW_LLM_API_KEY" at models.providers.qclaw.apiKey - feature using this value will be unavailable
+Config (/Users/guan/.qclaw/openclaw.json): missing env var "QCLAW_WECHAT_WS_URL" at channels.wechat-access.wsUrl - feature using this value will be unavailable
+[plugins] [claw-plugin-report] initReporter 开始, configDir=/Users/guan/Library/Application Support/QClaw/openclaw/config/extensions/lossless-claw/claw-plugin-report
+[plugins] [lcm] Transcript GC disabled (default false)
+[plugins] [lcm] Proactive threshold compaction mode: deferred (default deferred)
+[plugins] [lcm] migration step complete: step=ensureSummaryDepthColumn durationMs=0
+[plugins] [lcm] migration step complete: step=ensureSummaryMetadataColumns durationMs=0
+[plugins] [lcm] migration step complete: step=ensureSummaryModelColumn durationMs=0
+[plugins] [lcm] migration step complete: step=ensureMessageIdentityHashColumn durationMs=0
+[plugins] [lcm] migration step complete: step=backfillMessageIdentityHashes durationMs=9
+[plugins] [lcm] migration step complete: step=createMessagesIdentityHashIndex durationMs=0
+[plugins] [lcm] migration step complete: step=ensureCompactionTelemetryColumns durationMs=0
+[plugins] [lcm] migration step skipped: step=backfillSummaryDepths algorithmVersion=1 reason=already-complete
+[plugins] [lcm] migration step complete: step=createSummariesDepthIndex durationMs=0
+[plugins] [lcm] migration step skipped: step=backfillSummaryMetadata algorithmVersion=1 reason=already-complete
+[plugins] [lcm] migration step skipped: step=backfillToolCallColumns algorithmVersion=1 reason=already-complete
+[plugins] [lcm] migration step complete: step=ensureMessagesFts durationMs=1
+[plugins] [lcm] migration step complete: step=ensureSummariesFts durationMs=0
+[plugins] [lcm] migration step complete: step=ensureSummariesFtsCjk durationMs=0
+[plugins] [lcm] Migration run completed during engine init: duration=20ms fts5=undefined
+[plugins] [lcm] Ignoring sessions matching 2 pattern(s) from plugin config: agent:*:cron:**, **:heartbeat
+[plugins] [lcm] Stateless session patterns from plugin config: 1 pattern(s): agent:*:subagent:**
+[plugins] [lcm] Engine initialized for db=/Users/guan/.qclaw/memory/lossless/lcm.db duration=27ms
+[plugins] [lcm] Plugin loaded (enabled=true, db=/Users/guan/.qclaw/memory/lossless/lcm.db, threshold=0.6, proactiveThresholdCompactionMode=deferred)
+[plugins] [lcm] State dir: /Users/guan/.openclaw
+[plugins] [lcm] Compaction summarization model: qclaw/pool-deepseek-v4-flash (default)
+[qclaw-plugin] [diag] register() START invocation=#1 packages=18 alreadyInitialized=[]
+[qclaw-plugin] register() called (invocation #1), initializing with 18 package(s)...
+[plugins] [qclaw-reporter] init 开始
+[plugins] [qclaw-reporter] init 完成, env=production, sessionId=bb7cb5869a21be5bbebda914e1b24a9a, deviceId=55ab030fefe6951e8b30ce8b1aa2d46199d05e93393516c6b160f65e40c79f97
+[qclaw-plugin:trace-span-reporter] [qclaw-reporter] init 开始
+[qclaw-plugin:trace-span-reporter] [qclaw-reporter] init 完成, env=production, sessionId=bb7cb5869a21be5bbebda914e1b24a9a, deviceId=55ab030fefe6951e8b30ce8b1aa2d46199d05e93393516c6b160f65e40c79f97
+[qclaw-plugin:trace-span-reporter] [trace-span-reporter] content-plugin.deriveModelInfo 不可用，model_type 字段将留空
+[qclaw-plugin:hook-proxy] registering api.on('before_agent_start') for package trace-span-reporter
+[qclaw-plugin:hook-proxy] registering api.on('before_prompt_build') for package trace-span-reporter
+[qclaw-plugin:hook-proxy] registering api.on('llm_input') for package trace-span-reporter
+[qclaw-plugin:hook-proxy] registering api.on('llm_output') for package trace-span-reporter
+[qclaw-plugin:hook-proxy] registering api.on('before_tool_call') for package trace-span-reporter
+[qclaw-plugin:hook-proxy] registering api.on('after_tool_call') for package trace-span-reporter
+[qclaw-plugin:hook-proxy] registering api.on('agent_end') for package trace-span-reporter
+[qclaw-plugin:hook-proxy] registering api.on('message_received') for package trace-span-reporter
+[qclaw-plugin:trace-span-reporter] [trace-span-reporter] registered (0 active runs carried over)
+[qclaw-plugin] ✓ trace-span-reporter initialized (2.1ms)
+[qclaw-plugin:local-model-profile] setup
+[recommended-models][debug] resolveStateDir => ""
+[qclaw-plugin:local-model-profile] [recommended-models] 未取到 stateDir，推荐模型清单注入为空
+[recommended-models][debug] stateDir 为空，注入空清单
+[qclaw-plugin:local-model-profile] [local-model-profile] setup 阶段跳过预写 tools.allow：非本地 Ollama (model=qclaw/pool-deepseek-v4-flash, provider=qclaw)
+[qclaw-plugin:local-model-profile] local-model-profile 目录: /Users/guan/.qclaw/local-model
+[qclaw-plugin:local-model-profile] presets 目录（用户态，可选）: /Users/guan/.qclaw/local-model/presets
+[qclaw-plugin:local-model-profile] 模型映射配置（用户态，可选）: /Users/guan/.qclaw/local-model/model-mapping.json
+[qclaw-plugin:local-model-profile] [local-model-profile] 内置 model-mapping 加载成功，共 24 条规则（运行时 fs 读取）
+[qclaw-plugin:local-model-profile] [local-model-profile] 内置档位资源就绪: empty=(sp:1c,tools:0) low=(sp:774c,tools:3) mid=(sp:2487c,tools:5) high=(sp:2487c,tools:5)
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/local-model-profile/apply
+[qclaw-plugin] ✓ local-model-profile initialized (4.4ms)
+[qclaw-plugin:error-response-handler] Error code marker injection middleware registered
+[qclaw-plugin] ✓ error-response-handler initialized (0.2ms)
+[qclaw-plugin:cron-delivery-guard] setup
+[qclaw-plugin] ✓ cron-delivery-guard initialized (0.2ms)
+[qclaw-plugin:prompt-optimizer] setup
+[qclaw-plugin:prompt-optimizer] [prompt-optimizer] 当前环境: test，配置拉取地址: https://jprx.sparta.html5.qq.com/data/4168/forward
+[qclaw-plugin:prompt-optimizer] FetchMiddleware registered with priority=900
+[qclaw-plugin] ✓ prompt-optimizer initialized (2.8ms)
+[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] setup() — registering HTTP routes
+[qclaw-plugin:http-route-registry] registered HTTP route: GET /qclaw-plugin/pcmgr-ai-security/config
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/pcmgr-ai-security/config (merged into existing)
+[qclaw-plugin:http-route-registry] registered HTTP route: PUT /qclaw-plugin/pcmgr-ai-security/config (merged into existing)
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/pcmgr-ai-security/token
+[qclaw-plugin:http-route-registry] registered HTTP route: PUT /qclaw-plugin/pcmgr-ai-security/token (merged into existing)
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/pcmgr-ai-security/identity
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/pcmgr-ai-security/allowlist/add
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/pcmgr-ai-security/allowlist/remove
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/pcmgr-ai-security/allowlist/sync
+[qclaw-plugin:http-route-registry] registered HTTP route: GET /qclaw-plugin/pcmgr-ai-security/allowlist
+[qclaw-plugin:http-route-registry] registered HTTP route: GET /qclaw-plugin/pcmgr-ai-security/allowlist/status
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/pcmgr-ai-security/hold/confirm
+[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] setup()
+[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] stateDir: 
+[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] fileProtectionEnabled: false fileProtectionConfigPath: 
+[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] Using default endpoint environment: "production".
+[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] createFetchMiddleware()
+[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] FileProtection disabled, fileProtectionEnabled=false configPath=
+[qclaw-plugin] ✓ pcmgr-ai-security initialized (7.5ms, async pending)
+[qclaw-plugin:skill-interceptor] Config sources — blockedSkills: default(39), credentialHostedSkills: default(21), wecomCliSkills: default(7), larkCliSkills: default(11), manualCodeSkills: default(29)
+[qclaw-plugin:skill-interceptor] setup complete, blockedSkills(39)=["tencent-docs","tencent-survey","notion","imap-smtp-email","personal-mail-skill","agent-email","public-skill","tencent-meeting","tencent-meeting-mcp","ima","kdocs","youdaonote","weiyun","tencent-news","wecomcli-contact","wecomcli-doc","wecomcli-meeting","wecomcli-msg","wecomcli-schedule","wecomcli-todo","wecomcli-setup","flyai","wendao-partner-qclaw-skill","bdpan-storage","aippt","lark-calendar","lark-im","lark-doc","lark-drive","lark-sheets","lark-base","lark-task","lark-mail","lark-contact","lark-wiki","lark-setup","tencent-musician-skills","meituan-travel","mtunion-product-ai-guide"], credentialHostedSkills={"tencent-docs":"tencent_docs","tencent-survey":"tencent_survey","kdocs":"kdocs","notion":"notion","personal-mail-skill":["qq_agent_mail","163_mail","qq_mail","gmail","outlook","sina_mail","sohu_mail"],"imap-smtp-email":["qq_agent_mail","163_mail","qq_mail","gmail","outlook","sina_mail","sohu_mail"],"agent-email":"qq_agent_mail","public-skill":"__public_mail_4227__","tencent-meeting":"tencent_meeting","tencent-meeting-mcp":"tencent_meeting","ima":"ima","youdaonote":"youdaonote","weiyun":"tencent_weiyun","tencent-news":"tencent_news","flyai":"flyai","wendao-partner-qclaw-skill":"wendao","bdpan-storage":"bdpan","aippt":"aippt","tencent-musician-skills":"tme_musician_platform","meituan-travel":"meituan","mtunion-product-ai-guide":"meituan_food"}, manualCodeSkills=["imap-smtp-email","tencent-meeting","tencent-meeting-mcp","ima","youdaonote","tencent-news","wecomcli-contact","wecomcli-doc","wecomcli-meeting","wecomcli-msg","wecomcli-schedule","wecomcli-todo","wecomcli-setup","flyai","wendao-partner-qclaw-skill","bdpan-storage","lark-calendar","lark-im","lark-doc","lark-drive","lark-sheets","lark-base","lark-task","lark-mail","lark-contact","lark-wiki","lark-setup","meituan-travel","mtunion-product-ai-guide"], wecomCliSkills=["wecomcli-contact","wecomcli-doc","wecomcli-meeting","wecomcli-msg","wecomcli-schedule","wecomcli-todo","wecomcli-setup"], larkCliSkills=["lark-calendar","lark-im","lark-doc","lark-drive","lark-sheets","lark-base","lark-task","lark-mail","lark-contact","lark-wiki","lark-setup"], logOnly=false
+[qclaw-plugin] ✓ skill-interceptor initialized (0.5ms)
+[qclaw-plugin:queue-guard] shared event bus initialized (listenerCount=0)
+[qclaw-plugin:queue-guard] initializing (pollInterval=2000ms, queueCmd=4158)
+[qclaw-plugin:queue-guard] authInfo: guid=(empty), userId=(empty), gid=guandeMac-mini.local
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/queue-guard/token
+[qclaw-plugin:http-route-registry] registered HTTP route: PUT /qclaw-plugin/queue-guard/token (merged into existing)
+[qclaw-plugin:gateway-registry] registered gateway method: qclaw-plugin.queue-guard.queue-guard.status
+[qclaw-plugin:gateway-registry] registered gateway method alias: queue-guard.status
+[qclaw-plugin:gateway-registry] registered gateway method: qclaw-plugin.queue-guard.queue-guard.abort
+[qclaw-plugin:gateway-registry] registered gateway method alias: queue-guard.abort
+[qclaw-plugin:queue-guard] plugin registered successfully (fetch middleware installed)
+[qclaw-plugin] ✓ queue-guard initialized (1.6ms)
+[qclaw-plugin:qmemory] setup
+[qclaw-plugin:qmemory] 无法确定 WAL 存储目录，插件初始化失败
+[qclaw-plugin] ✓ qmemory initialized (0.4ms)
+[qclaw-plugin:content-plugin] [content-plugin] ===== setup 开始执行 =====
+[qclaw-plugin:content-plugin] [content-plugin] artifact-hint enabled=true
+[qclaw-plugin:content-plugin] registered service: telemetry-galileo
+[qclaw-plugin:gateway-registry] registered gateway method: qclaw-plugin.content-plugin.plugin.start
+[qclaw-plugin:gateway-registry] registered gateway method alias: plugin.start
+[qclaw-plugin:gateway-registry] registered gateway method: qclaw-plugin.content-plugin.report.data
+[qclaw-plugin:gateway-registry] registered gateway method alias: report.data
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/content-plugin/token
+[qclaw-plugin:http-route-registry] registered HTTP route: PUT /qclaw-plugin/content-plugin/token (merged into existing)
+[qclaw-plugin:content-plugin] [undici-tap] 已安装 undici fetch tap（本地模型请求采集）
+[qclaw-plugin:hook-proxy] registering api.on('subagent_spawned') for package content-plugin
+[qclaw-plugin:hook-proxy] registering api.on('subagent_ended') for package content-plugin
+[qclaw-plugin:content-plugin] setup complete
+[qclaw-plugin] ✓ content-plugin initialized (2.9ms)
+[qclaw-plugin:gbrain-skill-injector] 配置已热更新 (mtime=1781030216719.0405, prompt=1815 chars)
+[qclaw-plugin:gbrain-skill-injector] 调度指令已生成 (1815 chars)
+[qclaw-plugin:gbrain-skill-injector] setup complete: core=2, total_active=3
+[qclaw-plugin] ✓ gbrain-skill-injector initialized (1.2ms)
+[qclaw-plugin:skill-hub] setup 开始执行
+[qclaw-plugin:skill-hub] registered tool: skillhub_install
+[qclaw-plugin:skill-hub] setup complete
+[qclaw-plugin] ✓ skill-hub initialized (0.6ms)
+[ima-reader] setup: registering qclaw_read_ima_content tool
+[qclaw-plugin:undefined] registered tool: qclaw_read_ima_content
+[ima-reader] setup complete
+[qclaw-plugin] ✓ undefined initialized (0.4ms, async pending)
+[tdoc-mcp-bridge] setup: registering tdoc MCP bridge tools
+[qclaw-plugin:tdoc-mcp-bridge] registered tool: qclaw_tdoc_mcp_call
+[qclaw-plugin:tdoc-mcp-bridge] registered tool: qclaw_tdoc_mcp_list
+[tdoc-mcp-bridge] setup complete
+[qclaw-plugin] ✓ tdoc-mcp-bridge initialized (0.5ms, async pending)
+[qclaw-plugin:workspace-summary] 无法确定 stateDir，插件初始化失败
+[qclaw-plugin] ✓ workspace-summary initialized (0.2ms)
+[qclaw-plugin:auto-memory] 无法确定 stateDir，插件初始化失败
+[qclaw-plugin] ✓ auto-memory initialized (0.2ms)
+[qclaw-plugin:agent-browser-reporter] Initialized, tracking 42 commands + 9 xb management commands
+[qclaw-plugin] ✓ agent-browser-reporter initialized (0.2ms)
+[qclaw-plugin:prompt-inspector] middleware observer registered (first time)
+[qclaw-plugin:prompt-inspector] stream complete observer registered (first time)
+[qclaw-plugin:http-route-registry] registered HTTP route: GET /qclaw-plugin/prompt-inspector/runs
+[qclaw-plugin:http-route-registry] registered HTTP route: GET /qclaw-plugin/prompt-inspector/run
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/prompt-inspector/clear
+[qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/prompt-inspector/override
+[qclaw-plugin:http-route-registry] registered HTTP route: DELETE /qclaw-plugin/prompt-inspector/override (merged into existing)
+[qclaw-plugin:http-route-registry] registered HTTP route: GET /qclaw-plugin/prompt-inspector/override (merged into existing)
+[qclaw-plugin:prompt-inspector] registered (env gate passed, runtime enabled=false)
+[qclaw-plugin] ✓ prompt-inspector initialized (1.4ms)
+[qclaw-plugin:fetch-chain] installed with 8 middleware(s): [error-response-handler(50), prompt-inspector-override(100), content-plugin(200), trace-span-header-injector(250), pcmgr-ai-security(250), queue-guard(300), prompt-optimizer(900), prompt-inspector(950)]
+[qclaw-plugin] [diag] register() END 35.0ms initialized=18/18 middlewares=[error-response-handler(50),prompt-inspector-override(100),content-plugin(200),trace-span-header-injector(250),pcmgr-ai-security(250),queue-guard(300),prompt-optimizer(900),prompt-inspector(950)]
+[qclaw-plugin] initialized 18/18 package(s)
+[galileo] [galileo-reporter] init 开始
+[galileo] [galileo-reporter] init 完成, env=production
+[wechat-access-插件] 腾讯通路插件已注册（含伽利略上报）
+[qclaw-plugin] [diag] async setup RESOLVED for undefined
+[qclaw-plugin] [diag] async setup RESOLVED for tdoc-mcp-bridge
+Gateway agent failed; falling back to embedded: Error: Unknown agent id "qclaw-dev". Use "openclaw agents list" to see configured agents.
+Error: Unknown agent id "qclaw-dev". Use "openclaw agents list" to see configured agents.
+
+[2026-06-10 10:44:53][monitor] QClaw 执行失败 (exit=1): /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-012.json
+[2026-06-10 11:07:54][monitor] WorkBuddy 任务待处理: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-010.json
+[2026-06-10 12:44:41][monitor] Bridge Monitor 启动 (PID: 75949)
+[2026-06-10 12:44:41][monitor] WorkBuddy 任务待处理: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-010.json
+[2026-06-10 14:05:44][monitor] WorkBuddy 任务待处理: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-031.json
+[2026-06-10 14:25:45][monitor] WorkBuddy 任务待处理: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-032.json
+[2026-06-10 15:05:46][monitor] WorkBuddy 任务待处理: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-033.json
+[2026-06-10 15:27:17][monitor] WorkBuddy 任务待处理: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-039.json
+[2026-06-11 09:27:25][monitor][INFO] Bridge Monitor 启动 (PID: 38243, 轮询间隔=120s, Pending TTL=3600s)
+[2026-06-11 09:27:25][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/claw/tasks/task_2026-06-11-0925.json (agent=)
+[2026-06-11 10:03:24][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-1000.json (agent=)
+[2026-06-11 10:03:24][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260611-041.json (agent=)
+[2026-06-11 11:03:26][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-040.json (agent=)
+[2026-06-11 12:25:28][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-11-040.json (入队 1781151927s 未被消费)
+[2026-06-11 12:25:28][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260610-040.json (入队 1781151927s 未被消费)
+[2026-06-11 12:27:28][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-11-1000.json (入队 1781152048s 未被消费)
+[2026-06-11 12:27:28][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260611-041.json (入队 1781152048s 未被消费)
+[2026-06-11 12:27:28][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-11-0925.json (入队 1781152048s 未被消费)
+[2026-06-11 13:01:33][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/claw/tasks/task_2026-06-11-1300.json (agent=)
+[2026-06-11 13:03:33][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-040.json (agent=)
+[2026-06-11 14:03:34][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-11-041.json (agent=)
+[2026-06-11 14:11:35][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-11-040.json (入队 1781158295s 未被消费)
+[2026-06-11 14:11:35][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-11-041.json (入队 1781158295s 未被消费)
+[2026-06-11 14:11:35][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-11-1300.json (入队 1781158295s 未被消费)
+[2026-06-12 14:25:53][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-12-050.json (入队 1781245553s 未被消费)
+[2026-06-12 14:27:54][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-12-051.json (入队 1781245673s 未被消费)

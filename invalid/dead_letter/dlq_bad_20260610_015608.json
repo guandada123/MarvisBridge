@@ -1,0 +1,24 @@
+{
+  "_dead_letter": {
+    "original_task_id": "bad",
+    "failed_at": "2026-06-10T01:56:08.561263",
+    "reason": "validation_failed",
+    "recovery_suggestion": "retry_with_upgrade: 升级模型/增加超时后重试",
+    "retry_count": 0,
+    "trace_id": ""
+  },
+  "errors": [
+    "缺少必填字段: type",
+    "缺少必填字段: source",
+    "缺少必填字段: title",
+    "无效 project: invalid，可选: ['claw', 'quant', 'shared']",
+    "task_id 格式错误: bad，应为 YYYYMMDD-NNN"
+  ],
+  "original_payload": {
+    "task_id": "bad",
+    "project": "invalid",
+    "status": "pending",
+    "idempotency_key": "invalid:unknown:unknown:unknown"
+  },
+  "retry_history": []
+}

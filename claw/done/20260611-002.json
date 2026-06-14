@@ -1,0 +1,57 @@
+{
+  "task_id": "20260611-002",
+  "project": "claw",
+  "type": "custom",
+  "source": "marvis",
+  "title": "策略层数据基础设施搭建 — 宏观因子+因子模型数据就绪",
+  "priority": "high",
+  "created_at": "2026-06-11T10:00:00+08:00",
+  "tasks": [
+    {
+      "id": "1",
+      "action": "download_ff3",
+      "desc": "从北大光华管理学院官网下载中国版Fama-French三因子/五因子月频数据",
+      "detail": "URL: https://www.gsm.pku.edu.cn/finvc/info/1027/1147.htm → 下载 factors_monthly_2023.xlsx → 转换为 data/factors/ff3_china.json，字段：date, MKT, SMB_FF3, HML_FF3, SMB_FF5, HML_FF5, RMW, CMA, MOM",
+      "module": "新建 data/factors/",
+      "effort": "2h"
+    },
+    {
+      "id": "2",
+      "action": "build_macro_fetcher",
+      "desc": "创建 macro_data.py，批量拉取宏观因子日频/月频数据",
+      "detail": "参考 data/macro_factor_data_handbook.md 第一节，实现以下接口：get_industrial_value_added()、get_cpi_ppi()、get_m2()、get_bond_yield_10y()、get_credit_spread()。输出到 data/macro/ 目录的CSV/JSON文件。注意 bond_china_yield 单次跨度不超1年需循环拉取。",
+      "module": "新建 .workbuddy/scripts/macro_data.py",
+      "effort": "3h"
+    },
+    {
+      "id": "3",
+      "action": "expand_market_data",
+      "desc": "在 market_data.py 中扩展大类资产指数列表和商品/债券数据获取",
+      "detail": "新增：中证全债(bond_composite_index_cbond)、南华商品(futures_index_nh 'NHCI')、COMEX黄金(futures_foreign_hist 'GC')、恒生(stock_hk_index_daily_em 'HSI')、标普500(index_us_stock_sina '.INX')。参考 data/macro_factor_data_handbook.md 第三节。",
+      "module": ".workbuddy/scripts/market_data.py",
+      "effort": "2h"
+    },
+    {
+      "id": "4",
+      "action": "index_handbook",
+      "desc": "索引数据手册到知识库",
+      "detail": "执行 python3 knowledge_base.py report-index --input data/macro_factor_data_handbook.md",
+      "module": ".workbuddy/scripts/knowledge_base.py",
+      "effort": "0.1h"
+    },
+    {
+      "id": "5",
+      "action": "build_corr_monitor",
+      "desc": "在 cron_monitor.py 中新增股债相关性监控告警",
+      "detail": "滚动252日窗口计算沪深300与10年国债的Pearson相关系数，当6个月滚动相关>0时推送飞书告警（提示分散化失效风险）。参考报告方法论：股债相关性转正时固定比例/风险平价均失效。",
+      "module": ".workbuddy/scripts/cron_monitor.py",
+      "effort": "2h"
+    }
+  ],
+  "reference": {
+    "handbook": "/Users/guan/WorkBuddy/Claw/.workbuddy/data/macro_factor_data_handbook.md",
+    "analysis_report": "/Users/guan/WorkBuddy/Claw/.workbuddy/reports/analysis_changjiang_asset_allocation_20260611.md",
+    "priority_rationale": "P0基础设施就绪后，P1策略层才能动刀。股债相关性监控是报告最直接的可落地能力(低难度高ROI)。"
+  },
+  "idempotency_key": "claw:custom:20260611:策略层数据基础设施搭建_—_宏观因子+因子模型数据就绪"
+}

@@ -1,0 +1,12 @@
+{
+  "task_id": "fetch_data_20260612",
+  "type": "failure_notification",
+  "title": "量化数据拉取失败 - 2026-06-12",
+  "description": "fetch_data.py 执行失败：缺少 sqlalchemy 模块",
+  "error": "ModuleNotFoundError: No module named 'sqlalchemy'",
+  "command": "cd /Users/guan/WorkBuddy/QuantTradingSystem && python3 scripts/fetch_data.py",
+  "log_file": "/Users/guan/workbuddy_marvis_bridge/quant/raw_data/fetch_log_20260612.txt",
+  "date": "2026-06-12",
+  "status": "failed",
+  "suggested_fix": "pip install sqlalchemy"
+}

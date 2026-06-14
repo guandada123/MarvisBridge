@@ -1,0 +1,21 @@
+{
+  "task_id": "20260611-001",
+  "target_agent": "qclaw-dev",
+  "project": "claw",
+  "type": "maintenance",
+  "source": "marvis",
+  "priority": "high",
+  "title": "索引新研报：长江证券大类资产配置方法论",
+  "description": "将新写入的研报分析文档纳入 WorkBuddy 知识库索引。执行命令：\npython knowledge_base.py report-index /Users/guan/WorkBuddy/Claw/.workbuddy/reports/analysis_changjiang_asset_allocation_20260611.md\n\n研报概要：\n- 标题：大类资产配置方法论系列报告（一）：从盲人摸象到庖丁解牛\n- 机构：长江证券\n- 日期：2026-06-10\n- 核心内容：四阶段方法论演进（固定比例→MVO→风险平价→因子配置），10项可工程化能力，5个模块整合建议",
+  "params": {
+    "command": "python knowledge_base.py report-index",
+    "report_path": "/Users/guan/WorkBuddy/Claw/.workbuddy/reports/analysis_changjiang_asset_allocation_20260611.md",
+    "report_title": "大类资产配置方法论系列报告（一）：从盲人摸象到庖丁解牛",
+    "report_source": "长江证券",
+    "report_date": "2026-06-10"
+  },
+  "notify_feishu": false,
+  "created_at": "2026-06-11T06:56:00+08:00",
+  "status": "pending",
+  "idempotency_key": "claw:maintenance:20260611:report_index_changjiang_asset_allocation"
+}

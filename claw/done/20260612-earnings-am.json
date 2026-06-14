@@ -1,0 +1,1 @@
+{"task_id":"20260612-earnings-am","project":"claw","type":"data_collection","source":"marvis","title":"财报日历采集-上午完成","params":{"output_dir":"claw/raw_data/","filename":"earnings_calendar_20260612.csv"}}

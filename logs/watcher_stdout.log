@@ -1,0 +1,34 @@
+[2026-06-10 08:31:27][watcher][INFO] ============================================
+[2026-06-10 08:31:27][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v2 启动
+[2026-06-10 08:31:27][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/claw/tasks/
+[2026-06-10 08:31:27][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/quant/tasks/
+[2026-06-10 08:31:27][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-10 08:31:27][watcher][INFO] PID: 27398
+[2026-06-10 08:31:27][watcher][INFO] ============================================
+[2026-06-10 08:31:27][watcher][INFO] 心跳进程已启动 (PID: 27422)
+[2026-06-10 08:31:27][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-10 08:31:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-010.json (项目: claw)
+✅ 任务 20260610-010 校验通过
+   项目: claw | 类型: test | 来源: qclaw
+   🔑 幂等键: claw:test:20260610:QClaw_全链路实战验证
+[2026-06-10 08:31:35][watcher][INFO] 任务校验通过，已写入触发文件
+[2026-06-10 08:31:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/20260610-010.json (项目: claw)
+⏭️  幂等跳过: 业务幂等键 claw:test:20260610:QClaw_全链路实战验证 已在队列中
+[2026-06-10 08:31:37][watcher][WARN] 任务校验失败，已跳过: 20260610-010.json
+[2026-06-10 09:00:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/earnings_2026-06-10_am_done.json (项目: claw)
+❌ 校验失败 (1 个错误):
+  - task_id 格式错误: 2026-06-10-earnings-am，应为 YYYYMMDD-NNN
+   📮 已写入死信队列: /Users/guan/workbuddy_marvis_bridge/claw/dead_letter/dlq_2026-06-10-earnings-am_20260610_090018.json
+[2026-06-10 09:00:18][watcher][WARN] 任务校验失败，已跳过: earnings_2026-06-10_am_done.json
+[2026-06-10 09:26:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-0925.json (项目: claw)
+❌ 校验失败 (1 个错误):
+  - task_id 格式错误: 2026-06-10-0925，应为 YYYYMMDD-NNN
+   📮 已写入死信队列: /Users/guan/workbuddy_marvis_bridge/claw/dead_letter/dlq_2026-06-10-0925_20260610_092649.json
+[2026-06-10 09:26:49][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-0925.json
+[2026-06-10 10:03:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/claw/tasks/2026-06-10-1000.json (项目: claw)
+❌ 校验失败 (1 个错误):
+  - task_id 格式错误: 2026-06-10-1000，应为 YYYYMMDD-NNN
+   📮 已写入死信队列: /Users/guan/workbuddy_marvis_bridge/claw/dead_letter/dlq_2026-06-10-1000_20260610_100321.json
+[2026-06-10 10:03:21][watcher][WARN] 任务校验失败，已跳过: 2026-06-10-1000.json
+[2026-06-10 10:31:22][watcher][INFO] 文件监听器收到停止信号
+[2026-06-10 10:31:22][watcher][INFO] 文件监听器已停止

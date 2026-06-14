@@ -1,0 +1,16 @@
+{
+  "task_id": "2026-06-12-050",
+  "project": "dashboard",
+  "type": "status_report",
+  "source": "marvis",
+  "title": "全项目进度自检",
+  "params": {
+    "action": "report_all_projects",
+    "details": "请逐一检查你负责的所有项目(claw/quant/bridge/dashboard/wemprss/automations/datasource)当前状态，包括：运行状态、最新产出、阻塞项、下一步计划。写入 shared/STATUS.md 更新，同时生成一份简短的 Markdown 报告到 dashboard/status_report_20260612.md"
+  },
+  "created_at": "2026-06-12T10:00:00+08:00",
+  "status": "dead_lettered",
+  "notify_feishu": false,
+  "dead_letter_reason": "WorkBuddy 未在 3600s 内消费，已过期回收",
+  "dead_letter_at": "2026-06-12T06:25:53Z"
+}

@@ -1,0 +1,23 @@
+{
+  "task_id": "20260610-012",
+  "target_agent": "qclaw-dev",
+  "project": "claw",
+  "type": "github_ci_check",
+  "source": "marvis",
+  "priority": "high",
+  "title": "QClaw路由验证",
+  "description": "测试 qclaw-run 全链路：Marvis写入 → Bridge Monitor检测 → qclaw-run派发 → QClaw执行 → results/写回",
+  "params": {
+    "action": "self_check",
+    "verify": [
+      "cli_accessible",
+      "agents_loaded",
+      "skills_available"
+    ]
+  },
+  "notify_feishu": false,
+  "created_at": "2026-06-10T10:42:00+08:00",
+  "status": "completed",
+  "idempotency_key": "claw:github_ci_check:20260610:QClaw路由验证",
+  "completed_at": "2026-06-10T17:21:00+08:00"
+}

@@ -1,0 +1,33 @@
+[Fri Jun 12 14:43:02 CST 2026] === task_sync 扫描 ===
+  MOVE 2026-06-12-040.json → workbuddy_pending/2026-06-12-040.json
+  MOVE 2026-06-12-041.json → workbuddy_pending/2026-06-12-041.json
+  MOVE 2026-06-12-042.json → workbuddy_pending/2026-06-12-042.json
+  MOVE 2026-06-12-1000.json → workbuddy_pending/2026-06-12-1000.json
+  MOVE 2026-06-12-1100.json → workbuddy_pending/2026-06-12-1100.json
+  MOVE 20260610-040.json → workbuddy_pending/20260610-040.json
+  MOVE 20260612-041.json → workbuddy_pending/20260612-041.json
+  MOVE 20260612-earnings-am.json → workbuddy_pending/20260612-earnings-am.json
+  SKIP fetch_data_failure_20260612.json (type=failure_notification, non-actionable)
+  MOVE task_20260612-0925.json → workbuddy_pending/20260612-0925.json
+  MOVE task_20260612-1300.json → workbuddy_pending/20260612-1300.json
+[Fri Jun 12 14:43:02 CST 2026] 同步完成: moved=10 skipped=1
+[Fri Jun 12 15:40:01 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 15:40:01 CST 2026] 同步完成: moved=0 skipped=0
+[Fri Jun 12 16:36:14 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 16:36:14 CST 2026] 同步完成: moved=0 skipped=0
+[Fri Jun 12 17:32:02 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 17:32:02 CST 2026] 同步完成: moved=0 skipped=0
+[Fri Jun 12 17:38:27 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 17:38:27 CST 2026] 同步完成: moved=0 skipped=0
+[Fri Jun 12 18:28:13 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 18:28:13 CST 2026] 同步完成: moved=0 skipped=0
+[Fri Jun 12 19:24:07 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 19:24:07 CST 2026] 同步完成: moved=0 skipped=0
+[Fri Jun 12 20:20:07 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 20:20:07 CST 2026] 同步完成: moved=0 skipped=0
+[Fri Jun 12 21:16:11 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 21:16:11 CST 2026] 同步完成: moved=0 skipped=0
+[Fri Jun 12 22:12:00 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 22:12:00 CST 2026] 同步完成: moved=0 skipped=0
+[Fri Jun 12 23:08:06 CST 2026] === task_sync 扫描 ===
+[Fri Jun 12 23:08:06 CST 2026] 同步完成: moved=0 skipped=0

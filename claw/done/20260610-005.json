@@ -1,0 +1,22 @@
+{
+  "task_id": "20260610-005",
+  "project": "claw",
+  "type": "test",
+  "source": "qclaw",
+  "target_agent": "qclaw-supervisor",
+  "priority": "medium",
+  "title": "QClaw接入-通信链路验证-v2",
+  "description": "Onboarding 第二步(重试)：验证 QClaw 能读写 Bridge 目录。修复 config valid_sources 加入 qclaw。QClaw 写入 task → watcher 检测 → validator 校验通过。",
+  "target_dir": "/Users/guan/WorkBuddy/Claw/",
+  "params": {
+    "action": "self_test",
+    "phase": "onboarding",
+    "fix": "added_qclaw_to_valid_sources"
+  },
+  "notify_feishu": false,
+  "created_at": "2026-06-10T02:35:00+08:00",
+  "status": "completed",
+  "retry_count": 0,
+  "idempotency_key": "claw:test:20260610:QClaw接入-通信链路验证-v2",
+  "completed_at": "2026-06-10T17:21:00+08:00"
+}

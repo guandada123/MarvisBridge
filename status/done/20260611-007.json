@@ -1,0 +1,17 @@
+{
+  "task_id": "20260611-007",
+  "project": "bridge",
+  "type": "maintenance",
+  "source": "marvis",
+  "title": "Bridge 直连模式：信号文件约定",
+  "priority": "high",
+  "created_at": "2026-06-11T08:00:00+08:00",
+  "description": "每完成一个任务写入 results/ 后，同时写入信号文件，Marvis 轮询感知。",
+  "action_items": [
+    "每次写入 claw/results/{task_id}.md 或 quant/results/{task_id}.md 后",
+    "同步写入 status/signals/done_{task_id}.json，内容: {\"task_id\": \"xxx\", \"project\": \"claw|quant\", \"completed_at\": \"ISO8601\", \"result_file\": \"绝对路径\"}",
+    "Marvis 侧周期性检查 signals/ 目录即可实时感知完成状态"
+  ],
+  "notify_feishu": false,
+  "idempotency_key": "bridge:maintenance:20260611:signal_convention"
+}

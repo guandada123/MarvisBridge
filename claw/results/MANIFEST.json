@@ -1,0 +1,77 @@
+{
+  "project": "claw",
+  "generated_at": "2026-06-10T23:00:42.854573",
+  "total_results": 10,
+  "results": [
+    {
+      "task_id": "20260610-001",
+      "output_file": "20260610-001.md",
+      "size_bytes": 928,
+      "created": "2026-06-10T00:40:14.364600",
+      "archived": true
+    },
+    {
+      "task_id": "20260610-004",
+      "output_file": "20260610-004.md",
+      "size_bytes": 544,
+      "created": "2026-06-10T17:28:56.527032",
+      "archived": true
+    },
+    {
+      "task_id": "20260610-005",
+      "output_file": "20260610-005.md",
+      "size_bytes": 373,
+      "created": "2026-06-10T17:28:59.962181",
+      "archived": true
+    },
+    {
+      "task_id": "20260610-009",
+      "output_file": "20260610-009.md",
+      "size_bytes": 801,
+      "created": "2026-06-10T17:27:58.170407",
+      "archived": true
+    },
+    {
+      "task_id": "20260610-010",
+      "output_file": "20260610-010.md",
+      "size_bytes": 533,
+      "created": "2026-06-10T17:27:58.173178",
+      "archived": true
+    },
+    {
+      "task_id": "20260610-011",
+      "output_file": "20260610-011.md",
+      "size_bytes": 567,
+      "created": "2026-06-10T17:27:58.175339",
+      "archived": true
+    },
+    {
+      "task_id": "20260610-012",
+      "output_file": "20260610-012.md",
+      "size_bytes": 451,
+      "created": "2026-06-10T17:29:04.414349",
+      "archived": true
+    },
+    {
+      "task_id": "20260610-013",
+      "output_file": "20260610-013.md",
+      "size_bytes": 956,
+      "created": "2026-06-10T17:27:58.177372",
+      "archived": true
+    },
+    {
+      "task_id": "20260610-033",
+      "output_file": "20260610-033.md",
+      "size_bytes": 781,
+      "created": "2026-06-10T17:27:58.179414",
+      "archived": true
+    },
+    {
+      "task_id": "20260610-034",
+      "output_file": "20260610-034.md",
+      "size_bytes": 317,
+      "created": "2026-06-10T17:27:58.181412",
+      "archived": true
+    }
+  ]
+}

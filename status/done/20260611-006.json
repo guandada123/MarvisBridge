@@ -1,0 +1,21 @@
+{
+  "task_id": "20260611-006",
+  "project": "quant",
+  "type": "deploy",
+  "source": "marvis",
+  "title": "QuantTradingSystem — git 已提交，修复 DB 初始化",
+  "priority": "high",
+  "created_at": "2026-06-11T07:50:00+08:00",
+  "description": "git commit 已完成(e9ff0e2, 7188 files)。本轮处理 004 遗留的 DB 初始化问题。",
+  "action_items": [
+    "检查 docker-compose.yml 中 postgres 的 POSTGRES_DB 环境变量是否设为 quant_user",
+    "若缺失则添加 POSTGRES_DB: quant_user 并重新 docker-compose up -d 验证",
+    "验证 quant_user 数据库创建成功：docker exec quant-postgres psql -U quant_user -c '\\l'"
+  ],
+  "reference": {
+    "previous_result": "quant/results/20260611-004.md",
+    "git_commit": "e9ff0e2"
+  },
+  "notify_feishu": false,
+  "idempotency_key": "quant:deploy:20260611:fix_db_init"
+}

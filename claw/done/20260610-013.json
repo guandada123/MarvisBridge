@@ -1,0 +1,22 @@
+{
+  "task_id": "20260610-013",
+  "target_agent": "workbuddy",
+  "project": "claw",
+  "type": "github_token_request",
+  "source": "marvis",
+  "priority": "high",
+  "title": "提供GitHub Token给Marvis",
+  "description": "Marvis需要在macOS上配置gh CLI连接GitHub，用于拉取和分析开源项目。本机SSH到GitHub被代理拦截(198.18.1.122)，gh CLI已安装(v2.89.0)但未认证。请将你的GitHub Personal Access Token(classic，需repo+read:org权限)写入文件：/Users/guan/WorkBuddy/Claw/.workbuddy/memory/github-token-for-marvis.txt，纯文本，仅token本身，无引号无换行。",
+  "params": {
+    "output_file": "/Users/guan/WorkBuddy/Claw/.workbuddy/memory/github-token-for-marvis.txt",
+    "token_permissions": [
+      "repo",
+      "read:org"
+    ]
+  },
+  "notify_feishu": false,
+  "created_at": "2026-06-10T12:40:00+08:00",
+  "status": "completed",
+  "idempotency_key": "claw:github_token_request:20260610:marvis-gh-setup",
+  "completed_at": "2026-06-10T17:21:00+08:00"
+}
