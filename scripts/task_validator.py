@@ -12,13 +12,13 @@ Marvis-WorkBuddy Bridge 任务格式校验器 v3
       python3 task_validator.py --check-circuit <type>  # 检查熔断状态
 """
 
-import json
-import sys
-import os
-import glob
-import uuid
-import time
 import fcntl
+import glob
+import json
+import os
+import sys
+import time
+import uuid
 from datetime import datetime, timedelta
 
 BRIDGE_DIR = os.path.expanduser("~/workbuddy_marvis_bridge")
@@ -54,6 +54,8 @@ def _write_cb_unlock(fd, data: dict):
     os.write(fd, json.dumps(data, indent=2).encode())
     fcntl.flock(fd, fcntl.LOCK_UN)
     os.close(fd)
+
+
 CONFIG_FILE = os.path.join(BRIDGE_DIR, "shared/config/config.json")
 
 
@@ -71,20 +73,39 @@ def _fallback_config() -> dict:
     """硬编码回退配置"""
     return {
         "projects": {"claw": {}, "quant": {}, "shared": {}},
-        "valid_types": ["data_collection", "code_review", "data_analysis",
-                        "report_generation", "deploy", "test", "maintenance", "custom",
-                        "github_ci_check", "github_pr_review", "social_post",
-                        "content_publish", "wechat_notify", "wechat_push",
-                        "literature_search", "data_collect", "research",
-                        "market_snapshot", "github_token_request"],  # v3.1: 同步 config.json
+        "valid_types": [
+            "data_collection",
+            "code_review",
+            "data_analysis",
+            "report_generation",
+            "deploy",
+            "test",
+            "maintenance",
+            "custom",
+            "github_ci_check",
+            "github_pr_review",
+            "social_post",
+            "content_publish",
+            "wechat_notify",
+            "wechat_push",
+            "literature_search",
+            "data_collect",
+            "research",
+            "market_snapshot",
+            "github_token_request",
+        ],  # v3.1: 同步 config.json
         "valid_sources": ["marvis", "workbuddy", "manual"],
         "valid_priorities": ["high", "medium", "low"],
         "valid_statuses": ["pending", "processing", "completed", "failed", "dead_lettered"],
         "required_fields": ["task_id", "project", "type", "source", "title"],
         "idempotency": {"enabled": True, "check_done_dir": True, "use_business_key": True},
         "dead_letter_queue": {"enabled": True, "retention_days": 30},
-        "circuit_breaker": {"enabled": True, "failure_window_minutes": 30,
-                            "failure_rate_threshold": 0.5, "circuit_open_minutes": 30},
+        "circuit_breaker": {
+            "enabled": True,
+            "failure_window_minutes": 30,
+            "failure_rate_threshold": 0.5,
+            "circuit_open_minutes": 30,
+        },
         "retry": {"default_max_retries": 3},
     }
 
@@ -136,7 +157,7 @@ def check_business_idempotency(idempotency_key: str, project: str) -> tuple[bool
             existing_key = t.get("idempotency_key", "")
             if existing_key and existing_key == idempotency_key:
                 return False, f"业务幂等键 {idempotency_key} 已归档于 {os.path.basename(done_file)}"
-        except (json.JSONDecodeError, IOError):
+        except (OSError, json.JSONDecodeError):
             continue
 
     # 检查 tasks/ 目录
@@ -150,7 +171,7 @@ def check_business_idempotency(idempotency_key: str, project: str) -> tuple[bool
             existing_key = t.get("idempotency_key", "")
             if existing_key and existing_key == idempotency_key:
                 return False, f"业务幂等键 {idempotency_key} 已在队列中"
-        except (json.JSONDecodeError, IOError):
+        except (OSError, json.JSONDecodeError):
             continue
 
     return True, "业务幂等键唯一"
@@ -179,7 +200,10 @@ def check_circuit_breaker(task_type: str) -> tuple[bool, str]:
             opened_time = datetime.fromisoformat(opened_at)
             if datetime.now() - opened_time < timedelta(minutes=circuit_open_minutes):
                 _write_cb_unlock(fd, cb_state)
-                return False, f"熔断器开路: {task_type} 故障率 {circuit.get('failure_rate', '?')}%，熔断至 {opened_time + timedelta(minutes=circuit_open_minutes)}"
+                return (
+                    False,
+                    f"熔断器开路: {task_type} 故障率 {circuit.get('failure_rate', '?')}%，熔断至 {opened_time + timedelta(minutes=circuit_open_minutes)}",
+                )
         except ValueError:
             pass
 
@@ -220,17 +244,22 @@ def update_circuit_breaker(task_type: str, success: bool):
     except TimeoutError:
         return
 
-    circuit = cb_state.get(task_type, {
-        "state": "closed",
-        "failure_count": 0,
-        "total_count": 0,
-        "window_start": datetime.now().isoformat(),
-        "last_updated": datetime.now().isoformat(),
-    })
+    circuit = cb_state.get(
+        task_type,
+        {
+            "state": "closed",
+            "failure_count": 0,
+            "total_count": 0,
+            "window_start": datetime.now().isoformat(),
+            "last_updated": datetime.now().isoformat(),
+        },
+    )
 
     window_minutes = cb_config.get("failure_window_minutes", 30)
     try:
-        window_start = datetime.fromisoformat(circuit.get("window_start", datetime.now().isoformat()))
+        window_start = datetime.fromisoformat(
+            circuit.get("window_start", datetime.now().isoformat())
+        )
         if datetime.now() - window_start > timedelta(minutes=window_minutes):
             # 重置窗口
             circuit["failure_count"] = 0
@@ -264,7 +293,9 @@ def update_circuit_breaker(task_type: str, success: bool):
     _write_cb_unlock(fd, cb_state)
 
 
-def write_dead_letter(task: dict, errors: list[str], project: str, reason: str = "validation_failed"):
+def write_dead_letter(
+    task: dict, errors: list[str], project: str, reason: str = "validation_failed"
+):
     """写入死信队列"""
     config = load_config()
     dlq_config = config.get("dead_letter_queue", {})
@@ -351,7 +382,9 @@ def validate_task(task: dict) -> list[str]:
             try:
                 # 将 HHMM 拆分为 HH:MM 以兼容 Python 3.6+
                 hhmm = parts[3]
-                datetime.strptime(f"{parts[0]}-{parts[1]}-{parts[2]} {hhmm[:2]}:{hhmm[2:]}", "%Y-%m-%d %H:%M")
+                datetime.strptime(
+                    f"{parts[0]}-{parts[1]}-{parts[2]} {hhmm[:2]}:{hhmm[2:]}", "%Y-%m-%d %H:%M"
+                )
             except (ValueError, IndexError):
                 errors.append(f"task_id 格式错误: {tid}，日期/时间解析失败")
 
@@ -363,7 +396,9 @@ def validate_task(task: dict) -> list[str]:
                 except ValueError:
                     errors.append(f"task_id 格式错误: {tid}")
             else:
-                errors.append(f"task_id 格式错误: {tid}，支持 YYYYMMDD-NNN / YYYY-MM-DD-HHMM / YYYYMMDD-XXX")
+                errors.append(
+                    f"task_id 格式错误: {tid}，支持 YYYYMMDD-NNN / YYYY-MM-DD-HHMM / YYYYMMDD-XXX"
+                )
 
         else:
             errors.append(f"task_id 格式错误: {tid}，支持 YYYYMMDD-NNN 或 YYYY-MM-DD-HHMM")
@@ -409,13 +444,15 @@ def add_trace_span(task: dict, action: str, status: str, agent: str = "workbuddy
         return
 
     spans = task.get("_trace_spans", [])
-    spans.append({
-        "timestamp": datetime.now().isoformat(),
-        "trace_id": trace_id,
-        "agent": agent,
-        "action": action,
-        "status": status,
-    })
+    spans.append(
+        {
+            "timestamp": datetime.now().isoformat(),
+            "trace_id": trace_id,
+            "agent": agent,
+            "action": action,
+            "status": status,
+        }
+    )
     task["_trace_spans"] = spans
 
 

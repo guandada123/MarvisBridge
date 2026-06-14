@@ -16,6 +16,7 @@ import json
 import os
 import sys
 import time
+from datetime import UTC
 from pathlib import Path
 
 BRIDGE_DIR = Path.home() / "workbuddy_marvis_bridge"
@@ -95,7 +96,7 @@ def cmd_enqueue_pending(args: list[str]) -> None:
     try:
         with open(task_file) as f:
             data = json.load(f)
-    except (json.JSONDecodeError, IOError) as e:
+    except (OSError, json.JSONDecodeError) as e:
         print(f"ERROR: cannot read task: {e}", file=sys.stderr)
         sys.exit(1)
 
@@ -124,7 +125,7 @@ def cmd_write_dead_letter(args: list[str]) -> None:
     try:
         with open(task_file) as f:
             data = json.load(f)
-    except (json.JSONDecodeError, IOError) as e:
+    except (OSError, json.JSONDecodeError) as e:
         print(f"ERROR: {e}", file=sys.stderr)
         sys.exit(1)
 
@@ -165,7 +166,7 @@ def cmd_check_expired(args: list[str]) -> None:
         try:
             with open(pending_file) as f:
                 data = json.load(f)
-        except (json.JSONDecodeError, IOError):
+        except (OSError, json.JSONDecodeError):
             continue
 
         enqueued_at = data.get("bridge_enqueued_at", 0)
@@ -212,7 +213,6 @@ def cmd_log(args: list[str]) -> None:
 def cmd_gen_health_json(args: list[str]) -> None:
     """生成健康检查 JSON 输出，替代 Shell 手动拼接"""
     import subprocess
-    import shlex
 
     bridge_dir = Path(args[0]) if args else BRIDGE_DIR
     status_dir = bridge_dir / "status"
@@ -255,7 +255,9 @@ def cmd_gen_health_json(args: list[str]) -> None:
 
     # fswatch
     try:
-        result = subprocess.run(["pgrep", "-f", "fswatch.*claw/tasks"], capture_output=True, text=True, timeout=5)
+        result = subprocess.run(
+            ["pgrep", "-f", "fswatch.*claw/tasks"], capture_output=True, text=True, timeout=5
+        )
         fswatch_count = len(result.stdout.strip().split("\n")) if result.stdout.strip() else 0
     except Exception:
         fswatch_count = 0
@@ -272,10 +274,11 @@ def cmd_gen_health_json(args: list[str]) -> None:
     if heartbeat_file.exists():
         last_raw = heartbeat_file.read_text().strip()
         try:
-            from datetime import datetime, timezone
+            from datetime import datetime
+
             # Try ISO format
             last_dt = datetime.fromisoformat(last_raw)
-            age = int((datetime.now(timezone.utc) - last_dt.replace(tzinfo=timezone.utc)).total_seconds())
+            age = int((datetime.now(UTC) - last_dt.replace(tzinfo=UTC)).total_seconds())
         except ValueError:
             age = 999
         if age < 180:
@@ -319,9 +322,10 @@ def cmd_gen_health_json(args: list[str]) -> None:
     else:
         checks["workbuddy_pending"] = {"status": "healthy", "detail": f"{pending_count}条"}
 
-    from datetime import datetime, timezone
+    from datetime import datetime
+
     output = {
-        "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "timestamp": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "healthy": all_healthy,
         "checks": checks,
         "issues": issues,

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """生成 results/ 目录的清单文件 MANIFEST.json，包含执行概要"""
+
 import json
 import os
 import sys
@@ -23,12 +24,14 @@ for fname in sorted(os.listdir(results_dir)):
         continue
     stat = os.stat(fpath)
     task_id = fname.rsplit(".", 1)[0]
-    entries.append({
-        "task_id": task_id,
-        "output_file": fname,
-        "size_bytes": stat.st_size,
-        "created": datetime.fromtimestamp(stat.st_ctime).isoformat(),
-    })
+    entries.append(
+        {
+            "task_id": task_id,
+            "output_file": fname,
+            "size_bytes": stat.st_size,
+            "created": datetime.fromtimestamp(stat.st_ctime).isoformat(),
+        }
+    )
 
 # 标记是否已有 done 记录
 for entry in entries:

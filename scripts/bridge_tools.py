@@ -7,14 +7,12 @@
 - rotate_data: 30 天数据滚动清理
 """
 
+import glob
 import json
 import os
 import sys
-import time
-import shutil
-import glob
 from datetime import datetime, timedelta
-from typing import Any, Optional, Tuple
+from typing import Any
 
 BRIDGE_DIR = os.path.expanduser("~/workbuddy_marvis_bridge")
 CONFIG_FILE = os.path.join(BRIDGE_DIR, "shared/config/config.json")
@@ -24,9 +22,9 @@ LOCK_DIR = os.path.join(BRIDGE_DIR, "status/locks")
 def load_config() -> dict:
     """安全加载 bridge 配置文件，失败返回空字典"""
     try:
-        with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+        with open(CONFIG_FILE, encoding="utf-8") as f:
             return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError, IOError):
+    except (OSError, FileNotFoundError, json.JSONDecodeError):
         return {}
 
 
@@ -45,7 +43,7 @@ def sort_tasks_by_priority(tasks_dir: str) -> list[tuple[int, str, dict[str, Any
             if t.get("status") == "pending":
                 p = priority_order.get(t.get("priority", "medium"), 2)
                 tasks.append((p, f, t))
-        except (json.JSONDecodeError, IOError):
+        except (OSError, json.JSONDecodeError):
             continue
 
     tasks.sort(key=lambda x: x[0])
@@ -71,11 +69,14 @@ def acquire_lock(app_name: str, timeout_seconds: int = 300) -> bool:
 
     # 创建锁
     with open(lock_file, "w") as f:
-        json.dump({
-            "app": app_name,
-            "locked_at": datetime.now().isoformat(),
-            "pid": os.getpid(),
-        }, f)
+        json.dump(
+            {
+                "app": app_name,
+                "locked_at": datetime.now().isoformat(),
+                "pid": os.getpid(),
+            },
+            f,
+        )
     return True
 
 
@@ -96,7 +97,6 @@ def check_sla(project: str, task_type: str, deadline_minutes: int = 5) -> dict[s
     }
 
     tasks_dir = os.path.join(BRIDGE_DIR, project, "tasks")
-    done_dir = os.path.join(BRIDGE_DIR, project, "done")
 
     for f in glob.glob(os.path.join(tasks_dir, "*.json")):
         try:
@@ -114,14 +114,16 @@ def check_sla(project: str, task_type: str, deadline_minutes: int = 5) -> dict[s
             lag = (datetime.now() - deadline).total_seconds() / 60
 
             if lag > deadline_minutes:
-                result["violations"].append({
-                    "task_id": t["task_id"],
-                    "title": t.get("title", ""),
-                    "deadline": t["deadline"],
-                    "lag_minutes": round(lag, 1),
-                })
+                result["violations"].append(
+                    {
+                        "task_id": t["task_id"],
+                        "title": t.get("title", ""),
+                        "deadline": t["deadline"],
+                        "lag_minutes": round(lag, 1),
+                    }
+                )
                 result["healthy"] = False
-        except (json.JSONDecodeError, ValueError, IOError):
+        except (OSError, json.JSONDecodeError, ValueError):
             continue
 
     return result
@@ -199,9 +201,7 @@ def resolve_data_source(task: dict[str, Any]) -> dict[str, Any]:
 
     if not source_info:
         # 尝试从 params.data_source 读取
-        source_info = ds_config.get("available", {}).get(
-            params.get("data_source", ""), {}
-        )
+        source_info = ds_config.get("available", {}).get(params.get("data_source", ""), {})
 
     if not source_info:
         return {
@@ -226,7 +226,9 @@ def resolve_data_source(task: dict[str, Any]) -> dict[str, Any]:
             "name": backup_key,
             "type": backup_info.get("type"),
             "tool": backup_info.get("mcp_name") or backup_info.get("skill_name"),
-        } if backup_info else None,
+        }
+        if backup_info
+        else None,
         "params": params,
     }
 
@@ -243,8 +245,8 @@ def generate_data_collection_prompt(task: dict[str, Any]) -> str:
 
     lines = [
         f"# {task_title}",
-        f"",
-        f"## 数据源",
+        "",
+        "## 数据源",
         f"- 主: {p['tool']} ({p['type']})",
     ]
     if source["fallback"]:
@@ -272,6 +274,8 @@ def generate_data_collection_prompt(task: dict[str, Any]) -> str:
     lines.append("如主数据源不可用，自动切换备用数据源。")
 
     return "\n".join(lines)
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
 
@@ -280,8 +284,8 @@ if __name__ == "__main__":
             tasks_dir = os.path.join(BRIDGE_DIR, d, "tasks")
             tasks = sort_tasks_by_priority(tasks_dir)
             print(f"\n{d}/tasks: {len(tasks)} pending")
-            for p, f, t in tasks:
-                print(f"  {t.get('priority', '?')}: {t['task_id']} {t.get('title','')}")
+            for _p, _f, t in tasks:
+                print(f"  {t.get('priority', '?')}: {t['task_id']} {t.get('title', '')}")
 
     elif cmd == "lock":
         app = sys.argv[2] if len(sys.argv) > 2 else "default"

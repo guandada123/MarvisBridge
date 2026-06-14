@@ -6,10 +6,9 @@
   python3 extract_ocr_text.py --watch      # 持续监听新任务（配合 cron 或 launchd）
   python3 extract_ocr_text.py --file X.json # 处理单个任务文件
 """
+
 import json
-import os
 import sys
-import glob
 from pathlib import Path
 
 BRIDGE_DIR = Path.home() / "workbuddy_marvis_bridge"
@@ -20,9 +19,9 @@ MARKET_DATA_DIR = BRIDGE_DIR / "shared" / "market_data"
 def extract_ocr_from_task(task_file: Path) -> bool:
     """从任务JSON提取ocr_text，保存为对应的.txt文件"""
     try:
-        with open(task_file, "r", encoding="utf-8") as f:
+        with open(task_file, encoding="utf-8") as f:
             task = json.load(f)
-    except (json.JSONDecodeError, IOError) as e:
+    except (OSError, json.JSONDecodeError) as e:
         print(f"  [SKIP] {task_file.name}: {e}")
         return False
 

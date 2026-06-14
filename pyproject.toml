@@ -14,7 +14,9 @@ dev = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
     "ruff>=0.5",
+    "mypy>=1.0",
     "bandit>=1.7",
+    "pre-commit>=3.0",
 ]
 
 [tool.pytest.ini_options]
@@ -37,6 +39,16 @@ ignore = ["E501"]
 
 [tool.ruff.format]
 quote-style = "double"
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+no_implicit_optional = true
 
 [tool.bandit]
 exclude_dirs = ["tests"]

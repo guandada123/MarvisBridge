@@ -5,12 +5,11 @@ bridge_notify.py — 跨平台通知模块
 用法:
   python3 bridge_notify.py <title> <message> [--platform auto|macos|linux|feishu]
 """
+
 import json
-import os
 import subprocess
 import sys
 from pathlib import Path
-from typing import Optional
 
 BRIDGE_DIR = Path.home() / "workbuddy_marvis_bridge"
 CONFIG_FILE = BRIDGE_DIR / "shared" / "config" / "config.json"
@@ -39,7 +38,8 @@ def notify_macos(title: str, message: str) -> bool:
     try:
         subprocess.run(
             [
-                "osascript", "-e",
+                "osascript",
+                "-e",
                 f'display notification "{message}" with title "{title}" sound name "Glass"',
             ],
             capture_output=True,
@@ -67,7 +67,7 @@ def notify_feishu(title: str, message: str) -> bool:
     """飞书 Webhook 通知"""
     config = load_config()
     webhook_url = config.get("notifications", {}).get("feishu_webhook", "")
-    
+
     if not webhook_url:
         print("[bridge_notify] 飞书 webhook 未配置，跳过", file=sys.stderr)
         return False
@@ -75,27 +75,29 @@ def notify_feishu(title: str, message: str) -> bool:
     try:
         import urllib.request
 
-        payload = json.dumps({
-            "msg_type": "interactive",
-            "card": {
-                "header": {
-                    "title": {"tag": "plain_text", "content": title},
-                    "template": "blue",
-                },
-                "elements": [
-                    {"tag": "markdown", "content": message},
-                    {
-                        "tag": "note",
-                        "elements": [
-                            {
-                                "tag": "plain_text",
-                                "content": f"Bridge Notify · {_now_str()}",
-                            }
-                        ],
+        payload = json.dumps(
+            {
+                "msg_type": "interactive",
+                "card": {
+                    "header": {
+                        "title": {"tag": "plain_text", "content": title},
+                        "template": "blue",
                     },
-                ],
-            },
-        }).encode("utf-8")
+                    "elements": [
+                        {"tag": "markdown", "content": message},
+                        {
+                            "tag": "note",
+                            "elements": [
+                                {
+                                    "tag": "plain_text",
+                                    "content": f"Bridge Notify · {_now_str()}",
+                                }
+                            ],
+                        },
+                    ],
+                },
+            }
+        ).encode("utf-8")
 
         req = urllib.request.Request(
             webhook_url, data=payload, headers={"Content-Type": "application/json"}
@@ -109,10 +111,11 @@ def notify_feishu(title: str, message: str) -> bool:
 
 def _now_str() -> str:
     from datetime import datetime
+
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
-def send(title: str, message: str, platform: Optional[str] = None) -> dict[str, bool]:
+def send(title: str, message: str, platform: str | None = None) -> dict[str, bool]:
     """发送通知，返回各平台结果"""
     platform = platform or detect_platform()
     results: dict[str, bool] = {}
