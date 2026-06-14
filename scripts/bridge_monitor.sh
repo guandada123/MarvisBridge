@@ -20,6 +20,11 @@ TRIGGER_DIR="$BRIDGE_DIR/status/trigger_queue"
 LOG_FILE="$BRIDGE_DIR/logs/monitor.log"
 PID_FILE="$BRIDGE_DIR/status/monitor.pid"
 TOOL="$BRIDGE_DIR/scripts/bridge_monitor_tools.py"
+LOG_ROTATE="$BRIDGE_DIR/scripts/log_rotate.sh"
+
+# 日志轮转：每 LOG_ROTATE_INTERVAL 轮执行一次（约每小时，30s×120=3600s）
+LOG_ROTATE_INTERVAL=120
+_rotate_counter=0
 
 # 一次性读取配置（仅启动时调用一次 Python）
 MONITOR_INTERVAL=$(python3 "$TOOL" get-config automation.scan_interval_seconds 30 2>/dev/null)
@@ -117,6 +122,15 @@ while true; do
                 OK\|*) ;;  # 无过期
             esac
         done <<< "$EXPIRED_OUTPUT"
+    fi
+
+    # ==================== 自维护：定期日志轮转 ====================
+    _rotate_counter=$((_rotate_counter + 1))
+    if [ "$_rotate_counter" -ge "$LOG_ROTATE_INTERVAL" ] && [ -x "$LOG_ROTATE" ]; then
+        if bash "$LOG_ROTATE" --max-size-mb 50 --keep 7 >> "$LOG_FILE" 2>&1; then
+            log "日志轮转完成"
+        fi
+        _rotate_counter=0
     fi
 
     sleep "$MONITOR_INTERVAL"

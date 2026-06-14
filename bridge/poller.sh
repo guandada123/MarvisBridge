@@ -20,9 +20,13 @@ log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$LOG_FILE"
 }
 
-# 获取当前队列快照（文件名列表的 hash）
+# 获取当前队列快照（文件名列表 + 目录 mtime 的 hash）
+# 目录 mtime 会在任何文件增删时更新，确保不会漏检窗口内的快速变更
 current_snapshot() {
-    ls "$PENDING_DIR"/*.json 2>/dev/null | sort | md5 -q 2>/dev/null || echo "empty"
+    (
+        ls "$PENDING_DIR"/*.json 2>/dev/null | sort
+        stat -f "%m" "$PENDING_DIR" 2>/dev/null || echo "0"
+    ) | md5 -q 2>/dev/null || echo "empty"
 }
 
 # 触发 WorkBuddy 消费
