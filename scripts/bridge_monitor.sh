@@ -10,7 +10,10 @@
 #       (性能优化：从 7+ 次独立 Python 进程 → 每轮循环仅 2-3 次调用)
 # ============================================================
 
-set +e
+set -euo pipefail
+
+# 错误处理：关键路径失败时记录并继续（守护进程不能因此退出）
+trap 'log_err "脚本异常退出 (line $LINENO, exit=$?)"' ERR
 
 BRIDGE_DIR="$HOME/workbuddy_marvis_bridge"
 TRIGGER_DIR="$BRIDGE_DIR/status/trigger_queue"
@@ -68,7 +71,7 @@ log "Bridge Monitor 启动 (PID: $$, 轮询间隔=${MONITOR_INTERVAL}s, Pending 
 
 while true; do
     # ==================== 消费触发队列 ====================
-    for trigger_file in $(ls -1 "$TRIGGER_DIR"/*.json 2>/dev/null | sort); do
+    for trigger_file in $(ls -1 "$TRIGGER_DIR"/*.json 2>/dev/null | sort || true); do
         [ ! -f "$trigger_file" ] && continue
 
         # 用工具脚本一次性读取 task_file 字段

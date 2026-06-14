@@ -3,6 +3,8 @@
 # 用途: 每60秒扫描 workbuddy_pending/，有新任务时触发 WorkBuddy 消费
 # 部署: launchd agent (com.marvis.bridge-poller.plist)
 
+set -euo pipefail
+
 BRIDGE_ROOT="${BRIDGE_ROOT:-$HOME/workbuddy_marvis_bridge}"
 TOOL="$BRIDGE_ROOT/scripts/bridge_monitor_tools.py"
 PENDING_DIR="$BRIDGE_ROOT/status/workbuddy_pending"
@@ -10,6 +12,9 @@ SIGNAL_DIR="$BRIDGE_ROOT/status/signals"
 LOG_FILE="$BRIDGE_ROOT/status/poller.log"
 STATE_FILE="$BRIDGE_ROOT/status/.poller_state"
 INTERVAL=60
+
+# 守护进程错误处理：记录但不退出
+trap 'log "脚本异常 (line $LINENO, exit=$?)"' ERR
 
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$LOG_FILE"
@@ -22,15 +27,19 @@ current_snapshot() {
 
 # 触发 WorkBuddy 消费
 trigger_workbuddy() {
-    # WorkBuddy CLI 入口（待 WorkBuddy 侧暴露后填入）
-    # /path/to/workbuddy consume --dir "$PENDING_DIR"
-    log "TRIGGER: 队列有任务待消费，但 WorkBuddy CLI 未接入"
+    local consumer="$BRIDGE_ROOT/bridge/workbuddy_consumer.sh"
     
-    # 降级: 写触发标记文件
-    echo "$(date +%s)" > "$BRIDGE_ROOT/status/.trigger_pending"
+    if [ -x "$consumer" ]; then
+        log "TRIGGER: 启动 Bridge Consumer 消费 ${task_count} 个任务"
+        bash "$consumer" >> "$LOG_FILE" 2>&1 &
+        log "TRIGGER: Consumer 已后台启动 (PID: $!)"
+    else
+        log "TRIGGER: Consumer 脚本不可用 ($consumer)，写入降级信号"
+        echo "$(date +%s)" > "$BRIDGE_ROOT/status/.trigger_pending"
+    fi
     
     # macOS 通知
-    osascript -e "display notification \"队列中有待消费任务\" with title \"Bridge Poller\" sound name \"Glass\"" 2>/dev/null
+    osascript -e "display notification \"队列中有 ${task_count} 个待消费任务\" with title \"Bridge Poller\" sound name \"Glass\"" 2>/dev/null
 }
 
 # 主循环
