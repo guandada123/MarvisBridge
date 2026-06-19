@@ -1,7 +1,7 @@
 #!/bin/bash
 # ============================================================
 # Bridge Monitor v3.4 - 持续消费 trigger 队列并派发任务
-# 每30秒轮询 status/trigger_queue/ 目录，按时间戳排序消费
+# 每120秒轮询 status/trigger_queue/ 目录，按时间戳排序消费（实际值从 config.json 读取）
 # 所有任务 → 写入 workbuddy_pending/（WorkBuddy 自行轮询消费）
 # v3.1: 改为目录队列消费，支持多任务并发不丢失
 # v3.2: workbuddy_pending 过期回收 + 可配置轮询间隔
@@ -11,9 +11,6 @@
 # ============================================================
 
 set -euo pipefail
-
-# 错误处理：关键路径失败时记录并继续（守护进程不能因此退出）
-trap 'log_err "脚本异常退出 (line $LINENO, exit=$?)"' ERR
 
 BRIDGE_DIR="$HOME/workbuddy_marvis_bridge"
 TRIGGER_DIR="$BRIDGE_DIR/status/trigger_queue"
@@ -25,6 +22,16 @@ LOG_ROTATE="$BRIDGE_DIR/scripts/log_rotate.sh"
 # 日志轮转：每 LOG_ROTATE_INTERVAL 轮执行一次（约每小时，30s×120=3600s）
 LOG_ROTATE_INTERVAL=120
 _rotate_counter=0
+
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')][monitor][INFO] $*" | tee -a "$LOG_FILE"
+}
+log_err() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')][monitor][ERROR] $*" | tee -a "$LOG_FILE"
+}
+
+# 函数定义必须在 trap 之前，否则 trap 触发时 log_err 不存在
+trap 'log_err "脚本异常退出 (line $LINENO, exit=$?)"' ERR
 
 # 一次性读取配置（仅启动时调用一次 Python）
 MONITOR_INTERVAL=$(python3 "$TOOL" get-config automation.scan_interval_seconds 30 2>/dev/null)
@@ -58,13 +65,6 @@ cleanup() {
 }
 trap cleanup SIGINT SIGTERM
 
-log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')][monitor][INFO] $*" | tee -a "$LOG_FILE"
-}
-log_err() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')][monitor][ERROR] $*" | tee -a "$LOG_FILE"
-}
-
 # 将失败任务写入死信队列（使用工具脚本）
 write_dead_letter() {
     local task_file=$1
@@ -76,36 +76,22 @@ log "Bridge Monitor 启动 (PID: $$, 轮询间隔=${MONITOR_INTERVAL}s, Pending 
 
 while true; do
     # ==================== 消费触发队列 ====================
-    for trigger_file in $(ls -1 "$TRIGGER_DIR"/*.json 2>/dev/null | sort || true); do
-        [ ! -f "$trigger_file" ] && continue
+    # v3.5: consumer 直接扫描 workbuddy_pending/，移除冗余 enqueue-pending 步骤
+    # 流程：读取 trigger → 验证 task_file 存在 → 删 trigger
+    while IFS= read -r trigger_file; do
+        [ -f "$trigger_file" ] || continue
 
-        # 用工具脚本一次性读取 task_file 字段
+        # 用工具脚本读取 trigger_file 的 task_file 字段
         TASK_FILE=$(python3 "$TOOL" get-task-field "$trigger_file" task_file "" 2>/dev/null)
         if [ -z "$TASK_FILE" ] || [ ! -f "$TASK_FILE" ]; then
-            log_err "触发文件无效或任务文件不存在: $trigger_file"
+            log "触发文件已消费或任务文件不存在，清理触发条目: $trigger_file"
             rm -f "$trigger_file"
             continue
         fi
 
-        # 用工具脚本一次性读取 target_agent 和 project
-        TARGET=$(python3 "$TOOL" get-task-field "$TASK_FILE" target_agent "" 2>/dev/null)
-        PROJECT=$(python3 "$TOOL" get-task-field "$TASK_FILE" project claw 2>/dev/null)
-
-        # WorkBuddy 任务写入待处理队列（工具脚本批量操作）
-        PENDING_DIR="$BRIDGE_DIR/status/workbuddy_pending"
-        RESULT=$(python3 "$TOOL" enqueue-pending "$TASK_FILE" "$PENDING_DIR" 2>/dev/null)
-        # 输出格式: ENQUEUED|task_id|project|target_agent
-        if [ $? -eq 0 ]; then
-            TASK_ID=$(echo "$RESULT" | cut -d'|' -f2)
-            log "WorkBuddy 任务已入队: $TASK_FILE (id=$TASK_ID, agent=$TARGET)"
-        else
-            log_err "任务入队失败: $TASK_FILE"
-            write_dead_letter "$TASK_FILE" "bridge_monitor: enqueue_pending 失败"
-        fi
-
-        # 消费完毕，删除触发条目
+        log "任务已就绪等待消费: $TASK_FILE"
         rm -f "$trigger_file"
-    done
+    done < <(find "$TRIGGER_DIR" -name "*.json" -maxdepth 1 -type f 2>/dev/null | sort)
 
     # ==================== v3.4: workbuddy_pending 过期回收（工具脚本批量处理） ====================
     PENDING_DIR="$BRIDGE_DIR/status/workbuddy_pending"

@@ -54,11 +54,7 @@ for logfile in "$LOGS_DIR"/*.log; do
     fi
 done
 
-# 清理过期归档（KEEP_DAYS 天前，跨平台兼容）
-if [[ "$(uname)" == "Darwin" ]]; then
-    find "$ARCHIVE_DIR" -name "*.log.gz" -mtime "+${KEEP_DAYS}" -delete 2>/dev/null
-else
-    find "$ARCHIVE_DIR" -name "*.log.gz" -mtime "+${KEEP_DAYS}" -delete 2>/dev/null
-fi
+# 清理过期归档（KEEP_DAYS 天前，BSD/GNU find 均支持 -delete -mtime）
+find "$ARCHIVE_DIR" -name "*.log.gz" -mtime "+${KEEP_DAYS}" -delete 2>/dev/null
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')][log_rotate] 轮转完成 (max=${MAX_SIZE_MB}MB, keep=${KEEP_DAYS}d)"

@@ -26,23 +26,33 @@ done
 
 # ==================== 检查项 ====================
 
-declare -A CHECKS
+# 使用并行索引数组替代 declare -A（bash 3.2 不兼容关联数组）
+CHECK_KEYS=()
+CHECK_VALS=()
 ALL_HEALTHY=true
 ISSUES=()
+
+# 辅助：安全添加检查结果
+add_check() {
+    local key="$1"
+    local val="$2"
+    CHECK_KEYS+=("$key")
+    CHECK_VALS+=("$val")
+}
 
 # --- 1. watcher 进程 ---
 WATCHER_PID_FILE="$STATUS_DIR/watcher.pid"
 if [ -f "$WATCHER_PID_FILE" ]; then
     WATCHER_PID=$(cat "$WATCHER_PID_FILE")
     if kill -0 "$WATCHER_PID" 2>/dev/null; then
-        CHECKS["watcher"]="healthy|PID=$WATCHER_PID"
+        add_check "watcher" "healthy|PID=$WATCHER_PID"
     else
-        CHECKS["watcher"]="dead|PID文件存在但进程不存在"
+        add_check "watcher" "dead|PID文件存在但进程不存在"
         ALL_HEALTHY=false
         ISSUES+=("watcher 进程已死亡 (PID=$WATCHER_PID)")
     fi
 else
-    CHECKS["watcher"]="missing|无 PID 文件"
+    add_check "watcher" "missing|无 PID 文件"
     ALL_HEALTHY=false
     ISSUES+=("watcher 未启动 (无 PID 文件)")
 fi
@@ -52,24 +62,24 @@ MONITOR_PID_FILE="$STATUS_DIR/monitor.pid"
 if [ -f "$MONITOR_PID_FILE" ]; then
     MONITOR_PID=$(cat "$MONITOR_PID_FILE")
     if kill -0 "$MONITOR_PID" 2>/dev/null; then
-        CHECKS["monitor"]="healthy|PID=$MONITOR_PID"
+        add_check "monitor" "healthy|PID=$MONITOR_PID"
     else
-        CHECKS["monitor"]="dead|PID文件存在但进程不存在"
+        add_check "monitor" "dead|PID文件存在但进程不存在"
         ALL_HEALTHY=false
         ISSUES+=("monitor 进程已死亡 (PID=$MONITOR_PID)")
     fi
 else
-    CHECKS["monitor"]="missing|无 PID 文件"
+    add_check "monitor" "missing|无 PID 文件"
     ALL_HEALTHY=false
     ISSUES+=("monitor 未启动 (无 PID 文件)")
 fi
 
 # --- 3. fswatch 进程 ---
-FSWATCH_COUNT=$(pgrep -f "fswatch.*claw/tasks" 2>/dev/null | wc -l | tr -d ' ')
+FSWATCH_COUNT=$(pgrep -f "fswatch.*workbuddy_pending" 2>/dev/null | wc -l | tr -d ' ')
 if [ "$FSWATCH_COUNT" -gt 0 ]; then
-    CHECKS["fswatch"]="healthy|${FSWATCH_COUNT} 个进程"
+    add_check "fswatch" "healthy|${FSWATCH_COUNT} 个进程"
 else
-    CHECKS["fswatch"]="dead|无 fswatch 进程"
+    add_check "fswatch" "dead|无 fswatch 进程"
     ALL_HEALTHY=false
     ISSUES+=("fswatch 未运行，文件监听已停止")
 fi
@@ -87,14 +97,14 @@ if [ -f "$HEARTBEAT_FILE" ]; then
     NOW_EPOCH=$(date +%s)
     HEARTBEAT_AGE=$((NOW_EPOCH - HEARTBEAT_EPOCH))
     if [ "$HEARTBEAT_AGE" -lt 180 ]; then
-        CHECKS["heartbeat"]="healthy|${HEARTBEAT_AGE}s 前"
+        add_check "heartbeat" "healthy|${HEARTBEAT_AGE}s 前"
     else
-        CHECKS["heartbeat"]="stale|${HEARTBEAT_AGE}s 未更新"
+        add_check "heartbeat" "stale|${HEARTBEAT_AGE}s 未更新"
         ALL_HEALTHY=false
         ISSUES+=("心跳停滞 ${HEARTBEAT_AGE}s，watcher 可能卡死")
     fi
 else
-    CHECKS["heartbeat"]="missing|无心跳文件"
+    add_check "heartbeat" "missing|无心跳文件"
     ALL_HEALTHY=false
     ISSUES+=("无心跳文件")
 fi
@@ -104,13 +114,13 @@ TRIGGER_DIR="$STATUS_DIR/trigger_queue"
 if [ -d "$TRIGGER_DIR" ]; then
     TRIGGER_COUNT=$(ls -1 "$TRIGGER_DIR"/*.json 2>/dev/null | wc -l | tr -d ' ')
     if [ "$TRIGGER_COUNT" -gt 20 ]; then
-        CHECKS["trigger_queue"]="backlogged|${TRIGGER_COUNT} 条积压"
+        add_check "trigger_queue" "backlogged|${TRIGGER_COUNT} 条积压"
         ISSUES+=("trigger_queue 积压 ${TRIGGER_COUNT} 条，monitor 可能处理不过来")
     else
-        CHECKS["trigger_queue"]="healthy|${TRIGGER_COUNT} 条"
+        add_check "trigger_queue" "healthy|${TRIGGER_COUNT} 条"
     fi
 else
-    CHECKS["trigger_queue"]="missing|目录不存在"
+    add_check "trigger_queue" "missing|目录不存在"
 fi
 
 # --- 6. dead_letter ---
@@ -123,24 +133,24 @@ for proj in claw quant; do
     fi
 done
 if [ "$DEAD_TOTAL" -gt 50 ]; then
-    CHECKS["dead_letter"]="warning|${DEAD_TOTAL} 封死信"
+    add_check "dead_letter" "warning|${DEAD_TOTAL} 封死信"
     ISSUES+=("死信队列累积 ${DEAD_TOTAL} 封，建议清理")
 else
-    CHECKS["dead_letter"]="healthy|${DEAD_TOTAL} 封"
+    add_check "dead_letter" "healthy|${DEAD_TOTAL} 封"
 fi
 
-# --- 8. workbuddy_pending 积压 ---
+# --- 7. workbuddy_pending 积压 ---
 PENDING_DIR="$STATUS_DIR/workbuddy_pending"
 if [ -d "$PENDING_DIR" ]; then
     PENDING_COUNT=$(ls -1 "$PENDING_DIR"/*.json 2>/dev/null | wc -l | tr -d ' ')
     if [ "$PENDING_COUNT" -gt 10 ]; then
-        CHECKS["workbuddy_pending"]="backlogged|${PENDING_COUNT} 条待处理"
+        add_check "workbuddy_pending" "backlogged|${PENDING_COUNT} 条待处理"
         ISSUES+=("WorkBuddy 待处理队列积压 ${PENDING_COUNT} 条")
     else
-        CHECKS["workbuddy_pending"]="healthy|${PENDING_COUNT} 条"
+        add_check "workbuddy_pending" "healthy|${PENDING_COUNT} 条"
     fi
 else
-    CHECKS["workbuddy_pending"]="healthy|0 条 (目录未创建)"
+    add_check "workbuddy_pending" "healthy|0 条 (目录未创建)"
 fi
 
 # ==================== 输出 ====================
@@ -156,8 +166,10 @@ else
     echo "  $(date '+%Y-%m-%d %H:%M:%S')"
     echo "========================================"
     echo ""
-    for key in watcher monitor fswatch heartbeat trigger_queue dead_letter workbuddy_pending; do
-        IFS="|" read -r status detail <<< "${CHECKS[$key]}"
+    for i in "${!CHECK_KEYS[@]}"; do
+        key="${CHECK_KEYS[$i]}"
+        val="${CHECK_VALS[$i]}"
+        IFS="|" read -r status detail <<< "$val"
         case "$status" in
             healthy)    icon="✅" ;;
             warning)    icon="⚠️" ;;

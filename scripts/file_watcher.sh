@@ -30,6 +30,52 @@ LOG_FILE="$LOGS_DIR/watcher.log"
 # 确保目录存在
 mkdir -p "$STATUS_DIR" "$LOGS_DIR"
 
+# 去重缓存：文件系统级去重（兼容 bash 3.2，不依赖 declare -A 关联数组）
+DEDUP_DIR="$STATUS_DIR/.dedup_cache"
+DEDUP_TTL=300  # 同一文件 300 秒内不重复触发
+mkdir -p "$DEDUP_DIR"
+
+# 去重检查：同一路径在 DEDUP_TTL 秒内仅第一次放行
+# 返回 0 = 通过(未处理过/已过期)，返回 1 = 跳过(仍在去重窗口内)
+dedup_check() {
+    local event_path="$1"
+    # 生成缓存 key：取 md5 摘要，无 md5 则用路径的十六进制编码
+    local cache_key
+    if command -v md5 &>/dev/null; then
+        cache_key=$(printf '%s' "$event_path" | md5 -q 2>/dev/null)
+    elif command -v shasum &>/dev/null; then
+        cache_key=$(printf '%s' "$event_path" | shasum -a 256 2>/dev/null | cut -d' ' -f1)
+    else
+        # 兜底：路径转十六进制
+        cache_key=$(printf '%s' "$event_path" | xxd -p 2>/dev/null | tr -d '\n')
+    fi
+    [ -z "$cache_key" ] && cache_key=$(echo "$event_path" | sed 's/[^a-zA-Z0-9._-]/_/g')
+    
+    local cache_file="$DEDUP_DIR/$cache_key"
+    
+    if [ -f "$cache_file" ]; then
+        local expire_ts=0
+        expire_ts=$(cat "$cache_file" 2>/dev/null)
+        [ -z "$expire_ts" ] && expire_ts=0
+        local now
+        now=$(date +%s)
+        # 仍在去重窗口内 → 跳过
+        if [ "$now" -lt "$expire_ts" ] 2>/dev/null; then
+            return 1
+        fi
+    fi
+    
+    # 写入到期时间戳（当前时间 + TTL）
+    echo "$(( $(date +%s) + DEDUP_TTL ))" > "$cache_file"
+    
+    # 概率性清理过期缓存（每约 10 次触发执行一次，使用 Python clean-dedup 避免 find -exec bash 子进程爆炸）
+    if [ $((RANDOM % 10)) -eq 0 ]; then
+        python3 "$TOOL" clean-dedup "$DEDUP_DIR" "$DEDUP_TTL" &>/dev/null &
+    fi
+    
+    return 0
+}
+
 # 写入 PID
 echo $$ > "$PID_FILE"
 
@@ -37,7 +83,9 @@ echo $$ > "$PID_FILE"
 log() {
     local level="${1:-INFO}"
     shift
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')][watcher][$level] $*" | tee -a "$LOG_FILE"
+    # launchd 管理下 stdout 已被重定向到 launchd_watcher.stdout.log
+    # 只写日志文件，避免 tee 双写产生冗余
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')][watcher][$level] $*" >> "$LOG_FILE"
 }
 
 # 心跳函数
@@ -142,6 +190,12 @@ while true; do
         [[ "$(basename "$event_path")" == "template.json" ]] && continue
         # 跳过临时/隐藏文件
         [[ "$(basename "$event_path")" == .* ]] && continue
+
+        # 文件级去重：同一路径 300 秒内只触发一次（消除 fswatch 事件风暴）
+        if ! dedup_check "$event_path"; then
+            # 跳过去重文件，不写日志（生产环境日志量已经够大）
+            continue
+        fi
 
         timestamp=$(date '+%Y-%m-%d %H:%M:%S')
         project=$(python3 "$TOOL" get-task-field "$event_path" project unknown 2>/dev/null)

@@ -26,7 +26,7 @@ mkdir -p "$TARGET" "$DONE"
 MOVED=0
 SKIPPED=0
 
-python3 "$TOOL" log task_sync INFO "=== 扫描开始 ===" | tee -a "$LOG"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')][task_sync][INFO] === 扫描开始 ===" >> "$LOG"
 
 for file in "$SOURCE"/*.json; do
     [ -f "$file" ] || continue
@@ -39,7 +39,7 @@ for file in "$SOURCE"/*.json; do
     # 跳过不可操作类型
     case "$task_type" in
         notification|failure_notification)
-            python3 "$TOOL" log task_sync INFO "SKIP $filename (type=$task_type, non-actionable)" | tee -a "$LOG"
+            echo "[$(date '+%Y-%m-%d %H:%M:%S')][task_sync][INFO] SKIP $filename (type=$task_type, non-actionable)" >> "$LOG"
             SKIPPED=$((SKIPPED + 1))
             continue
             ;;
@@ -47,7 +47,17 @@ for file in "$SOURCE"/*.json; do
     
     # 检查是否已在 pending 目录
     if [ -f "$TARGET/${task_id}.json" ]; then
-        python3 "$TOOL" log task_sync INFO "DUP  $filename → already in pending/" | tee -a "$LOG"
+        # 版本感知：只保留更新的版本
+        source_mtime=$(stat -f %m "$file" 2>/dev/null || echo 0)
+        target_mtime=$(stat -f %m "$TARGET/${task_id}.json" 2>/dev/null || echo 0)
+        if [ "$source_mtime" -le "$target_mtime" ]; then
+            echo "[$(date '+%Y-%m-%d %H:%M:%S')][task_sync][INFO] DUP  $filename → pending has same/newer version" >> "$LOG"
+        else
+            # 源文件更新，覆盖 pending 中的副本
+            cp "$file" "$TARGET/${task_id}.json"
+            echo "[$(date '+%Y-%m-%d %H:%M:%S')][task_sync][INFO] UPD  $filename → overwrote pending with newer version" >> "$LOG"
+            MOVED=$((MOVED + 1))
+        fi
         # 归档源文件到 done
         mv "$file" "$DONE/"
         SKIPPED=$((SKIPPED + 1))
@@ -57,10 +67,10 @@ for file in "$SOURCE"/*.json; do
     # 移动任务到 pending
     mv "$file" "$TARGET/"
     MOVED=$((MOVED + 1))
-    python3 "$TOOL" log task_sync INFO "MOVE $filename → workbuddy_pending/${task_id}.json" | tee -a "$LOG"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')][task_sync][INFO] MOVE $filename → workbuddy_pending/${task_id}.json" >> "$LOG"
 done
 
-python3 "$TOOL" log task_sync INFO "同步完成: moved=$MOVED skipped=$SKIPPED" | tee -a "$LOG"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')][task_sync][INFO] 同步完成: moved=$MOVED skipped=$SKIPPED" >> "$LOG"
 
 # Docker 模式：添加循环防止快速重启
 if [ -f /.dockerenv ] || [ "${DOCKER_MODE}" = "1" ]; then

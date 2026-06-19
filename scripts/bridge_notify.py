@@ -69,11 +69,11 @@ def notify_feishu(title: str, message: str) -> bool:
     """
     import os
     webhook_url = os.environ.get("FEISHU_WEBHOOK", "")
-    
+
     if not webhook_url:
         config = load_config()
         webhook_url = config.get("notifications", {}).get("feishu_webhook", "")
-    
+
     if not webhook_url:
         print("[bridge_notify] 飞书 webhook 未配置，跳过", file=sys.stderr)
         return False

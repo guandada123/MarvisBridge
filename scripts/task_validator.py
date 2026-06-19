@@ -128,7 +128,15 @@ def derive_idempotency_key(task: dict) -> str:
     # 从 task_id 提取日期 YYYYMMDD
     date_part = "unknown"
     if task_id and "-" in task_id:
-        date_part = task_id.split("-")[0]
+        parts = task_id.split("-")
+        if len(parts) == 4 and len(parts[0]) == 4:
+            # YYYY-MM-DD-HHMM → YYYYMMDD
+            date_part = parts[0] + parts[1] + parts[2]
+        elif len(parts) == 2 and len(parts[0]) == 8:
+            # YYYYMMDD-NNN → YYYYMMDD
+            date_part = parts[0]
+        else:
+            date_part = parts[0]
 
     # 业务标识优先从 params 或 trigger_next 获取
     business_id = task.get("trigger_next", "")

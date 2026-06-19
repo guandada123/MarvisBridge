@@ -31,7 +31,7 @@ poll() {
     # 计算当前目录 hash（只对文件名和大小做指纹）
     local current_hash
     if [ "${count}" -gt 0 ]; then
-        current_hash=$(ls -la "${PENDING_DIR}"/*.json 2>/dev/null | md5)
+        current_hash=$(ls -l "${PENDING_DIR}"/*.json 2>/dev/null | /sbin/md5)
     else
         current_hash="empty"
     fi
