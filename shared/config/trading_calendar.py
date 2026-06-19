@@ -17,13 +17,12 @@ import json
 import os
 from datetime import datetime, timedelta, timezone
 
-
 # ---------- 模块级加载 ----------
 
 _MODULE_DIR = os.path.dirname(os.path.abspath(__file__))
 _CALENDAR_PATH = os.path.join(_MODULE_DIR, "trading_calendar.json")
 
-with open(_CALENDAR_PATH, "r", encoding="utf-8") as f:
+with open(_CALENDAR_PATH, encoding="utf-8") as f:
     _CALENDAR = json.load(f)
 
 # 时区：中国标准时间 UTC+8
@@ -54,6 +53,7 @@ def _today_cst():
 
 
 # ---------- 公开 API ----------
+
 
 def is_trading_day() -> bool:
     """判断今天是否为A股交易日"""
