@@ -50,9 +50,9 @@ dedup_check() {
         cache_key=$(printf '%s' "$event_path" | xxd -p 2>/dev/null | tr -d '\n')
     fi
     [ -z "$cache_key" ] && cache_key=$(echo "$event_path" | sed 's/[^a-zA-Z0-9._-]/_/g')
-    
+
     local cache_file="$DEDUP_DIR/$cache_key"
-    
+
     if [ -f "$cache_file" ]; then
         local expire_ts=0
         expire_ts=$(cat "$cache_file" 2>/dev/null)
@@ -64,15 +64,15 @@ dedup_check() {
             return 1
         fi
     fi
-    
+
     # 写入到期时间戳（当前时间 + TTL）
     echo "$(( $(date +%s) + DEDUP_TTL ))" > "$cache_file"
-    
+
     # 概率性清理过期缓存（每约 10 次触发执行一次，使用 Python clean-dedup 避免 find -exec bash 子进程爆炸）
     if [ $((RANDOM % 10)) -eq 0 ]; then
         python3 "$TOOL" clean-dedup "$DEDUP_DIR" "$DEDUP_TTL" &>/dev/null &
     fi
-    
+
     return 0
 }
 
@@ -209,7 +209,7 @@ while true; do
                 # 写入触发队列（每个任务独立文件，避免并发覆盖丢失）
                 mkdir -p "$TRIGGER_DIR"
                 task_id=$(basename "$event_path" .json)
-                trigger_file="$TRIGGER_DIR/$(date +%s%N)_${task_id}.json"
+                trigger_file="$TRIGGER_DIR/$(date +%s)_${task_id}.json"
                 echo "{\"timestamp\": \"$timestamp\", \"task_file\": \"$event_path\", \"project\": \"$project\", \"status\": \"valid\"}" > "$trigger_file"
                 log INFO "任务校验通过，已写入触发队列"
 

@@ -1,54 +1,26 @@
 {
   "dashboard_version": "1.0.0",
-  "updated_at": "2026-06-11T08:04:00+08:00",
-  "last_scan": null,
-
+  "updated_at": "2026-06-15T21:01:34+08:00",
+  "last_scan": "2026-06-15T21:01:34+08:00",
   "watcher": {
     "alive": false,
-    "last_heartbeat": null,
-    "pid": null,
-    "uptime_minutes": null
+    "pid": null
   },
-
   "tasks_today": {
-    "total": 1,
     "pending": 0,
-    "processing": 0,
-    "completed": 1,
-    "failed": 0,
     "dead_lettered": 0
   },
-
   "projects": {
     "claw": {
-      "tasks_processed": 0,
       "dead_letters": 0
     },
     "quant": {
-      "tasks_processed": 0,
       "dead_letters": 0
-    },
-    "dashboard": {
-      "tasks_processed": 1,
-      "dead_letters": 0,
-      "status_file": "/Users/guan/workbuddy_marvis_bridge/dashboard/results/dashboard_status.md",
-      "html_page": "/Users/guan/WorkBuddy/2026-06-11-06-53-32/project-dashboard.html",
-      "note": "Marvis 每日读取此项目获取4项目+10阻塞全景"
     }
   },
-
-  "data_collection": {
-    "strategy": "direct_api",
-    "screenshot_deprecated": true,
-    "notes": "数据采集已切换为 MCP/Skill 直连 API，不再经过截图→OCR"
-  },
-
   "circuit_breakers": {
     "open": [],
     "half_open": [],
-    "closed": ["data_collection", "code_review", "maintenance", "market_snapshot", "github_token_request"]
-  },
-
-  "last_3_events": [],
-  "last_3_errors": []
+    "closed": []
+  }
 }

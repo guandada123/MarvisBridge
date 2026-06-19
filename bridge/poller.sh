@@ -25,7 +25,7 @@ log() {
 current_snapshot() {
     (
         ls "$PENDING_DIR"/*.json 2>/dev/null | sort
-        stat -f "%m" "$PENDING_DIR" 2>/dev/null || echo "0"
+        stat -f "%m" "$PENDING_DIR" 2>/dev/null || stat -c "%Y" "$PENDING_DIR" 2>/dev/null || echo "0"
     ) | md5 -q 2>/dev/null || echo "empty"
 }
 

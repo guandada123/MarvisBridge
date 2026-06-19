@@ -1,0 +1,12 @@
+{
+  "task_id": "2026-06-19-1300",
+  "project": "claw",
+  "type": "data_collection",
+  "source": "marvis",
+  "title": "盘中监控截图-1300完成",
+  "params": {
+    "output_dir": "shared/market_data/",
+    "filename": "snapshot_1300.png"
+  },
+  "idempotency_key": "claw:data_collection:20260619:盘中监控截图-1300完成"
+}

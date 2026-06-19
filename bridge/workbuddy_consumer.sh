@@ -53,6 +53,31 @@ scan_tasks() {
             process_task "$task_file" "$project"
         done
     done
+
+    # 同时扫描 workbuddy_pending/（task_sync 搬运过来的任务）
+    local pending_dir="$BRIDGE_ROOT/status/workbuddy_pending"
+    if [ -d "$pending_dir" ]; then
+        for task_file in "$pending_dir"/*.json; do
+            [ -f "$task_file" ] || continue
+
+            local pending_project
+            pending_project=$(python3 "$TOOLS" get-fields "$task_file" project 2>/dev/null || echo "")
+
+            # 项目过滤
+            if [ -n "$PROJECT_FILTER" ] && [ "$pending_project" != "$PROJECT_FILTER" ]; then
+                continue
+            fi
+
+            # 任务ID过滤
+            if [ -n "$TASK_ID_FILTER" ]; then
+                local tid
+                tid=$(python3 "$TOOLS" get-fields "$task_file" task_id 2>/dev/null || echo "")
+                [ "$tid" != "$TASK_ID_FILTER" ] && continue
+            fi
+
+            process_task "$task_file" "$pending_project"
+        done
+    fi
 }
 
 # ── 处理单个任务 ───────────────────────────

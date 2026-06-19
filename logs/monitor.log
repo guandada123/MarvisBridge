@@ -89,8 +89,8 @@ Config (/Users/guan/.qclaw/openclaw.json): missing env var "QCLAW_WECHAT_WS_URL"
 [qclaw-plugin:http-route-registry] registered HTTP route: GET /qclaw-plugin/pcmgr-ai-security/allowlist/status
 [qclaw-plugin:http-route-registry] registered HTTP route: POST /qclaw-plugin/pcmgr-ai-security/hold/confirm
 [qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] setup()
-[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] stateDir: 
-[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] fileProtectionEnabled: false fileProtectionConfigPath: 
+[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] stateDir:
+[qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] fileProtectionEnabled: false fileProtectionConfigPath:
 [qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] Using default endpoint environment: "production".
 [qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] createFetchMiddleware()
 [qclaw-plugin:pcmgr-ai-security] [pcmgr-ai-security 1.0.2] FileProtection disabled, fileProtectionEnabled=false configPath=
@@ -196,3 +196,652 @@ Error: Unknown agent id "qclaw-dev". Use "openclaw agents list" to see configure
 [2026-06-11 14:11:35][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-11-1300.json (入队 1781158295s 未被消费)
 [2026-06-12 14:25:53][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-12-050.json (入队 1781245553s 未被消费)
 [2026-06-12 14:27:54][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-12-051.json (入队 1781245673s 未被消费)
+[2026-06-15 08:20:51][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/earnings_calendar_20260615.json (入队 1781482851s 未被消费)
+[2026-06-15 09:12:52][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/fetch_data_failed_20260615.json (入队 1781485972s 未被消费)
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487903858068000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487903901770000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487903990839000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487904060347000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487905720038000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487905775972000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487905818978000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487905898191000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487907718101000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487907770517000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487907810247000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487907866692000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487909717174000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487909772653000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487909808087000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487909867545000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487911716012000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487911771055000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487911813334000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487911871860000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487913707978000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487913763496000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487913831910000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487913894474000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487915721621000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487915721811000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487915818592000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487915873830000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487917726876000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487917782591000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487917819161000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487917874237000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487919729601000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487919785499000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487919822971000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487919886137000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487921718566000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487921773943000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487921818492000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487921871254000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487923729146000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487923782054000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487923827069000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487923880728000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487925732610000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487925788520000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487925822310000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487925878324000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487927729561000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487927785244000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487927818682000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487927876517000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487929728533000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487929783797000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487929832982000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487929895009000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487931720340000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487931787347000_20260615-002.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487931858120000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487931889952000_20260615-001.json
+[2026-06-15 09:46:52][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487933749567000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487933749700000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487933866542000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487933921345000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487935728573000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487935728582000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487935849297000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487935849935000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487937744866000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487937800783000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487937841060000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487937898975000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487939714583000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487939769769000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487939812001000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487939869024000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487941735780000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487941791417000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487941827585000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487941879494000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487943739162000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487943794679000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487943825839000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487943885758000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487945723886000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487945840225000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487946079806000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487946150351000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487947781457000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487947781460000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487947936639000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487947989510000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487949750502000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487949805346000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487949858534000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487949916286000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487951725750000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487951777534000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487951829029000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487951897203000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487953784866000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487953836377000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487953877109000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487953930710000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487955751766000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487955751769000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487955904591000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487955959025000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487957767868000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487957822540000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487957879940000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487957948817000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487959735325000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487959790423000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487959838579000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487959897947000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487961727529000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487961782084000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487961854925000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487961917488000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487963744160000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487963799625000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487963832312000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487963889009000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487965751768000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487965807159000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487965844649000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487965896815000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487967766577000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487967821103000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487967871510000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487967921566000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487969728500000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487969784411000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487969832568000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487969886479000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487971759936000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487971815612000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487971853010000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487971909777000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487973759856000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487973815263000_20260615-002.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487973855420000_20260615-001.json
+[2026-06-15 09:46:53][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487973912127000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487975762588000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487975818003000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487975863981000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487975915974000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487977748244000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487977748258000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487977855588000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487977911449000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487979747942000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487979802319000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487979884272000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487979943016000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487981752575000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487981801580000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487981858065000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487981910472000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487983762251000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487983817194000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487983855690000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487983909515000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487985759879000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487985814658000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487985854205000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487985908297000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487987755225000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487987810625000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487987858443000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487987911537000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487989749007000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487989749150000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487989921188000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487989927892000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487991759175000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487991811034000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487991853464000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487991904037000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487993774754000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487993825248000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487993875638000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487993927448000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487995766498000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487995767106000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487995991941000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487996045275000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487998062767000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487998121327000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487998319186000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487998375324000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487999774504000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487999774541000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487999896791000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781487999948098000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488001766247000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488001767374000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488001907800000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488001959401000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488003774021000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488003828628000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488003882700000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488003963251000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488005761220000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488005761861000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488005912883000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488005969669000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488007773605000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488007830189000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488007891851000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488007943297000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488009767614000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488009823345000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488009886120000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488009944723000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488011769476000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488011770962000_20260615-002.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488011876911000_20260615-001.json
+[2026-06-15 09:46:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488011932872000_20260615-001.json
+[2026-06-15 09:46:54][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (入队 1781488014s 未被消费)
+[2026-06-15 09:46:54][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (入队 1781488014s 未被消费)
+[2026-06-15 09:48:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488013851901000_20260615-002.json
+[2026-06-15 09:48:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488013852469000_20260615-002.json
+[2026-06-15 09:48:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488014084111000_20260615-001.json
+[2026-06-15 09:48:54][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781488014088548000_20260615-001.json
+[2026-06-15 10:04:55][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-0925.json (入队 1781489095s 未被消费)
+[2026-06-15 10:04:55][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260610-040.json (入队 1781489095s 未被消费)
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492345436268000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492345489943000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492347373914000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492347424829000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492349395037000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492349445362000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492351376796000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492351430006000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492353418113000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492353473090000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492355391132000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492355445601000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492357383159000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492357439000000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492359416868000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492359417278000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492361435811000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492361440126000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492363437893000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492363491620000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492365444079000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492365517595000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492367423537000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492367479333000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492369407215000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492369460397000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492371441772000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492371496143000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492373429875000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492373430106000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492375408110000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492375409197000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492377390370000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492377440558000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492379390557000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492379446102000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492381390070000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492381445702000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492383400046000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492383455267000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492385412368000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492385463693000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492387390855000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492387445619000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492389406423000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492389406521000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492391392805000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492391392895000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492393400344000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492393455865000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492395418382000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492395418393000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492397394327000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492397450234000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492399405109000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492399459161000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492401408490000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492401408494000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492409426041000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492409428475000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492410744030000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492410808951000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492412355434000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492412438013000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492414339924000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492414394770000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492415503242000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492415557459000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492417503778000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492417555539000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492419505527000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492419579581000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492421502129000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492421557692000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492423510960000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492423566130000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492425511825000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492425567047000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492427507121000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492427507145000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492429513281000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492429517014000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492431512492000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492431567463000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492433512147000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492433563469000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492435590438000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492435597771000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492437676132000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492437676588000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492439578498000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492439580218000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492441528091000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492441577464000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492444491337000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492444491763000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492445610001000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492445610022000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492447524505000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492447579028000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492449525738000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492449576269000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492451541387000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492451595279000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492453528779000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492453582623000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492455537080000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781492455537124000_2026-06-15-040.json
+[2026-06-15 11:00:56][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (入队 1781492456s 未被消费)
+[2026-06-15 11:00:56][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-15-1000.json (入队 1781492456s 未被消费)
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495712713312000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495712759940000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495712954095000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495712987785000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495714557049000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495714611733000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495714676045000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495714737325000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495716562233000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495716617369000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495716683468000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495716752734000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495718569139000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495718625135000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495718696130000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495718752513000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495720566262000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495720619127000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495720707913000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495720768849000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495722551860000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495722608415000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495722669906000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495722726368000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495724560828000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495724619679000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495724679861000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495724764280000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495726602383000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495726660232000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495726746743000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495726787909000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495728544013000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495728595549000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495728643855000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495728700050000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495730544204000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495730603643000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495730645032000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495730711011000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495732549765000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495732610576000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495732655116000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495732721564000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495734555833000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495734610776000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495734669542000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495734727421000_2026-06-15-1100.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495736546291000_2026-06-15-040.json
+[2026-06-15 11:56:57][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495736606853000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495736649379000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495736720638000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495738567847000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495738618805000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495738704153000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495738752682000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495740563373000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495740624021000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495740652286000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495740716857000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495742590054000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495742639516000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495742708941000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495742747546000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495744551723000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495744612175000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495744654318000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495744727377000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495746573226000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495746633672000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495746671898000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495746747362000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495748564616000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495748623309000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495748654402000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495748715538000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495750580438000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495750640968000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495750674066000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495750735103000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495752579420000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495752636188000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495752690108000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495752773810000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495754561296000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495754623034000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495754668878000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495754734547000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495756655193000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495756664940000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495756947533000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495756948280000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495758583592000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495758644282000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495758686536000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495758740790000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495760572821000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495760625256000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495760673640000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495760732037000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495762568538000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495762569082000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495762694995000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495762695009000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495764587470000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495764647424000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495764682325000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495764741534000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495766588967000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495766649863000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495766681441000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495766739562000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495768588478000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495768649475000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495768679596000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495768740408000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495770570591000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495770632941000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495770684099000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495770774696000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495772566462000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495772626914000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495772690194000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495772760376000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495774592736000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495774654642000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495774718628000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495774779735000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495776592696000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495776653182000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495776688503000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495776741256000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495778594599000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495778654736000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495778707483000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495778766809000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495780576066000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495780636899000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495780685017000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495780744520000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495782643496000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495782704091000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495782738140000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495782794490000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495784591261000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495784652054000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495784688529000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495784751068000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495786601113000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495786660954000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495786699021000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495786754096000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495788605141000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495788665999000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495788723019000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495788805882000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495790587398000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495790640717000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495790699946000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495790748895000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495792613664000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495792616096000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495792830146000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495792890228000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495794601865000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495794662587000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495794694621000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495794751455000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495796601216000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495796661374000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495796697612000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495796758404000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495798600427000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495798661069000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495798694059000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495798753896000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495800583992000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495800644471000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495800682818000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495800750144000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495802609856000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495802670239000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495802703324000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495802760522000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495804609196000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495804670259000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495804710594000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495804763099000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495806605518000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495806666814000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495806711026000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495806796988000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495808615705000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495808669026000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495808709518000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495808762322000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495810614613000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495810676243000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495810753514000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495810818731000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495812603432000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495812662917000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495812709544000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495812783135000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495814615129000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495814675394000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495814711263000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495814768901000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495816621586000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495816621617000_2026-06-15-040.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495816722275000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495816782886000_2026-06-15-1100.json
+[2026-06-15 11:56:58][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (入队 1781495818s 未被消费)
+[2026-06-15 11:56:58][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (入队 1781495818s 未被消费)
+[2026-06-15 11:58:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495818598428000_2026-06-15-040.json
+[2026-06-15 11:58:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495818658356000_2026-06-15-040.json
+[2026-06-15 11:58:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495818697539000_2026-06-15-1100.json
+[2026-06-15 11:58:58][monitor][ERROR] 触发文件无效或任务文件不存在: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781495818756616000_2026-06-15-1100.json
+[2026-06-15 13:49:00][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (入队 1781502540s 未被消费)
+[2026-06-15 13:49:00][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-15-1300.json (入队 1781502540s 未被消费)
+[2026-06-15 14:45:01][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/0615-040.json (入队 1781505901s 未被消费)
+[2026-06-15 23:44:29][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:44:39][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:44:49][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:44:59][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:45:02][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:45:12][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:45:22][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:45:32][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:45:42][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:45:43][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:45:53][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:46:03][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:46:13][monitor][ERROR] 脚本异常退出 (line 37, exit=1)
+[2026-06-15 23:46:23][monitor][INFO] Bridge Monitor 启动 (PID: 86786, 轮询间隔=120s, Pending TTL=3600s)
+[2026-06-15 23:47:11][monitor] Bridge Monitor 收到停止信号
+[2026-06-16 03:44:44][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-16 03:44:44][monitor][INFO] 日志轮转完成
+[2026-06-16 07:41:01][monitor][INFO] Bridge Monitor 启动 (PID: 595, 轮询间隔=120s, Pending TTL=3600s)
+[2026-06-16 08:13:38][monitor][INFO] Bridge Monitor 启动 (PID: 14682, 轮询间隔=120s, Pending TTL=3600s)
+[2026-06-16 09:17:43][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/fetch_data_failure_20260616.json (入队 1781572663ss 未被消费)
+[2026-06-16 10:09:47][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260610-040.json (入队 1781575787ss 未被消费)
+[2026-06-16 10:09:47][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-16-0925.json (入队 1781575787ss 未被消费)
+[2026-06-16 11:05:51][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260616-040.json (id=20260616-040, agent=)
+[2026-06-16 11:05:51][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-1000.json (入队 1781579151ss 未被消费)
+[2026-06-16 11:31:53][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-040.json (id=2026-06-16-040, agent=)
+[2026-06-16 11:31:53][monitor][INFO] WorkBuddy 任务已入队: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-1100.json (id=2026-06-16-1100, agent=)
+[2026-06-16 12:11:56][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-16 12:11:56][monitor][INFO] 日志轮转完成
+[2026-06-16 12:31:04][monitor] 已有 Monitor 实例运行 (PID: 14682)，退出
+[2026-06-16 12:31:19][monitor][INFO] Bridge Monitor 启动 (PID: 81730, 轮询间隔=120s, Pending TTL=3600s)
+[2026-06-16 13:51:23][monitor][INFO] 任务已就绪等待消费: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-040.json
+[2026-06-16 13:51:23][monitor][INFO] 任务已就绪等待消费: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-16-1300.json
+[2026-06-16 13:51:23][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-040.json (入队 1781589083ss 未被消费)
+[2026-06-16 13:51:23][monitor][INFO] WorkBuddy 任务过期回收: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-16-1300.json (入队 1781589083ss 未被消费)
+[2026-06-16 14:47:26][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781592408617912000_2026-06-16-040.json
+[2026-06-16 16:29:33][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-16 16:29:33][monitor][INFO] 日志轮转完成
+[2026-06-16 20:29:45][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-16 20:29:45][monitor][INFO] 日志轮转完成
+[2026-06-17 00:29:54][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-17 00:29:54][monitor][INFO] 日志轮转完成
+[2026-06-17 04:30:07][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-17 04:30:07][monitor][INFO] 日志轮转完成
+[2026-06-17 08:30:17][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-17 08:30:17][monitor][INFO] 日志轮转完成
+[2026-06-17 10:02:21][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781661697312610000_task_2026-06-17_0925.json
+[2026-06-17 10:58:24][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781665060235429000_2026-06-17-040.json
+[2026-06-17 10:58:24][monitor][INFO] 任务已就绪等待消费: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-17-1000.json
+[2026-06-17 11:54:27][monitor][INFO] 任务已就绪等待消费: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-17-040.json
+[2026-06-17 11:54:27][monitor][INFO] 任务已就绪等待消费: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-17-1100.json
+[2026-06-17 12:30:29][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-17 12:30:29][monitor][INFO] 日志轮转完成
+[2026-06-17 13:46:32][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781675111661300000_2026-06-17-040.json
+[2026-06-17 13:46:32][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781675111759538000_task_20260617-1300.json
+[2026-06-17 14:42:35][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781678481880036000_2026-06-17-040.json
+[2026-06-17 15:38:38][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781681856203862000_20260617-001.json
+[2026-06-17 16:30:40][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-17 16:30:40][monitor][INFO] 日志轮转完成
+[2026-06-17 20:30:48][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-17 20:30:48][monitor][INFO] 日志轮转完成
+[2026-06-18 00:30:57][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-18 00:30:57][monitor][INFO] 日志轮转完成
+[2026-06-18 04:31:04][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-18 04:31:04][monitor][INFO] 日志轮转完成
+[2026-06-18 08:31:13][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-18 08:31:13][monitor][INFO] 日志轮转完成
+[2026-06-18 10:37:18][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781750190424424000_2026-06-18-041.json
+[2026-06-18 10:37:18][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781750190511105000_2026-06-18-0925.json
+[2026-06-18 10:37:18][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781750190658330000_snapshot_1000_done.json
+[2026-06-18 11:43:20][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781754087356985000_20260618-040.json
+[2026-06-18 11:43:20][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781754087465518000_task_2026-06-18-1100.json
+[2026-06-18 12:31:22][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-18 12:31:22][monitor][INFO] 日志轮转完成
+[2026-06-18 13:47:25][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781761560379877000_2026-06-18-040.json
+[2026-06-18 13:47:25][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781761560472363000_2026-06-18-1300.json
+[2026-06-18 14:51:28][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781765384266384000_2026-06-18-040.json
+[2026-06-18 16:31:33][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-18 16:31:33][monitor][INFO] 日志轮转完成
+[2026-06-18 20:31:43][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-18 20:31:43][monitor][INFO] 日志轮转完成
+[2026-06-19 00:31:55][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-19 00:31:55][monitor][INFO] 日志轮转完成
+[2026-06-19 04:32:05][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-19 04:32:05][monitor][INFO] 日志轮转完成
+[2026-06-19 08:32:14][log_rotate] 轮转完成 (max=50MB, keep=7d)
+[2026-06-19 08:32:14][monitor][INFO] 日志轮转完成
+[2026-06-19 09:40:16][monitor][INFO] 触发文件已消费或任务文件不存在，清理触发条目: /Users/guan/workbuddy_marvis_bridge/status/trigger_queue/1781833105145147000_snapshot_0925_done.json
+[2026-06-19 10:06:17][monitor][ERROR] 脚本异常退出 (line 123, exit=1)

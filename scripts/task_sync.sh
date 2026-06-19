@@ -48,8 +48,9 @@ for file in "$SOURCE"/*.json; do
     # 检查是否已在 pending 目录
     if [ -f "$TARGET/${task_id}.json" ]; then
         # 版本感知：只保留更新的版本
-        source_mtime=$(stat -f %m "$file" 2>/dev/null || echo 0)
-        target_mtime=$(stat -f %m "$TARGET/${task_id}.json" 2>/dev/null || echo 0)
+        # 跨平台 mtime 获取（macOS: stat -f %m, Linux: stat -c %Y）
+        source_mtime=$(stat -f %m "$file" 2>/dev/null || stat -c %Y "$file" 2>/dev/null || echo 0)
+        target_mtime=$(stat -f %m "$TARGET/${task_id}.json" 2>/dev/null || stat -c %Y "$TARGET/${task_id}.json" 2>/dev/null || echo 0)
         if [ "$source_mtime" -le "$target_mtime" ]; then
             echo "[$(date '+%Y-%m-%d %H:%M:%S')][task_sync][INFO] DUP  $filename → pending has same/newer version" >> "$LOG"
         else

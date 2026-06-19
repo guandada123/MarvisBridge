@@ -32,3 +32,95 @@
 [2026-06-12 14:28:06] ✅ 队列已清空
 [2026-06-12 14:43:07] 🔔 新任务到达: 10 个待消费
 [2026-06-12 14:44:07] ✅ 队列已清空
+[2026-06-15 08:20:26] 🔔 新任务到达: 1 个待消费
+[2026-06-15 08:20:33] 🔔 新任务到达: 1 个待消费
+[2026-06-15 08:21:26] ✅ 队列已清空
+[2026-06-15 08:21:33] ✅ 队列已清空
+[2026-06-15 09:11:27] 🔔 新任务到达: 1 个待消费
+[2026-06-15 09:11:34] 🔔 新任务到达: 1 个待消费
+[2026-06-15 09:13:27] ✅ 队列已清空
+[2026-06-15 09:13:34] ✅ 队列已清空
+[2026-06-15 09:45:28] 🔔 新任务到达: 2 个待消费
+[2026-06-15 09:45:35] 🔔 新任务到达: 2 个待消费
+[2026-06-15 09:46:28] 🔔 新任务到达: 2 个待消费
+[2026-06-15 09:46:35] 🔔 新任务到达: 2 个待消费
+[2026-06-15 09:47:28] ✅ 队列已清空
+[2026-06-15 09:47:35] ✅ 队列已清空
+[2026-06-15 10:03:29] 🔔 新任务到达: 2 个待消费
+[2026-06-15 10:03:36] 🔔 新任务到达: 2 个待消费
+[2026-06-15 10:05:29] ✅ 队列已清空
+[2026-06-15 10:05:36] ✅ 队列已清空
+[2026-06-15 10:59:30] 🔔 新任务到达: 2 个待消费
+[2026-06-15 10:59:37] 🔔 新任务到达: 2 个待消费
+[2026-06-15 11:00:31] 🔔 新任务到达: 2 个待消费
+[2026-06-15 11:00:37] 🔔 新任务到达: 2 个待消费
+[2026-06-15 11:01:31] ✅ 队列已清空
+[2026-06-15 11:01:38] ✅ 队列已清空
+[2026-06-16 07:41:25] === WorkBuddy Poller 启动 (PID 602, 间隔 60s) ===
+[2026-06-16 07:41:26] 首次扫描: 0 个任务排队
+[2026-06-16 08:13:31] === Poller 停止 ===
+[2026-06-16 08:13:31] === WorkBuddy Poller 启动 (PID 14636, 间隔 60s) ===
+[2026-06-16 08:13:31] 首次扫描: 0 个任务排队
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+[2026-06-16 09:17:41] 🔔 新任务到达: 1 个待消费
+[2026-06-16 09:18:41] 首次扫描: 0 个任务排队
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+[2026-06-16 10:08:50] 🔔 新任务到达: 2 个待消费
+[2026-06-16 10:09:51] 首次扫描: 0 个任务排队
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+[2026-06-16 11:05:01] 🔔 新任务到达: 2 个待消费
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+/Users/guan/workbuddy_marvis_bridge/scripts/workbuddy_poller.sh: line 34: md5: command not found
+[2026-06-16 11:39:08] === Poller 停止 ===
+[2026-06-16 12:01:33] === WorkBuddy Poller 启动 (PID 74235, 间隔 60s) ===
+[2026-06-16 12:01:33] 首次扫描: 0 个任务排队
+[2026-06-17 09:11:01] 🔔 新任务到达: 1 个待消费
+[2026-06-17 10:02:03] 🔔 新任务到达: 2 个待消费
+[2026-06-17 10:03:03] 🔔 新任务到达: 1 个待消费
+[2026-06-17 10:07:03] ✅ 队列已清空
+[2026-06-17 10:58:05] 🔔 新任务到达: 3 个待消费
+[2026-06-17 10:59:05] ✅ 队列已清空
+[2026-06-17 11:54:07] 🔔 新任务到达: 2 个待消费
+[2026-06-17 11:55:07] ✅ 队列已清空
+[2026-06-17 13:45:10] 🔔 新任务到达: 2 个待消费
+[2026-06-17 13:46:10] ✅ 队列已清空
+[2026-06-18 08:32:31] 🔔 新任务到达: 1 个待消费
+[2026-06-18 08:33:31] ✅ 队列已清空
+[2026-06-18 10:36:33] 🔔 新任务到达: 4 个待消费
+[2026-06-18 10:37:34] ✅ 队列已清空
+[2026-06-18 11:41:35] 🔔 新任务到达: 2 个待消费
+[2026-06-18 11:42:36] ✅ 队列已清空
+[2026-06-19 13:48:13] 🔔 新任务到达: 1 个待消费
+[2026-06-19 13:49:13] 🔔 新任务到达: 1 个待消费
+[2026-06-19 13:54:14] ✅ 队列已清空

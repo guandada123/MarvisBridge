@@ -84,97 +84,19 @@ process_task() {
             local raw_dir="${BRIDGE_DIR}/${project}/raw_data"
             mkdir -p "$raw_dir" 2>/dev/null
 
-            # 写结构化结果 JSON
-            python3 - "$task_file" "$task_id" "$project" "$title" "$ocr_text" "$screenshot" "$result_file" "$raw_dir" "$now" 2>/dev/null << 'PYEOF'
-import json, sys, os
-from datetime import datetime, timezone, timedelta
-
-task_file = sys.argv[1]
-task_id = sys.argv[2]
-project = sys.argv[3]
-title = sys.argv[4]
-ocr_text = sys.argv[5]
-screenshot = sys.argv[6]
-result_file = sys.argv[7]
-raw_dir = sys.argv[8]
-now_str = sys.argv[9]
-
-# 加载原始任务
-with open(task_file) as f:
-    task_data = json.load(f)
-
-params = task_data.get("params", {})
-
-# 构建结果
-result = {
-    "task_id": task_id,
-    "project": project,
-    "type": task_data.get("type", ""),
-    "title": title,
-    "source": task_data.get("source", "unknown"),
-    "status": "completed",
-    "consumed_at": now_str,
-    "consumed_by": "workbuddy_consumer",
-    "output": {
-        "ocr_text": ocr_text if ocr_text else params.get("ocr_text", ""),
-        "screenshot": screenshot if screenshot else params.get("screenshot", ""),
-        "filename": params.get("filename", ""),
-        "output_dir": params.get("output_dir", ""),
-    }
-}
-
-# 写入结果
-with open(result_file, "w") as f:
-    json.dump(result, f, ensure_ascii=False, indent=2)
-
-# 如果有 OCR 文本，保存到 raw_data
-if ocr_text or params.get("ocr_text"):
-    tz = timezone(timedelta(hours=8))
-    ts = datetime.now(tz).strftime("%Y%m%d_%H%M%S")
-    raw_file = os.path.join(raw_dir, f"{task_id}_ocr_{ts}.json")
-    raw_data = {
-        "task_id": task_id,
-        "title": title,
-        "collected_at": now_str,
-        "ocr_text": ocr_text or params.get("ocr_text", ""),
-        "screenshot": screenshot or params.get("screenshot", ""),
-    }
-    with open(raw_file, "w") as f:
-        json.dump(raw_data, f, ensure_ascii=False, indent=2)
-    print(f"RAW_SAVED|{raw_file}", flush=True)
-
-print("OK", flush=True)
-PYEOF
+            # 写结构化结果 JSON（替代 inline heredoc）
+            python3 "$TOOL" write-data-collection-result \
+                "$task_file" "$task_id" "$project" "$title" \
+                "$ocr_text" "$screenshot" "$result_file" "$raw_dir" "$now" 2>/dev/null
             result_status="completed"
             ;;
 
         custom|maintenance|test)
             log "处理 ${task_type} 任务: $task_id ($title)"
-            # 简单任务：直接记录完成状态
-            python3 - "$task_file" "$task_id" "$project" "$title" "$result_file" "$now" 2>/dev/null << 'PYEOF2'
-import json, sys
-task_file = sys.argv[1]
-task_id = sys.argv[2]
-project = sys.argv[3]
-title = sys.argv[4]
-result_file = sys.argv[5]
-now_str = sys.argv[6]
-with open(task_file) as f:
-    task_data = json.load(f)
-result = {
-    "task_id": task_id,
-    "project": project,
-    "title": title,
-    "type": task_data.get("type", ""),
-    "source": task_data.get("source", "unknown"),
-    "status": "completed",
-    "consumed_at": now_str,
-    "consumed_by": "workbuddy_consumer",
-}
-with open(result_file, "w") as f:
-    json.dump(result, f, ensure_ascii=False, indent=2)
-print("OK", flush=True)
-PYEOF2
+            # 简单任务：直接记录完成状态（替代 inline heredoc）
+            python3 "$TOOL" write-simple-result \
+                "$task_file" "$task_id" "$project" "$title" \
+                "$result_file" "$now" 2>/dev/null
             ;;
 
         *)

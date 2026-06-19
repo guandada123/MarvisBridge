@@ -15,7 +15,7 @@
       "fix": "优先在托管 Python 3.13 执行 pip install akshare，然后 ak.fama_french()；若仍失败则改用东方财富 HTTP API 直接拉取因子数据"
     },
     {
-      "id": "2", 
+      "id": "2",
       "action": "build_macro_fetcher",
       "desc": "创建 macro_data.py 批量拉取宏观因子",
       "fix": "先 pip install akshare 到托管 Python，然后按 handbook 实现；备选方案：用东方财富/sina HTTP API 替代 AKShare 接口"

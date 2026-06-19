@@ -1,0 +1,129 @@
+/Users/guan/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Tushare token: ..., connected: True
+
+=== 获取 贵州茅台(600519.SH) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+=== 获取 五粮液(000858.SZ) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+=== 获取 招商银行(600036.SH) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+=== 获取 中国平安(601318.SH) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+=== 获取 美的集团(000333.SZ) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    self._dec_overflow()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/util/langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/util/langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/guan/WorkBuddy/QuantTradingSystem/scripts/fetch_data.py", line 59, in <module>
+    with engine.connect() as conn:
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/base.py", line 3295, in connect
+    return self._connection_cls(self)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/base.py", line 146, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/base.py", line 2450, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/base.py", line 144, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/base.py", line 3319, in raw_connection
+    return self.pool.connect()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/impl.py", line 179, in _do_get
+    self._dec_overflow()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/util/langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/impl.py", line 176, in _do_get
+    return self._create_connection()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/util/langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "/Users/guan/Library/Python/3.9/lib/python/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

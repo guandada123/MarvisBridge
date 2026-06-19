@@ -1,6 +1,6 @@
 {
-  "bridge_version": "v3.3",
-  "updated_at": "2026-06-12 14:43:00",
+  "bridge_version": "v3.4",
+  "updated_at": "2026-06-16 14:30:00",
   "mode": "direct",
   "description": "QClaw 已退役，所有任务由 WorkBuddy 处理",
   "projects": {

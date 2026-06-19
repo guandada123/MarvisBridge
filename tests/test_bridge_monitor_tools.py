@@ -3,26 +3,25 @@ bridge_monitor_tools 单元测试
 覆盖: get-config, get-task-field, get-fields, enqueue-pending,
       write-dead-letter, check-expired
 """
+
 import json
-import os
 import sys
-import time
 import tempfile
+import time
 from pathlib import Path
+
 import pytest
 
 # 将被测模块加入 path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from scripts.bridge_monitor_tools import (
-    load_config,
-    cmd_get_config,
-    cmd_get_task_field,
-    cmd_get_fields,
-    cmd_enqueue_pending,
-    cmd_write_dead_letter,
     cmd_check_expired,
-    BRIDGE_DIR,
-    CONFIG_FILE,
+    cmd_enqueue_pending,
+    cmd_get_config,
+    cmd_get_fields,
+    cmd_get_task_field,
+    cmd_write_dead_letter,
+    load_config,
 )
 
 
@@ -109,11 +108,15 @@ class TestGetFields:
     def test_reads_multiple_fields(self, capsys, tmp_path):
         """读取 type, task_id, project 三个字段"""
         task = tmp_path / "task.json"
-        task.write_text(json.dumps({
-            "type": "data_collection",
-            "task_id": "test-001",
-            "project": "claw",
-        }))
+        task.write_text(
+            json.dumps(
+                {
+                    "type": "data_collection",
+                    "task_id": "test-001",
+                    "project": "claw",
+                }
+            )
+        )
         cmd_get_fields([str(task), "type", "task_id", "project"])
         out = capsys.readouterr().out.strip()
         assert out == "data_collection test-001 claw"
@@ -133,12 +136,16 @@ class TestEnqueuePending:
     def test_enqueues_with_timestamp(self, capsys, tmp_path):
         """正常入队，写入 bridge_enqueued_at"""
         task_file = tmp_path / "task.json"
-        task_file.write_text(json.dumps({
-            "task_id": "test-001",
-            "type": "data_collection",
-            "project": "claw",
-            "target_agent": "workbuddy",
-        }))
+        task_file.write_text(
+            json.dumps(
+                {
+                    "task_id": "test-001",
+                    "type": "data_collection",
+                    "project": "claw",
+                    "target_agent": "workbuddy",
+                }
+            )
+        )
         pending_dir = tmp_path / "pending"
 
         cmd_enqueue_pending([str(task_file), str(pending_dir)])
@@ -170,11 +177,15 @@ class TestWriteDeadLetter:
     def test_writes_dead_letter(self, capsys, tmp_path):
         """正常写入死信"""
         task_file = tmp_path / "task.json"
-        task_file.write_text(json.dumps({
-            "task_id": "test-fail",
-            "project": "claw",
-            "type": "data_collection",
-        }))
+        task_file.write_text(
+            json.dumps(
+                {
+                    "task_id": "test-fail",
+                    "project": "claw",
+                    "type": "data_collection",
+                }
+            )
+        )
         dl_base = tmp_path / "dl_base"
         reason = "测试失败原因"
 
@@ -211,11 +222,15 @@ class TestCheckExpired:
         pending_dir = tmp_path / "pending"
         pending_dir.mkdir()
         task = pending_dir / "recent.json"
-        task.write_text(json.dumps({
-            "task_id": "recent",
-            "project": "claw",
-            "bridge_enqueued_at": int(time.time()),
-        }))
+        task.write_text(
+            json.dumps(
+                {
+                    "task_id": "recent",
+                    "project": "claw",
+                    "bridge_enqueued_at": int(time.time()),
+                }
+            )
+        )
         dl_base = tmp_path / "dl_base"
 
         cmd_check_expired([str(pending_dir), "60", str(dl_base)])
@@ -229,11 +244,15 @@ class TestCheckExpired:
         pending_dir = tmp_path / "pending"
         pending_dir.mkdir()
         task = pending_dir / "expired.json"
-        task.write_text(json.dumps({
-            "task_id": "expired",
-            "project": "claw",
-            "bridge_enqueued_at": int(time.time()) - 3600,  # 1小时前
-        }))
+        task.write_text(
+            json.dumps(
+                {
+                    "task_id": "expired",
+                    "project": "claw",
+                    "bridge_enqueued_at": int(time.time()) - 3600,  # 1小时前
+                }
+            )
+        )
         dl_base = tmp_path / "dl_base"
 
         cmd_check_expired([str(pending_dir), "60", str(dl_base)])
@@ -264,12 +283,16 @@ class TestIntegration:
         """任务：enqueue → check (不回收) → 手动过期 → check (回收)"""
         # 1. 创建任务并入队
         task_file = tmp_path / "task.json"
-        task_file.write_text(json.dumps({
-            "task_id": "flow-test",
-            "project": "claw",
-            "type": "data_collection",
-            "target_agent": "workbuddy",
-        }))
+        task_file.write_text(
+            json.dumps(
+                {
+                    "task_id": "flow-test",
+                    "project": "claw",
+                    "type": "data_collection",
+                    "target_agent": "workbuddy",
+                }
+            )
+        )
         pending_dir = tmp_path / "pending"
         cmd_enqueue_pending([str(task_file), str(pending_dir)])
 
@@ -294,3 +317,136 @@ class TestIntegration:
 
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
+
+
+class TestWriteDataCollectionResult:
+    """cmd_write_data_collection_result() — 写 data_collection 结果 + OCR"""
+
+    def test_writes_result_and_raw(self, tmp_path, capsys):
+        """正常写入结果 JSON 并保存 OCR"""
+        from scripts.bridge_monitor_tools import cmd_write_data_collection_result
+
+        task = {
+            "task_id": "t001",
+            "project": "claw",
+            "type": "data_collection",
+            "title": "测试",
+            "source": "marvis",
+            "params": {},
+        }
+        task_file = tmp_path / "task.json"
+        task_file.write_text(json.dumps(task))
+
+        result_file = tmp_path / "result.json"
+        raw_dir = tmp_path / "raw"
+
+        cmd_write_data_collection_result(
+            [
+                str(task_file),
+                "t001",
+                "claw",
+                "测试",
+                "OCR文本内容",
+                "shot.png",
+                str(result_file),
+                str(raw_dir),
+                "2026-06-19 15:00:00",
+            ]
+        )
+        out = capsys.readouterr().out
+
+        assert result_file.exists()
+        data = json.loads(result_file.read_text())
+        assert data["task_id"] == "t001"
+        assert data["status"] == "completed"
+        assert data["output"]["ocr_text"] == "OCR文本内容"
+        assert data["output"]["screenshot"] == "shot.png"
+        assert "RAW_SAVED" in out
+        assert list(raw_dir.iterdir())[0].name.startswith("t001_ocr_")
+
+    def test_no_ocr_skips_raw(self, tmp_path, capsys):
+        """无 OCR 文本时不保存 raw_data"""
+        from scripts.bridge_monitor_tools import cmd_write_data_collection_result
+
+        task = {
+            "task_id": "t002",
+            "project": "claw",
+            "type": "data_collection",
+            "title": "无OCR",
+            "source": "marvis",
+            "params": {},
+        }
+        task_file = tmp_path / "task.json"
+        task_file.write_text(json.dumps(task))
+
+        cmd_write_data_collection_result(
+            [
+                str(task_file),
+                "t002",
+                "claw",
+                "无OCR",
+                "",
+                "",
+                str(tmp_path / "r.json"),
+                str(tmp_path / "raw"),
+                "now",
+            ]
+        )
+
+        assert (tmp_path / "r.json").exists()
+        assert not (tmp_path / "raw").exists() or not list((tmp_path / "raw").iterdir())
+
+    def test_missing_task_file(self, capsys):
+        """不存在的任务文件应报错退出"""
+        from scripts.bridge_monitor_tools import cmd_write_data_collection_result
+
+        with pytest.raises(SystemExit):
+            cmd_write_data_collection_result(
+                ["/nonexistent", "t", "c", "t", "", "", "/tmp/r", "/tmp/raw", "now"]
+            )
+
+
+class TestWriteSimpleResult:
+    """cmd_write_simple_result() — 写简单任务完成状态"""
+
+    def test_writes_result(self, tmp_path, capsys):
+        """正常写入结果 JSON"""
+        from scripts.bridge_monitor_tools import cmd_write_simple_result
+
+        task = {
+            "task_id": "s001",
+            "project": "claw",
+            "type": "test",
+            "title": "简单任务",
+            "source": "workbuddy",
+            "params": {},
+        }
+        task_file = tmp_path / "task.json"
+        task_file.write_text(json.dumps(task))
+
+        result_file = tmp_path / "result.json"
+
+        cmd_write_simple_result(
+            [
+                str(task_file),
+                "s001",
+                "claw",
+                "简单任务",
+                str(result_file),
+                "2026-06-19 15:00:00",
+            ]
+        )
+
+        assert result_file.exists()
+        data = json.loads(result_file.read_text())
+        assert data["task_id"] == "s001"
+        assert data["status"] == "completed"
+        assert data["title"] == "简单任务"
+        assert data["source"] == "workbuddy"
+
+    def test_missing_task_file(self, capsys):
+        """不存在的任务文件应报错退出"""
+        from scripts.bridge_monitor_tools import cmd_write_simple_result
+
+        with pytest.raises(SystemExit):
+            cmd_write_simple_result(["/nonexistent", "t", "c", "t", "/tmp/r", "now"])

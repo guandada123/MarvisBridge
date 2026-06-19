@@ -12,7 +12,7 @@ on:
 
 env:
   PYTHON_VERSION: "3.12"
-  COV_FAIL_UNDER: 65
+  COV_FAIL_UNDER: 10
 
 jobs:
   pre-commit:

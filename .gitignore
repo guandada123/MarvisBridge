@@ -1,0 +1,32 @@
+# Environment variables (contains API keys, tokens)
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.bak
+
+# WorkBuddy bridge runtime
+claw/tasks/
+status/
+trigger_queue/
+dead_letter/
+workbuddy_pending/

@@ -31,3 +31,291 @@
 [Fri Jun 12 22:12:00 CST 2026] 同步完成: moved=0 skipped=0
 [Fri Jun 12 23:08:06 CST 2026] === task_sync 扫描 ===
 [Fri Jun 12 23:08:06 CST 2026] 同步完成: moved=0 skipped=0
+[2026-06-15 00:04:07][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 00:04:07][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 01:00:07][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 01:00:07][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 01:55:35][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 01:55:35][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 02:51:01][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 02:51:01][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 03:46:35][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 03:46:35][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 04:42:34][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 04:42:34][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 05:37:59][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 05:37:59][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 06:34:06][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 06:34:06][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 07:29:35][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 07:29:35][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 08:20:05][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 08:20:05][task_sync][INFO] MOVE earnings_calendar_20260615.json → workbuddy_pending/20260615-earnings-am.json
+[2026-06-15 08:20:05][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-15 09:11:05][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 09:11:05][task_sync][INFO] MOVE fetch_data_failed_20260615.json → workbuddy_pending/fetch_data_20260615.json
+[2026-06-15 09:11:05][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-15 10:03:05][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 10:03:05][task_sync][INFO] MOVE 2026-06-15-0925.json → workbuddy_pending/2026-06-15-0925.json
+[2026-06-15 10:03:05][task_sync][INFO] MOVE 20260610-040.json → workbuddy_pending/20260610-040.json
+[2026-06-15 10:03:05][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-15 10:59:03][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 10:59:03][task_sync][INFO] MOVE 2026-06-15-040.json → workbuddy_pending/2026-06-15-040.json
+[2026-06-15 10:59:03][task_sync][INFO] MOVE task_2026-06-15-1000.json → workbuddy_pending/2026-06-15-1000.json
+[2026-06-15 10:59:03][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-15 11:55:10][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 11:55:10][task_sync][INFO] MOVE 2026-06-15-040.json → workbuddy_pending/2026-06-15-040.json
+[2026-06-15 11:55:10][task_sync][INFO] MOVE 2026-06-15-1100.json → workbuddy_pending/2026-06-15-1100.json
+[2026-06-15 11:55:10][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-15 12:51:09][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 12:51:09][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 13:47:02][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 13:47:02][task_sync][INFO] MOVE 2026-06-15-040.json → workbuddy_pending/2026-06-15-040.json
+[2026-06-15 13:47:02][task_sync][INFO] MOVE task_2026-06-15-1300.json → workbuddy_pending/2026-06-15-1300.json
+[2026-06-15 13:47:02][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-15 14:43:03][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 14:43:03][task_sync][INFO] MOVE 0615-040.json → workbuddy_pending/0615-040.json
+[2026-06-15 14:43:03][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-15 15:41:16][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 15:41:16][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 16:37:44][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 16:37:44][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 17:33:32][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 17:33:32][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 18:29:43][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 18:29:43][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 19:25:44][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 19:25:44][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 20:21:39][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 20:21:39][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 21:17:39][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 21:17:39][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 22:13:44][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 22:13:44][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-15 23:09:39][task_sync][INFO] === 扫描开始 ===
+[2026-06-15 23:09:39][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 00:05:31][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 00:05:31][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 01:00:59][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 01:00:59][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 01:56:58][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 01:56:58][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 02:52:59][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 02:52:59][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 03:48:29][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 03:48:29][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 04:44:33][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 04:44:33][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 05:40:01][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 05:40:01][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 06:36:03][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 06:36:03][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 07:31:58][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 07:31:58][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 08:26:20][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 08:26:20][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 09:17:14][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 09:17:14][task_sync][INFO] MOVE fetch_data_failure_20260616.json → workbuddy_pending/.json
+[2026-06-16 09:17:14][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-16 10:08:16][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 10:08:16][task_sync][INFO] MOVE 20260610-040.json → workbuddy_pending/20260610-040.json
+[2026-06-16 10:08:16][task_sync][INFO] MOVE task_2026-06-16-0925.json → workbuddy_pending/2026-06-16-0925.json
+[2026-06-16 10:08:16][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-16 11:04:29][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 11:04:29][task_sync][INFO] MOVE 2026-06-16-1000.json → workbuddy_pending/2026-06-16-1000.json
+[2026-06-16 11:04:29][task_sync][INFO] MOVE 20260616-040.json → workbuddy_pending/20260616-040.json
+[2026-06-16 11:04:29][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-16 11:31:47][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 11:31:47][task_sync][INFO] MOVE 2026-06-16-040.json → workbuddy_pending/2026-06-16-040.json
+[2026-06-16 11:31:47][task_sync][INFO] MOVE 2026-06-16-1100.json → workbuddy_pending/2026-06-16-1100.json
+[2026-06-16 11:31:47][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-16 12:00:15][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 12:00:15][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 12:55:48][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 12:55:48][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 13:51:11][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 13:51:11][task_sync][INFO] MOVE 2026-06-16-040.json → workbuddy_pending/2026-06-16-040.json
+[2026-06-16 13:51:11][task_sync][INFO] MOVE task_2026-06-16-1300.json → workbuddy_pending/2026-06-16-1300.json
+[2026-06-16 13:51:11][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-16 14:46:46][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 14:46:46][task_sync][INFO] MOVE 2026-06-16-040.json → workbuddy_pending/2026-06-16-040.json
+[2026-06-16 14:46:46][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-16 15:42:48][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 15:42:48][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 16:38:51][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 16:38:51][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 17:34:18][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 17:34:18][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 18:29:46][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 18:29:46][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 19:25:26][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 19:25:26][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 20:21:07][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 20:21:07][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 21:17:00][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 21:17:00][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 22:12:34][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 22:12:34][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-16 23:08:31][task_sync][INFO] === 扫描开始 ===
+[2026-06-16 23:08:31][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 00:04:02][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 00:04:02][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 00:59:56][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 00:59:56][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 01:55:30][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 01:55:30][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 02:51:02][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 02:51:02][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 03:46:36][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 03:46:36][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 04:42:33][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 04:42:33][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 05:38:35][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 05:38:35][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 06:34:00][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 06:34:00][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 07:29:29][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 07:29:29][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 08:20:04][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 08:20:04][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 09:10:33][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 09:10:33][task_sync][INFO] MOVE fetch_data_failed_20260617.json → workbuddy_pending/fetch_data_20260617.json
+[2026-06-17 09:10:33][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-17 10:01:35][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 10:01:35][task_sync][INFO] MOVE task_2026-06-17_0925.json → workbuddy_pending/2026-06-17-0925.json
+[2026-06-17 10:01:35][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-17 10:57:38][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 10:57:38][task_sync][INFO] MOVE 2026-06-17-040.json → workbuddy_pending/2026-06-17-040.json
+[2026-06-17 10:57:38][task_sync][INFO] MOVE 2026-06-17-1000.json → workbuddy_pending/2026-06-17-1000.json
+[2026-06-17 10:57:38][task_sync][INFO] MOVE 20260610-040.json → workbuddy_pending/20260610-040.json
+[2026-06-17 10:57:38][task_sync][INFO] 同步完成: moved=3 skipped=0
+[2026-06-17 11:53:36][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 11:53:36][task_sync][INFO] MOVE 2026-06-17-040.json → workbuddy_pending/2026-06-17-040.json
+[2026-06-17 11:53:36][task_sync][INFO] MOVE task_2026-06-17-1100.json → workbuddy_pending/2026-06-17-1100.json
+[2026-06-17 11:53:36][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-17 12:49:37][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 12:49:37][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 13:45:09][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 13:45:09][task_sync][INFO] MOVE 2026-06-17-040.json → workbuddy_pending/2026-06-17-040.json
+[2026-06-17 13:45:09][task_sync][INFO] MOVE task_20260617-1300.json → workbuddy_pending/20260617-1300.json
+[2026-06-17 13:45:09][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-17 14:41:19][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 14:41:19][task_sync][INFO] MOVE 2026-06-17-040.json → workbuddy_pending/2026-06-17-040.json
+[2026-06-17 14:41:19][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-17 15:37:34][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 15:37:34][task_sync][INFO] MOVE 20260617-001.json → workbuddy_pending/20260617-001.json
+[2026-06-17 15:37:34][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-17 16:33:38][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 16:33:38][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 17:29:42][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 17:29:42][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 18:25:08][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 18:25:08][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 19:20:43][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 19:20:43][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 20:16:39][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 20:16:39][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 21:12:41][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 21:12:41][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 22:08:42][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 22:08:42][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-17 23:05:49][task_sync][INFO] === 扫描开始 ===
+[2026-06-17 23:05:49][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 00:12:19][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 00:12:19][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 01:13:25][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 01:13:25][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 02:17:57][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 02:17:57][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 03:19:10][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 03:19:10][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 04:27:35][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 04:27:35][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 05:33:39][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 05:33:39][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 06:36:04][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 06:36:04][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 07:38:21][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 07:38:21][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 08:32:19][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 08:32:19][task_sync][INFO] MOVE earnings_calendar_20260618.json → workbuddy_pending/20260618-earnings-am.json
+[2026-06-18 08:32:19][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-18 09:32:43][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 09:32:43][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 10:36:28][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 10:36:28][task_sync][INFO] MOVE 2026-06-18-041.json → workbuddy_pending/2026-06-18-041.json
+[2026-06-18 10:36:28][task_sync][INFO] MOVE 2026-06-18-0925.json → workbuddy_pending/2026-06-18-0925.json
+[2026-06-18 10:36:28][task_sync][INFO] MOVE 20260610-040.json → workbuddy_pending/20260610-040.json
+[2026-06-18 10:36:28][task_sync][INFO] MOVE snapshot_1000_done.json → workbuddy_pending/2026-06-18-1000.json
+[2026-06-18 10:36:28][task_sync][INFO] 同步完成: moved=4 skipped=0
+[2026-06-18 11:41:25][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 11:41:25][task_sync][INFO] MOVE 20260618-040.json → workbuddy_pending/20260618-040.json
+[2026-06-18 11:41:25][task_sync][INFO] MOVE task_2026-06-18-1100.json → workbuddy_pending/2026-06-18-1100.json
+[2026-06-18 11:41:25][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-18 12:43:15][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 12:43:15][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 13:45:58][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 13:45:58][task_sync][INFO] MOVE 2026-06-18-040.json → workbuddy_pending/2026-06-18-040.json
+[2026-06-18 13:45:58][task_sync][INFO] MOVE 2026-06-18-1300.json → workbuddy_pending/2026-06-18-1300.json
+[2026-06-18 13:45:58][task_sync][INFO] 同步完成: moved=2 skipped=0
+[2026-06-18 14:49:42][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 14:49:42][task_sync][INFO] MOVE 2026-06-18-040.json → workbuddy_pending/2026-06-18-040.json
+[2026-06-18 14:49:42][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-18 15:55:15][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 15:55:15][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 16:55:41][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 16:55:41][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 18:01:29][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 18:01:29][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 19:04:59][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 19:04:59][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 20:11:58][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 20:11:58][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 21:16:20][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 21:16:20][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 22:21:42][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 22:21:42][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-18 23:21:27][task_sync][INFO] === 扫描开始 ===
+[2026-06-18 23:21:27][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 00:20:58][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 00:20:58][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 01:26:19][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 01:26:19][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 02:29:49][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 02:29:49][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 03:32:21][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 03:32:21][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 04:36:11][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 04:36:11][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 05:39:27][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 05:39:27][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 06:39:32][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 06:39:32][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 07:43:04][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 07:43:04][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 08:42:36][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 08:42:36][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 09:38:22][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 09:38:22][task_sync][INFO] MOVE snapshot_0925_done.json → workbuddy_pending/2026-06-19-0925.json
+[2026-06-19 09:38:22][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-19 10:42:23][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 10:42:23][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 11:43:46][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 11:43:46][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 12:45:37][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 12:45:37][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 13:48:13][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 13:48:13][task_sync][INFO] MOVE 2026-06-19-1300.json → workbuddy_pending/2026-06-19-1300.json
+[2026-06-19 13:48:13][task_sync][INFO] 同步完成: moved=1 skipped=0
+[2026-06-19 14:55:16][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 14:55:16][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 15:54:55][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 15:54:55][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 16:57:32][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 16:57:32][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 18:01:34][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 18:01:34][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 19:03:03][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 19:03:03][task_sync][INFO] 同步完成: moved=0 skipped=0
+[2026-06-19 20:08:38][task_sync][INFO] === 扫描开始 ===
+[2026-06-19 20:08:38][task_sync][INFO] 同步完成: moved=0 skipped=0

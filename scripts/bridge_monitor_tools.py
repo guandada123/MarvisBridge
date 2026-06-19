@@ -10,6 +10,8 @@ bridge_monitor_tools.py — 为 bridge_monitor.sh 提供批量 JSON 操作
   python3 bridge_monitor_tools.py check-expired <pending_dir> <ttl_sec> <dl_base_dir>
   python3 bridge_monitor_tools.py log-aggregate <minutes> [log_dir]
   python3 bridge_monitor_tools.py clean-dedup [dedup_dir] [ttl_seconds]
+  python3 bridge_monitor_tools.py write-data-collection-result <task_file> <task_id> <project> <title> <ocr_text> <screenshot> <result_file> <raw_dir> <now>
+  python3 bridge_monitor_tools.py write-simple-result <task_file> <task_id> <project> <title> <result_file> <now>
 
 设计目标: 消除 bridge_monitor.sh 中每次 python3 -c 内联调用带来的进程启动开销。
 """
@@ -18,6 +20,7 @@ import json
 import os
 import sys
 import time
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 # Python 3.11+ has datetime.UTC; 3.9 compat fallback
@@ -650,6 +653,118 @@ def cmd_get_fields(args: list[str]) -> None:
     print(" ".join(values))
 
 
+def cmd_write_data_collection_result(args: list[str]) -> None:
+    """write-result data_collection <task_file> <task_id> <project> <title> <ocr_text> <screenshot> <result_file> <raw_dir> <now>
+
+    替代 heredoc PYEOF：为 data_collection 类型任务写结果 JSON 并保存 OCR 数据。
+    """
+    if len(args) < 9:
+        print("ERROR: 参数不足", flush=True)
+        sys.exit(1)
+
+    task_file, task_id, project = args[0], args[1], args[2]
+    title, ocr_text, screenshot = args[3], args[4], args[5]
+    result_file, raw_dir, now_str = args[6], args[7], args[8]
+
+    try:
+        with open(task_file) as f:
+            task_data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"ERROR: 读任务文件失败 {e}", flush=True)
+        sys.exit(1)
+
+    params = task_data.get("params", {})
+    result = {
+        "task_id": task_id,
+        "project": project,
+        "type": task_data.get("type", ""),
+        "title": title,
+        "source": task_data.get("source", "unknown"),
+        "status": "completed",
+        "consumed_at": now_str,
+        "consumed_by": "workbuddy_consumer",
+        "output": {
+            "ocr_text": ocr_text if ocr_text else params.get("ocr_text", ""),
+            "screenshot": screenshot if screenshot else params.get("screenshot", ""),
+            "filename": params.get("filename", ""),
+            "output_dir": params.get("output_dir", ""),
+        },
+    }
+
+    try:
+        os.makedirs(os.path.dirname(result_file), exist_ok=True)
+        with open(result_file, "w") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+    except OSError as e:
+        print(f"ERROR: 写结果文件失败 {e}", flush=True)
+        sys.exit(1)
+
+    # 保存 OCR 文本到 raw_data
+    saved = ocr_text or params.get("ocr_text", "")
+    if saved:
+        os.makedirs(raw_dir, exist_ok=True)
+        tz = timezone(timedelta(hours=8))
+        ts = datetime.now(tz).strftime("%Y%m%d_%H%M%S")
+        raw_file = os.path.join(raw_dir, f"{task_id}_ocr_{ts}.json")
+        raw_data = {
+            "task_id": task_id,
+            "title": title,
+            "collected_at": now_str,
+            "ocr_text": saved,
+            "screenshot": screenshot or params.get("screenshot", ""),
+        }
+        try:
+            with open(raw_file, "w") as f:
+                json.dump(raw_data, f, ensure_ascii=False, indent=2)
+            print(f"RAW_SAVED|{raw_file}", flush=True)
+        except OSError as e:
+            print(f"ERROR: 写 OCR 文件失败 {e}", flush=True)
+            sys.exit(1)
+
+    print("OK", flush=True)
+
+
+def cmd_write_simple_result(args: list[str]) -> None:
+    """write-result simple <task_file> <task_id> <project> <title> <result_file> <now>
+
+    替代 heredoc PYEOF2：为 custom/maintenance/test 类型任务写完成状态。
+    """
+    if len(args) < 6:
+        print("ERROR: 参数不足", flush=True)
+        sys.exit(1)
+
+    task_file, task_id, project, title = args[0], args[1], args[2], args[3]
+    result_file, now_str = args[4], args[5]
+
+    try:
+        with open(task_file) as f:
+            task_data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"ERROR: 读任务文件失败 {e}", flush=True)
+        sys.exit(1)
+
+    result = {
+        "task_id": task_id,
+        "project": project,
+        "title": title,
+        "type": task_data.get("type", ""),
+        "source": task_data.get("source", "unknown"),
+        "status": "completed",
+        "consumed_at": now_str,
+        "consumed_by": "workbuddy_consumer",
+    }
+
+    try:
+        os.makedirs(os.path.dirname(result_file), exist_ok=True)
+        with open(result_file, "w") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+    except OSError as e:
+        print(f"ERROR: 写结果文件失败 {e}", flush=True)
+        sys.exit(1)
+
+    print("OK", flush=True)
+
+
 def main() -> None:
     if len(sys.argv) < 2:
         print(__doc__)
@@ -672,6 +787,8 @@ def main() -> None:
         "enqueue-pending": cmd_enqueue_pending,
         "write-dead-letter": cmd_write_dead_letter,
         "check-expired": cmd_check_expired,
+        "write-data-collection-result": cmd_write_data_collection_result,
+        "write-simple-result": cmd_write_simple_result,
     }
 
     if cmd in commands:

@@ -1,0 +1,38 @@
+/Users/guan/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Tushare token: ..., connected: True
+
+=== 获取 贵州茅台(600519.SH) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+=== 获取 五粮液(000858.SZ) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+=== 获取 招商银行(600036.SH) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+=== 获取 中国平安(601318.SH) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+=== 获取 美的集团(000333.SZ) 2025年日K线 ===
+  获取到 243 条
+  ❌ 写入失败: (psycopg2.OperationalError) connection to server at "postgres" (198.18.0.77), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+执行时间: 2026-06-16
+执行状态: 部分失败 - Tushare数据拉取成功(5/5)，PostgreSQL写入全部失败(0/5)
+失败原因: PostgreSQL数据库 (postgres:5432) 连接被拒绝，服务可能未启动或网络不可达
+（内容由AI生成，仅供参考）

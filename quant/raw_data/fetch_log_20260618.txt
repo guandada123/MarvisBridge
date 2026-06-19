@@ -1,0 +1,29 @@
+/Users/guan/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Tushare token: ..., connected: True
+
+=== 获取 贵州茅台(600519.SH) 2025年日K线 ===
+  获取到 243 条
+  ✅ 写入 243 条
+
+=== 获取 五粮液(000858.SZ) 2025年日K线 ===
+  获取到 243 条
+  ✅ 写入 243 条
+
+=== 获取 招商银行(600036.SH) 2025年日K线 ===
+  获取到 243 条
+  ✅ 写入 243 条
+
+=== 获取 中国平安(601318.SH) 2025年日K线 ===
+  获取到 243 条
+  ✅ 写入 243 条
+
+=== 获取 美的集团(000333.SZ) 2025年日K线 ===
+  获取到 243 条
+  ✅ 写入 243 条
+
+=== 总计 ===
+daily_quote 表总行数: 137659
+本次写入: 1215 条
+
+✅ 数据采集完成

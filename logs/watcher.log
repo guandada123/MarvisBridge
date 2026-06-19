@@ -318,3 +318,1247 @@ Terminated: 15
 [2026-06-12 15:02:23][watcher][INFO] ============================================
 [2026-06-12 15:02:23][watcher][INFO] 心跳进程已启动 (PID: 37137)
 [2026-06-12 15:02:23][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-15 08:20:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/earnings_calendar_20260615.json (项目: claw)
+[2026-06-15 08:20:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/earnings_calendar_20260615.json (项目: claw)
+[2026-06-15 08:20:07][watcher][WARN] 任务校验失败，已跳过: earnings_calendar_20260615.json
+[2026-06-15 08:20:07][watcher][WARN] 任务校验失败，已跳过: earnings_calendar_20260615.json
+[2026-06-15 09:11:08][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/fetch_data_failed_20260615.json (项目: quant)
+[2026-06-15 09:11:08][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/fetch_data_failed_20260615.json (项目: quant)
+[2026-06-15 09:11:08][watcher][WARN] 任务校验失败，已跳过: fetch_data_failed_20260615.json
+[2026-06-15 09:11:08][watcher][WARN] 任务校验失败，已跳过: fetch_data_failed_20260615.json
+[2026-06-15 09:45:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:03][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:03][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:03][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:04][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:37][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:37][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:37][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:37][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:45][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:46][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:55][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:55][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:55][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:55][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:57][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:57][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:57][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:57][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:57][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:57][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:57][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:57][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:59][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:59][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:45:59][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:59][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:59][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:59][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:45:59][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:45:59][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:01][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:01][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:01][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:01][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:03][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:03][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:03][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:03][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:03][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:45][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:45][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:45][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:45][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: quant)
+[2026-06-15 09:46:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: claw)
+[2026-06-15 09:46:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 09:46:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: unknown)
+[2026-06-15 09:46:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-001.json (项目: unknown)
+[2026-06-15 09:46:55][watcher][WARN] 任务校验失败，已跳过: 20260615-001.json
+[2026-06-15 09:46:55][watcher][WARN] 任务校验失败，已跳过: 20260615-001.json
+[2026-06-15 09:46:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: unknown)
+[2026-06-15 09:46:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260615-002.json (项目: unknown)
+[2026-06-15 09:46:55][watcher][WARN] 任务校验失败，已跳过: 20260615-002.json
+[2026-06-15 09:46:55][watcher][WARN] 任务校验失败，已跳过: 20260615-002.json
+[2026-06-15 10:03:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-0925.json (项目: claw)
+[2026-06-15 10:03:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-0925.json (项目: claw)
+[2026-06-15 10:03:07][watcher][WARN] 任务校验失败，已跳过: 2026-06-15-0925.json
+[2026-06-15 10:03:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260610-040.json (项目: claw)
+[2026-06-15 10:03:07][watcher][WARN] 任务校验失败，已跳过: 2026-06-15-0925.json
+[2026-06-15 10:03:07][watcher][WARN] 任务校验失败，已跳过: 20260610-040.json
+[2026-06-15 10:03:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260610-040.json (项目: claw)
+[2026-06-15 10:03:07][watcher][WARN] 任务校验失败，已跳过: 20260610-040.json
+[2026-06-15 10:59:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:05][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-15-1000.json (项目: claw)
+[2026-06-15 10:59:05][watcher][WARN] 任务校验失败，已跳过: task_2026-06-15-1000.json
+[2026-06-15 10:59:05][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-15-1000.json (项目: claw)
+[2026-06-15 10:59:05][watcher][WARN] 任务校验失败，已跳过: task_2026-06-15-1000.json
+[2026-06-15 10:59:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:07][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:07][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:37][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:37][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:43][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:45][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:45][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:55][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:55][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:57][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:57][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:57][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:57][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:59][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:59][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 10:59:59][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 10:59:59][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:01][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:01][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:01][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:09][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:09][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:10][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:10][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:10][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:10][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:17][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:17][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:19][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:23][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:23][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:29][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:29][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:33][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:33][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:35][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:37][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:37][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:39][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:39][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:41][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:41][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:43][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:45][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:45][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:45][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:47][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:47][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:51][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:51][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:53][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:53][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:55][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:00:55][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:55][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:00:57][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: unknown)
+[2026-06-15 11:00:57][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: unknown)
+[2026-06-15 11:00:57][watcher][WARN] 任务校验失败，已跳过: 2026-06-15-040.json
+[2026-06-15 11:00:57][watcher][WARN] 任务校验失败，已跳过: 2026-06-15-040.json
+[2026-06-15 11:55:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:14][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:14][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:14][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:14][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:16][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:16][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:16][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:16][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:16][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:16][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:16][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:16][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:18][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:18][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:18][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:18][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:20][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:20][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:20][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:20][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:20][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:20][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:20][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:20][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:22][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:22][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:22][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:22][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:22][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:22][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:22][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:22][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:24][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:24][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:24][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:24][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:24][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:24][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:24][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:24][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:26][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:26][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:26][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:26][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:28][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:28][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:28][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:28][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:28][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:28][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:28][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:28][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:32][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:32][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:32][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:32][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:34][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:34][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:34][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:34][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:42][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:42][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:42][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:42][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:42][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:42][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:42][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:42][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:44][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:44][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:44][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:44][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:46][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:46][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:46][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:46][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:48][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:48][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:48][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:48][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:48][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:48][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:48][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:48][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:50][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:50][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:50][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:50][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:52][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:52][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:52][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:52][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:54][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:54][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:54][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:54][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:56][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:56][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:56][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:56][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:56][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:56][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:56][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:56][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:58][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:58][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:55:58][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:58][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:58][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:58][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:55:58][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:55:58][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:00][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:00][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:00][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:00][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:02][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:02][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:02][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:02][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:02][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:02][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:02][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:02][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:04][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:04][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:04][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:04][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:04][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:04][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:04][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:04][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:06][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:06][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:06][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:06][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:06][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:06][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:06][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:06][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:08][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:08][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:08][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:08][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:08][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:08][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:08][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:08][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:10][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:10][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:10][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:10][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:10][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:10][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:10][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:10][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:12][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:14][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:14][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:14][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:14][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:16][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:16][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:16][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:16][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:16][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:16][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:16][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:16][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:18][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:18][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:18][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:18][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:20][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:20][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:20][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:20][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:20][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:20][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:20][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:20][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:22][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:22][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:22][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:22][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:22][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:22][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:22][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:22][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:24][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:24][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:24][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:24][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:24][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:24][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:24][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:24][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:26][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:26][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:26][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:26][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:26][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:28][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:28][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:28][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:28][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:28][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:28][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:28][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:28][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:32][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:32][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:32][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:32][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:32][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:34][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:34][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:34][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:34][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:42][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:42][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:42][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:42][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:42][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:42][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:42][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:42][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:44][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:44][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:44][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:44][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:46][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:46][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:46][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:46][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:46][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:48][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:48][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:48][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:48][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:48][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:48][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:48][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:48][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:50][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:50][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:50][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:50][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:50][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:52][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:52][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:52][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:52][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:52][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:54][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:54][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:54][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:54][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:54][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:56][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:56][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:56][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:56][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:56][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:56][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:56][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:56][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:58][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:58][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: claw)
+[2026-06-15 11:56:58][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:58][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:58][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:58][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:56:58][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: claw)
+[2026-06-15 11:56:58][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-15 11:57:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: unknown)
+[2026-06-15 11:57:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-040.json (项目: unknown)
+[2026-06-15 11:57:00][watcher][WARN] 任务校验失败，已跳过: 2026-06-15-040.json
+[2026-06-15 11:57:00][watcher][WARN] 任务校验失败，已跳过: 2026-06-15-040.json
+[2026-06-15 11:57:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: unknown)
+[2026-06-15 11:57:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-15-1100.json (项目: unknown)
+[2026-06-15 11:57:00][watcher][WARN] 任务校验失败，已跳过: 2026-06-15-1100.json
+[2026-06-15 11:57:00][watcher][WARN] 任务校验失败，已跳过: 2026-06-15-1100.json
+[2026-06-15 12:54:22][watcher][INFO] 文件监听器收到停止信号
+[2026-06-15 12:54:22][watcher][INFO] 文件监听器收到停止信号
+[2026-06-15 12:54:22][watcher][INFO] 文件监听器已停止
+[2026-06-15 12:54:22][watcher][INFO] 文件监听器已停止
+[2026-06-15 23:44:08][watcher][INFO] ============================================
+[2026-06-15 23:44:08][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v3 启动
+[2026-06-15 23:44:08][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/
+[2026-06-15 23:44:08][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-15 23:44:08][watcher][INFO] PID: 85784
+[2026-06-15 23:44:08][watcher][INFO] ============================================
+[2026-06-15 23:44:08][watcher][INFO] 心跳进程已启动 (PID: 85812)
+[2026-06-15 23:44:08][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-16 07:40:03][watcher][INFO] 文件监听器收到停止信号
+[2026-06-16 07:40:03][watcher][INFO] 文件监听器已停止
+[2026-06-16 07:41:00][watcher][INFO] ============================================
+[2026-06-16 07:41:00][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v3 启动
+[2026-06-16 07:41:01][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/
+[2026-06-16 07:41:01][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-16 07:41:01][watcher][INFO] PID: 605
+[2026-06-16 07:41:01][watcher][INFO] ============================================
+[2026-06-16 07:41:01][watcher][INFO] 心跳进程已启动 (PID: 692)
+[2026-06-16 07:41:01][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-16 08:12:35][watcher][INFO] 文件监听器收到停止信号
+[2026-06-16 08:12:35][watcher][INFO] 文件监听器已停止
+[2026-06-16 08:12:37][watcher][INFO] ============================================
+[2026-06-16 08:12:37][watcher][INFO] Marvis-WorkBuddy Bridge 文件监听器 v3 启动
+[2026-06-16 08:12:37][watcher][INFO] 监听目录: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/
+[2026-06-16 08:12:37][watcher][INFO] 心跳间隔: 60s | 重拉机制: 启用
+[2026-06-16 08:12:37][watcher][INFO] PID: 14324
+[2026-06-16 08:12:37][watcher][INFO] ============================================
+[2026-06-16 08:12:37][watcher][INFO] 心跳进程已启动 (PID: 14333)
+[2026-06-16 08:12:37][watcher][INFO] 启动 fswatch 子进程 (第 1 次)
+[2026-06-16 08:32:34][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/e2e-test-task.json (项目: unknown)
+[2026-06-16 08:32:34][watcher][WARN] 任务校验失败，已跳过: e2e-test-task.json
+[2026-06-16 09:17:16][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/fetch_data_failure_20260616.json (项目: unknown)
+[2026-06-16 09:17:16][watcher][WARN] 任务校验失败，已跳过: fetch_data_failure_20260616.json
+[2026-06-16 10:08:18][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260610-040.json (项目: claw)
+[2026-06-16 10:08:19][watcher][WARN] 任务校验失败，已跳过: 20260610-040.json
+[2026-06-16 10:08:19][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-16-0925.json (项目: claw)
+[2026-06-16 10:08:19][watcher][WARN] 任务校验失败，已跳过: task_2026-06-16-0925.json
+[2026-06-16 11:04:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-1000.json (项目: claw)
+[2026-06-16 11:04:31][watcher][WARN] 任务校验失败，已跳过: 2026-06-16-1000.json
+[2026-06-16 11:04:31][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260616-040.json (项目: claw)
+[2026-06-16 11:04:31][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-16 11:31:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-040.json (项目: claw)
+[2026-06-16 11:31:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-16 11:31:49][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-1100.json (项目: claw)
+[2026-06-16 11:31:49][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-16 11:39:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-040.json (项目: unknown)
+[2026-06-16 11:39:12][watcher][WARN] 任务校验失败，已跳过: 2026-06-16-040.json
+[2026-06-16 11:39:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-1100.json (项目: unknown)
+[2026-06-16 11:39:12][watcher][WARN] 任务校验失败，已跳过: 2026-06-16-1100.json
+[2026-06-16 11:39:12][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260616-040.json (项目: unknown)
+[2026-06-16 11:39:12][watcher][WARN] 任务校验失败，已跳过: 20260616-040.json
+[2026-06-16 13:51:13][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-040.json (项目: claw)
+[2026-06-16 13:51:13][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-16 13:51:14][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-16-1300.json (项目: claw)
+[2026-06-16 13:51:14][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-16 14:46:48][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-16-040.json (项目: claw)
+[2026-06-16 14:46:48][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-17 09:10:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/fetch_data_failed_20260617.json (项目: unknown)
+[2026-06-17 09:10:35][watcher][WARN] 任务校验失败，已跳过: fetch_data_failed_20260617.json
+[2026-06-17 10:01:37][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-17_0925.json (项目: claw)
+[2026-06-17 10:01:37][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-17 10:57:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-17-040.json (项目: claw)
+[2026-06-17 10:57:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-17 10:57:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-17-1000.json (项目: claw)
+[2026-06-17 10:57:40][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-17 10:57:40][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260610-040.json (项目: claw)
+[2026-06-17 10:57:40][watcher][WARN] 任务校验失败，已跳过: 20260610-040.json
+[2026-06-17 11:53:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-17-040.json (项目: claw)
+[2026-06-17 11:53:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-17 11:53:38][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-17-1100.json (项目: claw)
+[2026-06-17 11:53:38][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-17 13:45:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-17-040.json (项目: claw)
+[2026-06-17 13:45:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-17 13:45:11][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_20260617-1300.json (项目: claw)
+[2026-06-17 13:45:11][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-17 14:41:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-17-040.json (项目: claw)
+[2026-06-17 14:41:21][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-17 15:37:36][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260617-001.json (项目: claw)
+[2026-06-17 15:37:36][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-18 08:32:21][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/earnings_calendar_20260618.json (项目: claw)
+[2026-06-18 08:32:21][watcher][WARN] 任务校验失败，已跳过: earnings_calendar_20260618.json
+[2026-06-18 10:36:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-18-041.json (项目: claw)
+[2026-06-18 10:36:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-18 10:36:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-18-0925.json (项目: claw)
+[2026-06-18 10:36:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-18 10:36:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260610-040.json (项目: claw)
+[2026-06-18 10:36:30][watcher][WARN] 任务校验失败，已跳过: 20260610-040.json
+[2026-06-18 10:36:30][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/snapshot_1000_done.json (项目: claw)
+[2026-06-18 10:36:30][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-18 11:41:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/20260618-040.json (项目: claw)
+[2026-06-18 11:41:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-18 11:41:27][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/task_2026-06-18-1100.json (项目: claw)
+[2026-06-18 11:41:27][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-18 13:46:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-18-040.json (项目: claw)
+[2026-06-18 13:46:00][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-18 13:46:00][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-18-1300.json (项目: claw)
+[2026-06-18 13:46:00][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-18 14:49:44][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-18-040.json (项目: claw)
+[2026-06-18 14:49:44][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-19 09:38:25][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/snapshot_0925_done.json (项目: claw)
+[2026-06-19 09:38:25][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-19 13:48:15][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-19-1300.json (项目: )
+[2026-06-19 13:48:15][watcher][INFO] 任务校验通过，已写入触发队列
+[2026-06-19 13:53:35][watcher][INFO] 检测到新任务: /Users/guan/workbuddy_marvis_bridge/status/workbuddy_pending/2026-06-19-1300.json (项目: )
+[2026-06-19 13:53:35][watcher][WARN] 任务校验失败，已跳过: 2026-06-19-1300.json
