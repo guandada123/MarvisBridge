@@ -34,17 +34,20 @@ PID_FILE = BRIDGE_DIR / "status" / "feishu_qa_bot.pid"
 STOCK_NAMES_FILE = BRIDGE_DIR / "scripts" / "stock_names.json"
 
 # 模拟盘数据
-SIM_PORTFOLIO = Path.home() / "WorkBuddy" / "Claw" / ".workbuddy" / "data" / "simulation" / "portfolio.json"
+SIM_PORTFOLIO = (
+    Path.home() / "WorkBuddy" / "Claw" / ".workbuddy" / "data" / "simulation" / "portfolio.json"
+)
 
 OLLAMA_API = "http://localhost:11434"
 OLLAMA_MODEL = "qwen2.5:7b"
 
 POLL_INTERVAL = 180  # 轮询间隔（秒）
-FETCH_MINUTES = 60   # 每次拉取最近多少分钟的消息
+FETCH_MINUTES = 60  # 每次拉取最近多少分钟的消息
 
 BOT_NAME = "WorkBuddy AI 助理"
 
 # ─── 工具函数 ──────────────────────────────────────────────
+
 
 def log(msg: str):
     """写日志"""
@@ -93,14 +96,23 @@ def fetch_recent_messages(minutes: int = FETCH_MINUTES) -> list:
     now = datetime.now(timezone(timedelta(hours=8)))
     start = now - timedelta(minutes=minutes)
 
-    result = run_cmd([
-        "lark-cli", "im", "+chat-messages-list",
-        "--chat-id", CHAT_ID,
-        "--as", "bot",
-        "--start", start.strftime("%Y-%m-%dT%H:%M:%S+08:00"),
-        "--format", "json",
-        "--page-size", "50"
-    ])
+    result = run_cmd(
+        [
+            "lark-cli",
+            "im",
+            "+chat-messages-list",
+            "--chat-id",
+            CHAT_ID,
+            "--as",
+            "bot",
+            "--start",
+            start.strftime("%Y-%m-%dT%H:%M:%S+08:00"),
+            "--format",
+            "json",
+            "--page-size",
+            "50",
+        ]
+    )
 
     if not result.get("ok"):
         log(f"⚠️ 获取消息失败: {result.get('error', 'unknown')}")
@@ -122,12 +134,19 @@ def send_reply(message_id: str, reply_text: str):
 
     markdown = f"🤖 **{BOT_NAME}**\n\n{reply_text}"
 
-    result = run_cmd([
-        "lark-cli", "im", "+messages-send",
-        "--chat-id", CHAT_ID,
-        "--as", "bot",
-        "--markdown", markdown,
-    ])
+    result = run_cmd(
+        [
+            "lark-cli",
+            "im",
+            "+messages-send",
+            "--chat-id",
+            CHAT_ID,
+            "--as",
+            "bot",
+            "--markdown",
+            markdown,
+        ]
+    )
 
     if result.get("ok"):
         log(f"✅ 已回复消息 {message_id[:16]}...")
@@ -136,6 +155,7 @@ def send_reply(message_id: str, reply_text: str):
 
 
 # ─── 股票名称映射 ──────────────────────────────────────────
+
 
 def load_stock_names() -> dict:
     """加载股票名称→代码映射"""
@@ -155,7 +175,7 @@ def resolve_stock_names(text: str, name_map: dict) -> list:
     found = set()
 
     # 1. 匹配 6 位数字代码（不使用 \b，因为中文环境 \b 不生效）
-    codes = re.findall(r'(\d{6})', text)
+    codes = re.findall(r"(\d{6})", text)
     for code in codes:
         found.add(code)
 
@@ -177,9 +197,11 @@ def resolve_stock_names(text: str, name_map: dict) -> list:
 
 # ─── 大盘指数查询 ──────────────────────────────────────────
 
+
 def fetch_market_indices() -> str:
     """获取主要指数实时行情"""
     import urllib.request
+
     indices = {
         "sh000001": "上证指数",
         "sz399001": "深证成指",
@@ -200,9 +222,7 @@ def fetch_market_indices() -> str:
             price = parts[3]
             change_amt = parts[31] if len(parts) > 31 else ""
             change_pct = parts[32] if len(parts) > 32 else ""
-            results.append(
-                f"• {q_name}: {price} ({change_pct}%, {change_amt})"
-            )
+            results.append(f"• {q_name}: {price} ({change_pct}%, {change_amt})")
         except Exception as e:
             log(f"⚠️ 指数获取失败 {q_code}: {e}")
 
@@ -212,6 +232,7 @@ def fetch_market_indices() -> str:
 
 
 # ─── 持仓查询 ──────────────────────────────────────────────
+
 
 def fetch_portfolio_summary() -> str:
     """读取模拟盘持仓并生成摘要"""
@@ -228,7 +249,9 @@ def fetch_portfolio_summary() -> str:
         pnl = latest.get("pnl", 0)
         pnl_pct = latest.get("pnl_pct", 0)
 
-        lines = [f"总资产: ¥{total_asset:,.2f} | 总收益: ¥{pnl:+.2f} ({pnl_pct:+.2f}%) | 现金: ¥{cash:,.2f}"]
+        lines = [
+            f"总资产: ¥{total_asset:,.2f} | 总收益: ¥{pnl:+.2f} ({pnl_pct:+.2f}%) | 现金: ¥{cash:,.2f}"
+        ]
 
         if positions:
             lines.append("\n持仓明细：")
@@ -256,9 +279,11 @@ def fetch_portfolio_summary() -> str:
 
 # ─── 腾讯行情 ──────────────────────────────────────────────
 
+
 def fetch_stock_quote(stock_code: str) -> str:
     """通过腾讯财经 API 获取单只股票实时行情"""
     import urllib.request
+
     try:
         prefix = "sh" if stock_code.startswith("6") else "sz"
         url = f"http://qt.gtimg.cn/q={prefix}{stock_code}"
@@ -275,15 +300,18 @@ def fetch_stock_quote(stock_code: str) -> str:
         change_amt = parts[31] if len(parts) > 31 else ""
         change_pct = parts[32] if len(parts) > 32 else ""
         volume = parts[6]
-        return (f"股票: {name}({stock_code})\n"
-                f"现价: ¥{price} | 涨跌: {change_amt} ({change_pct}%)\n"
-                f"成交量: {volume}手")
+        return (
+            f"股票: {name}({stock_code})\n"
+            f"现价: ¥{price} | 涨跌: {change_amt} ({change_pct}%)\n"
+            f"成交量: {volume}手"
+        )
     except Exception as e:
         log(f"⚠️ 行情获取失败 {stock_code}: {e}")
         return ""
 
 
 # ─── Ollama ────────────────────────────────────────────────
+
 
 def call_ollama(system_prompt: str, user_message: str) -> str:
     """调用 Ollama 生成回答"""
@@ -295,15 +323,25 @@ def call_ollama(system_prompt: str, user_message: str) -> str:
         "options": {
             "temperature": 0.7,
             "max_tokens": 1024,
-        }
+        },
     }
 
     try:
         result = subprocess.run(
-            ["curl", "-s", "-X", "POST", f"{OLLAMA_API}/api/generate",
-             "-H", "Content-Type: application/json",
-             "-d", json.dumps(prompt)],
-            capture_output=True, text=True, timeout=60
+            [
+                "curl",
+                "-s",
+                "-X",
+                "POST",
+                f"{OLLAMA_API}/api/generate",
+                "-H",
+                "Content-Type: application/json",
+                "-d",
+                json.dumps(prompt),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=60,
         )
         data = json.loads(result.stdout)
         return data.get("response", "抱歉，我暂时无法回答这个问题。").strip()
@@ -313,6 +351,7 @@ def call_ollama(system_prompt: str, user_message: str) -> str:
 
 
 # ─── 消息处理 ──────────────────────────────────────────────
+
 
 def detect_query_type(text: str) -> list:
     """检测问题类型，返回需要补充的数据标签列表"""
@@ -460,6 +499,7 @@ def main():
                 except Exception as e:
                     log(f"❌ 处理消息失败: {e}")
                     import traceback
+
                     traceback.print_exc()
                     save_processed(msg.get("message_id", ""))
 
@@ -469,6 +509,7 @@ def main():
         except Exception as e:
             log(f"❌ 轮询异常: {e}")
             import traceback
+
             traceback.print_exc()
 
         time.sleep(POLL_INTERVAL)

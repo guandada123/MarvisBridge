@@ -193,9 +193,15 @@ def send_summary(results: list[dict]) -> bool:
             "elements": [
                 {
                     "tag": "markdown",
-                    "content": f"**检查时间**: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n" + "\n".join(lines),
+                    "content": f"**检查时间**: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
+                    + "\n".join(lines),
                 },
-                {"tag": "note", "elements": [{"tag": "plain_text", "content": "status_aggregator.py · 每6小时自动巡检"}]},
+                {
+                    "tag": "note",
+                    "elements": [
+                        {"tag": "plain_text", "content": "status_aggregator.py · 每6小时自动巡检"}
+                    ],
+                },
             ],
         },
     }

@@ -8,7 +8,9 @@ repos:
     rev: v5.0.0
     hooks:
       - id: trailing-whitespace
+        exclude: ^(claw|dashboard|shared|quant|status|logs|invalid)/
       - id: end-of-file-fixer
+        exclude: ^(claw|dashboard|shared|quant|status|logs|invalid)/
       - id: check-yaml
         args: [--allow-multiple-documents]
       - id: check-toml
@@ -19,6 +21,7 @@ repos:
       - id: detect-private-key
       - id: mixed-line-ending
         args: [--fix=lf]
+        exclude: ^(claw|dashboard|shared|quant|status|logs|invalid)/
 
   # Shell script checks
   - repo: https://github.com/shellcheck-py/shellcheck-py

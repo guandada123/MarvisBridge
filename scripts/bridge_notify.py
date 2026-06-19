@@ -68,6 +68,7 @@ def notify_feishu(title: str, message: str) -> bool:
     优先级: 环境变量 FEISHU_WEBHOOK > config.json notifications.feishu_webhook
     """
     import os
+
     webhook_url = os.environ.get("FEISHU_WEBHOOK", "")
 
     if not webhook_url:

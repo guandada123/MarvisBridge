@@ -33,9 +33,9 @@ def fetch_all() -> list:
     seen_codes = set()
 
     market_segments = [
-        "m:0+t:6",     # 沪市A股 (600xxx)
-        "m:1+t:2",     # 深市A股 (000xxx)
-        "m:1+t:23",    # 中小板 (002xxx)
+        "m:0+t:6",  # 沪市A股 (600xxx)
+        "m:1+t:2",  # 深市A股 (000xxx)
+        "m:1+t:23",  # 中小板 (002xxx)
     ]
 
     for fs in market_segments:
@@ -94,9 +94,23 @@ def main():
     print(f"✅ 去重后 {len(mapping)} 只唯一股票", flush=True)
 
     # 验证关键股票
-    checks = ["紫光国微", "中国巨石", "龙佰集团", "贵州茅台", "中国平安",
-              "招商银行", "宁德时代", "中兴通讯", "中信证券", "美的集团",
-              "三六零", "科大讯飞", "比亚迪", "紫金矿业", "药明康德"]
+    checks = [
+        "紫光国微",
+        "中国巨石",
+        "龙佰集团",
+        "贵州茅台",
+        "中国平安",
+        "招商银行",
+        "宁德时代",
+        "中兴通讯",
+        "中信证券",
+        "美的集团",
+        "三六零",
+        "科大讯飞",
+        "比亚迪",
+        "紫金矿业",
+        "药明康德",
+    ]
     for name in checks:
         code = mapping.get(name, "NOT FOUND")
         print(f"  {name} -> {code}", flush=True)
@@ -105,7 +119,7 @@ def main():
         "version": 5,
         "updated": time.strftime("%Y-%m-%dT%H:%M:%S+08:00"),
         "total": len(mapping),
-        "stocks": mapping
+        "stocks": mapping,
     }
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:

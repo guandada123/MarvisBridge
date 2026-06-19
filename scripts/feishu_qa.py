@@ -46,14 +46,22 @@ def fetch_recent_messages(minutes: int = 30) -> list:
     now = datetime.now(timezone(timedelta(hours=8)))
     start = now - timedelta(minutes=minutes)
 
-    result = run_lark([
-        "im", "+chat-messages-list",
-        "--chat-id", CHAT_ID,
-        "--as", "bot",
-        "--start", start.strftime("%Y-%m-%dT%H:%M:%S+08:00"),
-        "--format", "json",
-        "--page-size", "50"
-    ])
+    result = run_lark(
+        [
+            "im",
+            "+chat-messages-list",
+            "--chat-id",
+            CHAT_ID,
+            "--as",
+            "bot",
+            "--start",
+            start.strftime("%Y-%m-%dT%H:%M:%S+08:00"),
+            "--format",
+            "json",
+            "--page-size",
+            "50",
+        ]
+    )
 
     if not result.get("ok"):
         print(f"WARN: Failed to fetch messages: {result.get('error')}", file=sys.stderr)
@@ -84,20 +92,19 @@ def main():
         if not is_user_message(msg):
             continue
 
-        new_messages.append({
-            "message_id": msg_id,
-            "content": msg.get("content", ""),
-            "message_type": msg.get("msg_type", ""),
-            "create_time": msg.get("create_time", ""),
-            "sender": msg.get("sender", {}),
-        })
+        new_messages.append(
+            {
+                "message_id": msg_id,
+                "content": msg.get("content", ""),
+                "message_type": msg.get("msg_type", ""),
+                "create_time": msg.get("create_time", ""),
+                "sender": msg.get("sender", {}),
+            }
+        )
 
     if new_messages:
         # Write results to stdout for the automation to consume
-        output = {
-            "found": len(new_messages),
-            "messages": new_messages
-        }
+        output = {"found": len(new_messages), "messages": new_messages}
         print(json.dumps(output, ensure_ascii=False, indent=2))
     else:
         print(json.dumps({"found": 0, "messages": []}))

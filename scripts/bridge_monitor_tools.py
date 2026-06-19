@@ -29,14 +29,17 @@ except ImportError:
 # 安全白名单：防止 project 字段路径穿越
 VALID_PROJECTS = {"claw", "quant", "dashboard", "stock_insight", "shared"}
 
+
 def sanitize_project(project: str) -> str:
     """强制 project 字段只能是白名单值，防止路径穿越"""
     if not project or project not in VALID_PROJECTS:
         return "claw"
     return project
 
+
 # 任务文件最大尺寸限制（1MB）
 MAX_TASK_FILE_SIZE = 1 * 1024 * 1024
+
 
 def safe_load_json(path: Path) -> dict:
     """安全加载 JSON，带文件大小限制"""
@@ -45,6 +48,7 @@ def safe_load_json(path: Path) -> dict:
         raise ValueError(f"Task file too large: {stat.st_size} bytes (max {MAX_TASK_FILE_SIZE})")
     with open(path) as f:
         return json.load(f)
+
 
 BRIDGE_DIR = Path.home() / "workbuddy_marvis_bridge"
 CONFIG_FILE = BRIDGE_DIR / "shared" / "config" / "config.json"
@@ -304,9 +308,9 @@ def cmd_gen_health_json(args: list[str]) -> None:
 
             # 兼容 Python 3.9: +0800 → +08:00 标准化
             normalized = last_raw
-            if len(last_raw) == 25 and last_raw[-5] in ('+', '-'):
+            if len(last_raw) == 25 and last_raw[-5] in ("+", "-"):
                 # 格式: 2026-06-16T07:56:56+0800 → 2026-06-16T07:56:56+08:00
-                normalized = last_raw[:-2] + ':' + last_raw[-2:]
+                normalized = last_raw[:-2] + ":" + last_raw[-2:]
             last_dt = datetime.fromisoformat(normalized)
             if last_dt.tzinfo is not None:
                 last_dt = last_dt.astimezone(UTC)
@@ -606,8 +610,16 @@ def cmd_update_dashboard(args: list[str]) -> None:
             "dead_lettered": dead_total,
         },
         "projects": {
-            "claw": {"dead_letters": len(list((BRIDGE_DIR / "claw" / "dead_letter").glob("*.json"))) if (BRIDGE_DIR / "claw" / "dead_letter").exists() else 0},
-            "quant": {"dead_letters": len(list((BRIDGE_DIR / "quant" / "dead_letter").glob("*.json"))) if (BRIDGE_DIR / "quant" / "dead_letter").exists() else 0},
+            "claw": {
+                "dead_letters": len(list((BRIDGE_DIR / "claw" / "dead_letter").glob("*.json")))
+                if (BRIDGE_DIR / "claw" / "dead_letter").exists()
+                else 0
+            },
+            "quant": {
+                "dead_letters": len(list((BRIDGE_DIR / "quant" / "dead_letter").glob("*.json")))
+                if (BRIDGE_DIR / "quant" / "dead_letter").exists()
+                else 0
+            },
         },
         "circuit_breakers": {"open": [], "half_open": [], "closed": []},
     }
