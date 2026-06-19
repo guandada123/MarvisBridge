@@ -38,7 +38,8 @@ poll() {
 
     # 检测变化
     if [ "${current_hash}" != "${LAST_HASH}" ]; then
-        local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+        local timestamp
+        timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
         if [ "${LAST_HASH}" = "" ]; then
             # 首次启动 — 只记录不通知
@@ -57,7 +58,8 @@ poll() {
             local task_list=""
             for f in "${PENDING_DIR}"/*.json; do
                 [ -f "$f" ] || continue
-                local title=$(python3 "$TOOL" get-task-field "${f}" title "未知任务" 2>/dev/null)
+                local title
+                title=$(python3 "$TOOL" get-task-field "${f}" title "未知任务" 2>/dev/null)
                 task_list="${task_list}• ${title}\n"
             done
 

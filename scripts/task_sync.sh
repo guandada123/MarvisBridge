@@ -1,6 +1,6 @@
 #!/bin/bash
 # task_sync.sh — 将 Marvis 写入 claw/tasks/ 的任务同步到 status/workbuddy_pending/
-# 
+#
 # 背景：Marvis 持续将任务写入 claw/tasks/ 而非 status/workbuddy_pending/
 # 此脚本作为补偿机制，将可操作任务移动到正确目录
 #
@@ -30,12 +30,12 @@ echo "[$(date '+%Y-%m-%d %H:%M:%S')][task_sync][INFO] === 扫描开始 ===" >> "
 
 for file in "$SOURCE"/*.json; do
     [ -f "$file" ] || continue
-    
+
     filename=$(basename "$file")
-    
+
     # 用工具脚本一次性读取 type 和 task_id（消除两次 python3 -c 内联调用）
-    read -r task_type task_id <<< $(python3 "$TOOL" get-fields "$file" type task_id 2>/dev/null || echo "unknown unknown")
-    
+    read -r task_type task_id <<< "$(python3 "$TOOL" get-fields "$file" type task_id 2>/dev/null || echo "unknown unknown")"
+
     # 跳过不可操作类型
     case "$task_type" in
         notification|failure_notification)
@@ -44,7 +44,7 @@ for file in "$SOURCE"/*.json; do
             continue
             ;;
     esac
-    
+
     # 检查是否已在 pending 目录
     if [ -f "$TARGET/${task_id}.json" ]; then
         # 版本感知：只保留更新的版本
@@ -63,7 +63,7 @@ for file in "$SOURCE"/*.json; do
         SKIPPED=$((SKIPPED + 1))
         continue
     fi
-    
+
     # 移动任务到 pending
     mv "$file" "$TARGET/"
     MOVED=$((MOVED + 1))

@@ -13,7 +13,6 @@ set +e
 
 BRIDGE_DIR="$HOME/workbuddy_marvis_bridge"
 STATUS_DIR="$BRIDGE_DIR/status"
-LOGS_DIR="$BRIDGE_DIR/logs"
 
 OUTPUT_JSON=false
 QUIET_MODE=false

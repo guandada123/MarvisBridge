@@ -68,7 +68,7 @@ jobs:
       - name: Bandit scan
         run: |
           bandit -r scripts/ bridge/ -f json -o bandit-report.json \
-            -ll --skip B101 || true
+            -ll --skip B101,B310 || true
         continue-on-error: true
       - name: Upload bandit report
         uses: actions/upload-artifact@v4

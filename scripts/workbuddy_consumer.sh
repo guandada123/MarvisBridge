@@ -59,12 +59,14 @@ process_task() {
     project=$(python3 "$TOOL" get-task-field "$task_file" project "claw" 2>/dev/null)
     task_type=$(python3 "$TOOL" get-task-field "$task_file" type "unknown" 2>/dev/null)
     title=$(python3 "$TOOL" get-task-field "$task_file" title "未知任务" 2>/dev/null)
+    # shellcheck disable=SC2034
     source=$(python3 "$TOOL" get-task-field "$task_file" source "unknown" 2>/dev/null)
 
     [ -z "$task_id" ] && { log "任务 ID 缺失，跳过: $task_file"; return 1; }
 
     local result_file="${RESULTS_DIR}/${task_id}.json"
-    local archive_file="${ARCHIVE_DIR}/${task_id}_$(date +%s).json"
+    local archive_file
+    archive_file="${ARCHIVE_DIR}/${task_id}_$(date +%s).json"
     local result_status="completed"
 
     # --- 按类型分发处理 ---

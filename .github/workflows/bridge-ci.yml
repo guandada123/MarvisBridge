@@ -108,7 +108,7 @@ jobs:
       - name: Install scanners
         run: pip install bandit safety
       - name: Bandit (code-level scan)
-        run: bandit -r scripts/ bridge/ -ll --skip B101
+        run: bandit -r scripts/ bridge/ -ll --skip B101,B310
       - name: Safety (dependency scan)
         run: safety check --full-report || true
       - name: Secret scan

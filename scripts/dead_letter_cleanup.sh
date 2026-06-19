@@ -7,7 +7,6 @@
 set +e
 
 BRIDGE_DIR="$HOME/workbuddy_marvis_bridge"
-CONFIG_FILE="$BRIDGE_DIR/shared/config/config.json"
 ARCHIVE_DIR="$BRIDGE_DIR/status/dead_letter_archive"
 TOOL="$BRIDGE_DIR/scripts/bridge_monitor_tools.py"
 
@@ -58,11 +57,14 @@ cleanup_project() {
     for f in "$dl_dir"/*.json; do
         [ ! -f "$f" ] && continue
 
-        local mtime_epoch=$(get_mtime "$f")
+        local mtime_epoch
+        mtime_epoch=$(get_mtime "$f")
 
         if [ "$mtime_epoch" -lt "$cutoff_epoch" ] || $CLEAR_ALL; then
-            local size_kb=$(du -k "$f" | cut -f1)
-            local fname=$(basename "$f")
+            local size_kb
+            size_kb=$(du -k "$f" | cut -f1)
+            local fname
+            fname=$(basename "$f")
 
             if $DRY_RUN; then
                 echo "  [DRY-RUN] 将清理: $project/dead_letter/$fname (${size_kb}KB)"
