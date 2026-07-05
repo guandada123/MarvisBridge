@@ -522,10 +522,9 @@ def main():
     # ====== 业务幂等键检查 ======
     idem_config = config.get("idempotency", {})
     if idem_config.get("enabled", False) and idem_config.get("use_business_key", False):
-        # 优先使用任务显式设定的幂等键，没有时才从语义派生
-        idem_key = task.get("idempotency_key", "")
-        if not idem_key:
-            idem_key = derive_idempotency_key(task)
+        # 强制从 task_id 推导幂等键（YYYYMMDD 粒度），
+        # 不信任文件中写死的 key（Marvis 端曾写入年份级粒度，导致跨天误判）
+        idem_key = derive_idempotency_key(task)
         if idem_key:
             # 注入幂等键到任务
             task["idempotency_key"] = idem_key

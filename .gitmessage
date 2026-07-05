@@ -1,0 +1,16 @@
+# <type>: <简短描述>
+#
+# <类型>: <描述>
+#
+# 类型: feat / fix / refactor / style / docs / test / chore / perf / ci / revert
+# 范围(可选): claw / pmf / marvis / eak / ci
+#
+# 示例:
+#   feat(sim_trade): 新增ATR动态止损
+#   fix(backtest): 修复除零错误
+#   refactor(report): 提取sector_report子函数
+#   ci: 统一GitHub Actions门禁
+#
+# 如果变更重要或需要关注：
+#   Breaking: <简要说明>
+#   Reviewed-by: <审查者>

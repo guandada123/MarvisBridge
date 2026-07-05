@@ -31,7 +31,14 @@ poll() {
     # 计算当前目录 hash（只对文件名和大小做指纹）
     local current_hash
     if [ "${count}" -gt 0 ]; then
-        current_hash=$(ls -l "${PENDING_DIR}"/*.json 2>/dev/null | /sbin/md5)
+        # 跨平台 md5: macOS 用 md5, Linux 用 md5sum, 兜底用 openssl
+        if command -v md5 &>/dev/null; then
+            current_hash=$(ls -l "${PENDING_DIR}"/*.json 2>/dev/null | md5)
+        elif command -v md5sum &>/dev/null; then
+            current_hash=$(ls -l "${PENDING_DIR}"/*.json 2>/dev/null | md5sum)
+        else
+            current_hash=$(ls -l "${PENDING_DIR}"/*.json 2>/dev/null | openssl md5)
+        fi
     else
         current_hash="empty"
     fi

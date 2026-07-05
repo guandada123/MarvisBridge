@@ -27,6 +27,18 @@ TRIGGER_DIR="$STATUS_DIR/trigger_queue"   # 目录队列替代单文件，避免
 HEARTBEAT_FILE="$STATUS_DIR/heartbeat"
 LOG_FILE="$LOGS_DIR/watcher.log"
 
+# 日志轮转：当文件超过 1MB 时自动归档
+rotate_log() {
+    local log="$1"
+    local max_size=1048576  # 1MB
+    if [ -f "$log" ] && [ "$(stat -f%z "$log" 2>/dev/null || echo 0)" -gt "$max_size" ]; then
+        local archive="${log}.$(date '+%Y%m%d-%H%M%S')"
+        mv "$log" "$archive"
+        gzip "$archive" 2>/dev/null || true
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] 🔄 Log rotated: $archive.gz" > "$log"
+    fi
+}
+
 # 确保目录存在
 mkdir -p "$STATUS_DIR" "$LOGS_DIR"
 
@@ -81,6 +93,7 @@ echo $$ > "$PID_FILE"
 
 # 统一日志函数
 log() {
+    rotate_log "$LOG_FILE"
     local level="${1:-INFO}"
     shift
     # launchd 管理下 stdout 已被重定向到 launchd_watcher.stdout.log

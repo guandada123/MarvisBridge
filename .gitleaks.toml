@@ -1,0 +1,32 @@
+# Shared gitleaks configuration
+# Reference: https://github.com/gitleaks/gitleaks#config
+title = "Claw Monorepo Secret Scan"
+
+[allowlist]
+  description = "Allow common false positives"
+  regexes = [
+    "(?i)password[\s=:]*example",
+    "(?i)secret[\s=:]*placeholder",
+    "-----BEGIN PUBLIC KEY-----",
+  ]
+
+[rules]
+# Example custom rules; extend as needed
+[[rules]]
+  id = "generic-api-key"
+  description = "High entropy string likely API key"
+  regex = '''(?i)(api[_-]?key|access[_-]?key|secret|token)[\s=:]*[A-Za-z0-9\-_]{20,}'''
+  entropy = 4.0
+  tags = ["key", "api", "token"]
+
+[[rules]]
+  id = "aws-key"
+  description = "AWS Access Key"
+  regex = '''AKIA[0-9A-Z]{16}'''
+  tags = ["aws"]
+
+[[rules]]
+  id = "private-key"
+  description = "Private Key"
+  regex = '''-----BEGIN (EC|RSA|DSA|OPENSSH) PRIVATE KEY-----'''
+  tags = ["key", "private"]

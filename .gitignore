@@ -30,3 +30,6 @@ status/
 trigger_queue/
 dead_letter/
 workbuddy_pending/
+
+# Market data snapshots (auto-generated)
+shared/market_data/snapshot_*

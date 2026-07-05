@@ -3,7 +3,7 @@
 # WorkBuddy Consumer — 消费 workbuddy_pending 队列中的任务
 # 功能: 读取 pending/*.json → 执行任务 → 写结果 → 归档
 # 调用: launchd 定时触发或手动执行
-# v1.0.0 - 2026-06-16
+# v1.1.0 - 2026-06-20 (add: log rotation)
 # ============================================================
 
 set -euo pipefail
@@ -22,7 +22,20 @@ INTERVAL=30  # 扫描间隔（秒），launchd 模式下只执行一次
 mkdir -p "${ARCHIVE_DIR}" "${RESULTS_DIR}" "${BRIDGE_DIR}/logs" 2>/dev/null
 echo $$ > "${PID_FILE}"
 
+# 日志轮转：当文件超过 1MB 时自动归档
+rotate_log() {
+    local log="$1"
+    local max_size=1048576  # 1MB
+    if [ -f "$log" ] && [ "$(stat -f%z "$log" 2>/dev/null || echo 0)" -gt "$max_size" ]; then
+        local archive="${log}.$(date '+%Y%m%d-%H%M%S')"
+        mv "$log" "$archive"
+        gzip "$archive" 2>/dev/null || true
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] 🔄 Log rotated: $archive.gz" > "$log"
+    fi
+}
+
 log() {
+    rotate_log "$LOG_FILE"
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "${LOG_FILE}"
 }
 

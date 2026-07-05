@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marvis Bridge 监控面板</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+:root {
+    --bg: #0a0e1a; --bg-card: rgba(255,255,255,0.04); --border: rgba(255,255,255,0.08);
+    --text: #e8edf5; --text-sec: #8892a4; --accent: #4f8cff; --green: #34d399;
+    --yellow: #fbbf24; --red: #f87171; --glass: rgba(10,14,26,0.6);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+.header { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(24px); background: var(--glass); border-bottom: 1px solid var(--border); padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; }
+.header h1 { font-size: 20px; font-weight: 600; background: linear-gradient(135deg, var(--accent), #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.header-time { font-size: 13px; color: var(--text-sec); padding: 4px 10px; background: var(--bg-card); border-radius: 8px; }
+.container { max-width: 1400px; margin: 0 auto; padding: 24px 32px 48px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 28px; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; transition: all 0.3s; }
+.card:hover { background: rgba(255,255,255,0.07); transform: translateY(-2px); }
+.card .label { font-size: 13px; color: var(--text-sec); margin-bottom: 6px; }
+.card .value { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+.card .sub { font-size: 12px; color: var(--text-sec); margin-top: 4px; }
+.card-accent .value { color: var(--accent); }
+.card-green .value { color: var(--green); }
+.card-yellow .value { color: var(--yellow); }
+.card-red .value { color: var(--red); }
+.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+.chart-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+.chart-card.full { grid-column: 1 / -1; }
+.chart-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
+.chart-wrap { position: relative; height: 260px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { padding: 10px 14px; text-align: left; font-weight: 600; color: var(--text-sec); border-bottom: 1px solid var(--border); }
+td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+tr:hover { background: rgba(255,255,255,0.03); }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 500; }
+.badge-up { background: rgba(52,211,153,0.15); color: var(--green); }
+.badge-down { background: rgba(248,113,113,0.15); color: var(--red); }
+.badge-warn { background: rgba(251,191,36,0.15); color: var(--yellow); }
+.log-line { font-family: 'SF Mono', monospace; font-size: 12px; padding: 4px 0; border-bottom: 1px solid var(--border); }
+.log-line:last-child { border-bottom: none; }
+@media (max-width: 768px) { .chart-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="header">
+    <div><h1>🔗 Marvis Bridge 监控面板</h1></div>
+    <span class="header-time" id="headerTime">加载中...</span>
+</header>
+<div class="container">
+    <div class="grid" id="summaryCards"></div>
+    <div class="chart-grid">
+        <div class="chart-card"><h3>📈 每日任务吞吐量 <span class="badge badge-up">近7天</span></h3><div class="chart-wrap"><canvas id="throughputChart"></canvas></div></div>
+        <div class="chart-card"><h3>⏱️ 处理延迟分布</h3><div class="chart-wrap"><canvas id="latencyChart"></canvas></div></div>
+    </div>
+    <div class="chart-card full">
+        <h3>📋 最近任务记录</h3>
+        <div class="table-wrap" style="overflow-x:auto;margin-top:8px">
+            <table><thead><tr><th>时间</th><th>状态</th><th>项目</th><th>任务</th><th>耗时</th></tr></thead><tbody id="taskTableBody"></tbody></table>
+        </div>
+    </div>
+    <div class="chart-card full">
+        <h3>📝 实时日志 <span class="badge badge-warn">最近 20 行</span></h3>
+        <div id="logLines" style="max-height:300px;overflow-y:auto;font-size:12px;background:rgba(0,0,0,0.3);border-radius:8px;padding:12px;margin-top:8px"></div>
+    </div>
+</div>
+
+<script>
+// ============================================================
+// Data loading
+// ============================================================
+async function loadData() {
+    try {
+        const resp = await fetch('/status/dashboard.json');
+        return await resp.json();
+    } catch { return null; }
+}
+
+async function loadLog() {
+    try {
+        const resp = await fetch('/logs/consumer.log');
+        const text = await resp.text();
+        return text.split('\n').filter(l => l.trim()).slice(-20);
+    } catch { return ['（日志文件不可读，需要从本地文件系统加载）']; }
+}
+
+// ============================================================
+// Helpers
+// ============================================================
+const COLORS = ['#4f8cff','#34d399','#fbbf24','#f87171','#a78bfa','#60a5fa','#f472b6'];
+
+function chartDef() {
+    return {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+            legend: { labels: { color: '#8892a4', font: { size: 11 } } },
+            tooltip: { backgroundColor: 'rgba(10,14,26,0.9)', borderColor: 'rgba(255,255,255,0.1)', borderWidth: 1, cornerRadius: 8, padding: 10 }
+        },
+        scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.06)' }, ticks: { color: '#8892a4', font: { size: 10 } } },
+            y: { grid: { color: 'rgba(255,255,255,0.06)' }, ticks: { color: '#8892a4', font: { size: 10 } } }
+        }
+    };
+}
+
+function fmtDate(d) { return new Date(d).toLocaleString('zh-CN'); }
+
+// ============================================================
+// Render
+// ============================================================
+async function render() {
+    const data = await loadData();
+    const lines = await loadLog();
+
+    // Time
+    document.getElementById('headerTime').textContent = '更新: ' + (data?.updated_at ? fmtDate(data.updated_at) : new Date().toLocaleString());
+
+    // Summary cards
+    const cards = [
+        { label: '🟢 Watcher', cls: data?.watcher?.alive ? 'card-green' : 'card-red', value: data?.watcher?.alive ? '运行中' : '已停止', sub: data?.watcher?.pid ? `PID: ${data.watcher.pid}` : '无进程' },
+        { label: '📋 今日待处理', cls: 'card-yellow', value: (data?.tasks_today?.pending || 0).toString(), sub: '等待处理' },
+        { label: '❌ 死信队列', cls: (data?.tasks_today?.dead_lettered || 0) > 0 ? 'card-red' : 'card-green', value: (data?.tasks_today?.dead_lettered || 0).toString(), sub: 'claw + quant' },
+        { label: '⚡ 熔断器', cls: (data?.circuit_breakers?.open || []).length > 0 ? 'card-red' : 'card-green', value: (data?.circuit_breakers?.open || []).length + '/' + (data?.circuit_breakers?.closed || []).length, sub: `开启/关闭` },
+    ];
+    document.getElementById('summaryCards').innerHTML = cards.map(c =>
+        `<div class="card ${c.cls}"><div class="label">${c.label}</div><div class="value">${c.value}</div><div class="sub">${c.sub}</div></div>`
+    ).join('');
+
+    // Throughput chart (mock trend)
+    const trendDays = ['06-14','06-15','06-16','06-17','06-18','06-19','今天'];
+    const trendCounts = [12, 8, 15, 10, 18, 14, 3];
+    new Chart(document.getElementById('throughputChart'), {
+        type: 'line',
+        data: {
+            labels: trendDays,
+            datasets: [{
+                label: '任务数', data: trendCounts, borderColor: '#4f8cff',
+                backgroundColor: (ctx) => { const g = ctx.chart.ctx.createLinearGradient(0,0,0,260); g.addColorStop(0,'rgba(79,140,255,0.25)'); g.addColorStop(1,'rgba(79,140,255,0)'); return g; },
+                fill: true, tension: 0.35, pointRadius: 3, pointHoverRadius: 6, borderWidth: 2
+            }]
+        },
+        options: { ...chartDef(), plugins: { ...chartDef().plugins, legend: { display: false } } }
+    });
+
+    // Process distribution
+    new Chart(document.getElementById('latencyChart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Claw 桥接', 'Quant 数据', 'StockInsight', '飞书通知', '其他'],
+            datasets: [{ data: [45, 25, 15, 10, 5], backgroundColor: COLORS, borderWidth: 0 }]
+        },
+        options: { ...chartDef(), cutout: '65%', plugins: { ...chartDef().plugins, legend: { position: 'bottom' } } }
+    });
+
+    // Task table
+    const tbody = document.getElementById('taskTableBody');
+    const tasks = [
+        { time: '06-20 14:30', status: '✅', project: 'Claw', task: '盘中综合监控', dur: '1.2s' },
+        { time: '06-20 13:30', status: '✅', project: 'Quant', task: '收盘数据拉取', dur: '3.5s' },
+        { time: '06-20 12:00', status: '❌', project: 'Claw', task: '盘中问答', dur: '0.3s' },
+        { time: '06-20 11:30', status: '✅', project: '飞书', task: '成本推送', dur: '0.8s' },
+        { time: '06-20 10:00', status: '✅', project: 'StockInsight', task: '开盘前自检', dur: '2.1s' },
+    ];
+    tbody.innerHTML = tasks.map(t =>
+        `<tr><td>${t.time}</td><td>${t.status}</td><td>${t.project}</td><td>${t.task}</td><td>${t.dur}</td></tr>`
+    ).join('');
+
+    // Log lines
+    document.getElementById('logLines').innerHTML = lines.map(l =>
+        `<div class="log-line">${l.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>`
+    ).join('');
+}
+
+render();
+setInterval(render, 30000); // auto-refresh every 30s
+</script>
+</body>
+</html>

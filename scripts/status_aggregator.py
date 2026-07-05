@@ -11,6 +11,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 import time
 import urllib.request
@@ -22,6 +23,20 @@ MARVIS_DIR = HOME / "workbuddy_marvis_bridge"
 CLAW_HEARTBEAT = HOME / "WorkBuddy" / "Claw" / ".workbuddy" / "data" / "heartbeat.json"
 STOCKINSIGHT_HEALTH_URL = "http://localhost:8765/api/health"
 FEISHU_WEBHOOK = os.environ.get("FEISHU_WEBHOOK", "")
+
+
+def _parse_timestamp(ts_str: str) -> float:
+    """兼容 Unix 时间戳和 ISO 8601 字符串的解析，返回 Unix 时间戳（浮点数）。"""
+    ts_str = ts_str.strip()
+    # 纯数字 → Unix 时间戳
+    try:
+        return float(ts_str)
+    except ValueError:
+        pass
+    # ISO 8601 → 标准化时区格式 (+0800 → +08:00) 后解析
+    normalized = re.sub(r"(\d{2})(\d{2})$", r"\1:\2", ts_str)
+    dt = datetime.fromisoformat(normalized)
+    return dt.timestamp()
 
 
 def check_marvis() -> dict:
@@ -47,14 +62,14 @@ def check_marvis() -> dict:
         try:
             with open(heartbeat) as f:
                 ts = f.read().strip()
-            age = time.time() - float(ts)
+            age = time.time() - _parse_timestamp(ts)
             if age < 300:
                 result["details"].append(f"✅ 心跳正常 ({int(age)}s前)")
             else:
                 result["details"].append(f"🟡 心跳过旧 ({int(age)}s前)")
                 result["status"] = "warning"
-        except (ValueError, OSError):
-            result["details"].append("❌ 心跳文件异常")
+        except (ValueError, OSError) as e:
+            result["details"].append(f"❌ 心跳文件异常: {e}")
             result["status"] = "critical"
     else:
         result["details"].append("❌ 心跳文件缺失")

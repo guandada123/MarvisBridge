@@ -16,10 +16,12 @@ STATUS_DIR="$BRIDGE_DIR/status"
 
 OUTPUT_JSON=false
 QUIET_MODE=false
+FEISHU_ALERT=false
 for arg in "$@"; do
     case "$arg" in
-        --json)  OUTPUT_JSON=true ;;
-        --quiet) QUIET_MODE=true ;;
+        --json)      OUTPUT_JSON=true ;;
+        --quiet)     QUIET_MODE=true ;;
+        --feishu)    FEISHU_ALERT=true ;;
     esac
 done
 
@@ -159,6 +161,17 @@ if $OUTPUT_JSON; then
     python3 "$BRIDGE_DIR/scripts/bridge_monitor_tools.py" gen-health-json "$BRIDGE_DIR" 2>/dev/null
 elif $QUIET_MODE; then
     $ALL_HEALTHY && exit 0 || exit 1
+elif $FEISHU_ALERT; then
+    if ! $ALL_HEALTHY; then
+        ISSUES_TEXT=""
+        for issue in "${ISSUES[@]}"; do
+            ISSUES_TEXT="${ISSUES_TEXT}⚠️ ${issue}\\n"
+        done
+        python3 "$BRIDGE_DIR/scripts/bridge_notify.py" \
+            "🚨 Bridge 健康检查异常" \
+            "${ISSUES_TEXT}" \
+            --platform feishu 2>/dev/null || echo "  ⚠️ 飞书通知发送失败"
+    fi
 else
     echo "========================================"
     echo "  Bridge 全链路健康检查"
