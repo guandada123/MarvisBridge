@@ -32,7 +32,8 @@ rotate_log() {
     local log="$1"
     local max_size=1048576  # 1MB
     if [ -f "$log" ] && [ "$(stat -f%z "$log" 2>/dev/null || echo 0)" -gt "$max_size" ]; then
-        local archive="${log}.$(date '+%Y%m%d-%H%M%S')"
+        local archive
+        archive="${log}.$(date '+%Y%m%d-%H%M%S')"
         mv "$log" "$archive"
         gzip "$archive" 2>/dev/null || true
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] 🔄 Log rotated: $archive.gz" > "$log"

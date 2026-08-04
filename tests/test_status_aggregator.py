@@ -4,7 +4,6 @@ status_aggregator 单元测试
 """
 
 import json
-import os
 import sys
 import time
 from pathlib import Path
@@ -123,7 +122,9 @@ class TestCheckClaw:
 
     def test_no_heartbeat_file(self, monkeypatch, tmp_path):
         """心跳文件不存在 → warning"""
-        monkeypatch.setattr("scripts.status_aggregator.CLAW_HEARTBEAT", tmp_path / "nonexistent.json")
+        monkeypatch.setattr(
+            "scripts.status_aggregator.CLAW_HEARTBEAT", tmp_path / "nonexistent.json"
+        )
         result = check_claw()
         assert result["status"] == "warning"
         assert any("未生成" in d for d in result["details"])
@@ -131,11 +132,15 @@ class TestCheckClaw:
     def test_healthy_heartbeat(self, monkeypatch, tmp_path):
         """心跳正常 → healthy"""
         hb_file = tmp_path / "heartbeat.json"
-        hb_file.write_text(json.dumps({
-            "last_heartbeat": "2026-06-10T08:30:00",
-            "healthy": True,
-            "dependencies": {"database": True, "api": True},
-        }))
+        hb_file.write_text(
+            json.dumps(
+                {
+                    "last_heartbeat": "2026-06-10T08:30:00",
+                    "healthy": True,
+                    "dependencies": {"database": True, "api": True},
+                }
+            )
+        )
         monkeypatch.setattr("scripts.status_aggregator.CLAW_HEARTBEAT", hb_file)
         result = check_claw()
         assert result["status"] == "healthy"
@@ -143,11 +148,15 @@ class TestCheckClaw:
     def test_unhealthy_heartbeat(self, monkeypatch, tmp_path):
         """心跳 unhealthy → critical"""
         hb_file = tmp_path / "heartbeat.json"
-        hb_file.write_text(json.dumps({
-            "last_heartbeat": "2026-06-10T08:30:00",
-            "healthy": False,
-            "dependencies": {"database": False},
-        }))
+        hb_file.write_text(
+            json.dumps(
+                {
+                    "last_heartbeat": "2026-06-10T08:30:00",
+                    "healthy": False,
+                    "dependencies": {"database": False},
+                }
+            )
+        )
         monkeypatch.setattr("scripts.status_aggregator.CLAW_HEARTBEAT", hb_file)
         result = check_claw()
         assert result["status"] == "critical"
@@ -169,15 +178,19 @@ class TestSendSummary:
         assert send_summary([]) is False
 
     def test_no_critical_uses_blue(self, monkeypatch):
-        monkeypatch.setattr("scripts.status_aggregator.FEISHU_WEBHOOK", "https://example.com/webhook")
+        monkeypatch.setattr(
+            "scripts.status_aggregator.FEISHU_WEBHOOK", "https://example.com/webhook"
+        )
 
         sent_payload = {}
 
         class MockContext:
             def __enter__(self_):
                 return self_
+
             def __exit__(self_, *args):
                 pass
+
             def read(self_):
                 return b'{"code": 0}'
 
@@ -187,21 +200,28 @@ class TestSendSummary:
             return MockContext()
 
         monkeypatch.setattr("urllib.request.urlopen", mock_urlopen)
-        results = [{"name": "Claw", "status": "healthy"}, {"name": "MarvisBridge", "status": "warning"}]
+        results = [
+            {"name": "Claw", "status": "healthy"},
+            {"name": "MarvisBridge", "status": "warning"},
+        ]
         assert send_summary(results) is True
         assert sent_payload["data"]["card"]["header"]["template"] == "blue"
 
     def test_with_critical_uses_red(self, monkeypatch):
-        """"有 critical 状态 → 红色模板"""
-        monkeypatch.setattr("scripts.status_aggregator.FEISHU_WEBHOOK", "https://example.com/webhook")
+        """ "有 critical 状态 → 红色模板"""
+        monkeypatch.setattr(
+            "scripts.status_aggregator.FEISHU_WEBHOOK", "https://example.com/webhook"
+        )
 
         sent_data = {}
 
         class MockContext:
             def __enter__(self_):
                 return self_
+
             def __exit__(self_, *args):
                 pass
+
             def read(self_):
                 return b'{"code": 0}'
 
@@ -222,6 +242,7 @@ class TestCheckQts:
         """docker-compose.yml 不存在 → warning"""
         monkeypatch.setattr("scripts.status_aggregator.HOME", tmp_path)
         from scripts.status_aggregator import check_qts
+
         result = check_qts()
         assert result["status"] == "warning"
         assert any("缺失" in d for d in result["details"])
@@ -236,8 +257,10 @@ class TestCheckQts:
 
         def mock_urlopen(req, timeout=3):
             raise Exception("not running")
+
         monkeypatch.setattr("urllib.request.urlopen", mock_urlopen)
 
         from scripts.status_aggregator import check_qts
+
         result = check_qts()
         assert result["status"] == "warning"

@@ -6,8 +6,6 @@ task_validator 单元测试
 import json
 import os
 import sys
-import tempfile
-import time
 from pathlib import Path
 
 import pytest
@@ -329,14 +327,21 @@ class TestCircuitBreaker:
         monkeypatch.setattr(
             "scripts.task_validator.load_config",
             lambda: {
-                "circuit_breaker": {"enabled": True, "failure_window_minutes": 30, "failure_rate_threshold": 0.5, "circuit_open_minutes": 30},
+                "circuit_breaker": {
+                    "enabled": True,
+                    "failure_window_minutes": 30,
+                    "failure_rate_threshold": 0.5,
+                    "circuit_open_minutes": 30,
+                },
             },
         )
+
         # patch _with_cb_lock to read/write our file
         def mock_lock(cb_path, mode="r"):
             fd = os.open(str(cb_file), os.O_RDWR | os.O_CREAT, 0o644)
             data = json.loads(os.read(fd, 4096).decode() or "{}")
             return fd, data
+
         monkeypatch.setattr("scripts.task_validator._with_cb_lock", mock_lock)
         monkeypatch.setattr("scripts.task_validator._write_cb_unlock", lambda fd, data: None)
 

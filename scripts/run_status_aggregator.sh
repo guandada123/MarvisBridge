@@ -3,7 +3,7 @@
 # 每天 08:00 执行，异常时推送飞书
 
 export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-cd ~/workbuddy_marvis_bridge
+cd ~/workbuddy_marvis_bridge || exit 1
 
 # 执行状态汇总检查
 REPORT=$(/Users/guan/.workbuddy/binaries/python/versions/3.13.12/bin/python3 scripts/status_aggregator.py --alert 2>&1)

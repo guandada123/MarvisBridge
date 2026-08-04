@@ -5,12 +5,11 @@ title = "Claw Monorepo Secret Scan"
 [allowlist]
   description = "Allow common false positives"
   regexes = [
-    "(?i)password[\s=:]*example",
-    "(?i)secret[\s=:]*placeholder",
-    "-----BEGIN PUBLIC KEY-----",
+    '(?i)password[\s=:]*example',
+    '(?i)secret[\s=:]*placeholder',
+    '-----BEGIN PUBLIC KEY-----',
   ]
 
-[rules]
 # Example custom rules; extend as needed
 [[rules]]
   id = "generic-api-key"

@@ -41,7 +41,7 @@ jobs:
           cache: pip
           cache-dependency-path: "requirements*.txt"
       - name: Install ruff
-        run: pip install ruff
+        run: pip install ruff==0.15.17  # 与根 pre-commit 锁定一致，防新版规则漂移
       - name: Ruff lint
         run: ruff check scripts/ shared/
       - name: Ruff format check
@@ -120,6 +120,6 @@ jobs:
           echo "No secrets found"
       - name: Gitleaks (secret leak scan)
         run: |
-          which gitleaks || curl -sL https://github.com/gitleaks/gitleaks/releases/download/v8.18.2/gitleaks_8.18.2_linux_x64.tar.gz | tar xz -C /tmp
-          gitleaks detect --source . --verbose --no-git --config .gitleaks.toml
+          GITLEAKS_BIN="$(which gitleaks 2>/dev/null || { curl -sL https://github.com/gitleaks/gitleaks/releases/download/v8.18.2/gitleaks_8.18.2_linux_x64.tar.gz | tar xz -C /tmp && echo /tmp/gitleaks; })"
+          "$GITLEAKS_BIN" detect --source . --verbose --no-git --config .gitleaks.toml
         continue-on-error: true
