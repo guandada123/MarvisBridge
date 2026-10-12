@@ -411,17 +411,43 @@ def cmd_acquire_lock(args: list[str]) -> None:
             except (ValueError, OSError):
                 pass
         if old_pid is not None:
-            try:
-                os.kill(old_pid, 0)
-                return False  # PID 存活 → 锁有效
-            except OSError:
-                return True  # PID 不存在 → 僵尸锁
-        # 旧格式兼容：仅靠时间判断
+            # 2026-10-12 修（根因：6–8 月 Bridge 全线停摆）：
+            # 原实现只要 `os.kill(old_pid, 0)` 成功就认定「锁有效」，**不校验该 PID 是不是我们的进程**。
+            # macOS **PID 会复用** → 死掉的 consumer 的 PID 被任意进程占用后，此判据**永久**判"有效"
+            # → Consumer 从此再也起不来（consumer.log 里连续两个月全是「另一个实例正在运行」）。
+            # 修法两层：
+            #   ① 身份校验：该 PID 的命令行必须确实是本 Consumer 才算"活锁"；
+            #   ② 兜底 TTL：身份无法确认时，回落到时间戳判据（锁龄 >= timeout 即视为 stale）。
+            alive = False
+            if _pid_looks_like_consumer(old_pid):
+                try:
+                    os.kill(old_pid, 0)
+                    alive = True
+                except OSError:
+                    alive = False
+            if alive:
+                return False  # 确认是"我们的"存活进程 → 锁有效
+            # 身份不符或进程已死 → 再看锁龄（双重保险）
         try:
             lock_ts = int(lock_file.read_text().strip())
             return now - lock_ts >= timeout_sec  # 超时则视为 stale
         except (ValueError, OSError):
             return True
+
+    def _pid_looks_like_consumer(pid: int) -> bool:
+        """该 PID 的命令行是否像本 Consumer（防 PID 复用误判）。
+
+        取不到进程信息时**返回 False**（=当作"不是我们的"），
+        这样会退回时间戳兜底，而不是把一把可能已死的锁永久当成有效。
+        """
+        try:
+            out = subprocess.run(
+                ["ps", "-p", str(pid), "-o", "command="],
+                capture_output=True, text=True, timeout=5,
+            ).stdout.strip()
+        except Exception:
+            return False
+        return "workbuddy_consumer" in out or "bridge_consumer" in out
 
     # 第 1 次：尝试原子抢锁
     if _try_acquire():
