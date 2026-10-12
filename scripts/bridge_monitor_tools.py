@@ -18,6 +18,7 @@ bridge_monitor_tools.py — 为 bridge_monitor.sh 提供批量 JSON 操作
 
 import json
 import os
+import subprocess
 import sys
 import time
 from datetime import datetime, timedelta, timezone
