@@ -444,7 +444,9 @@ def cmd_acquire_lock(args: list[str]) -> None:
         try:
             out = subprocess.run(
                 ["ps", "-p", str(pid), "-o", "command="],
-                capture_output=True, text=True, timeout=5,
+                capture_output=True,
+                text=True,
+                timeout=5,
             ).stdout.strip()
         except Exception:
             return False
