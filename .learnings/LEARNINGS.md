@@ -20,6 +20,6 @@ Corrections, insights, and knowledge gaps captured during development.
 - **类型**: correction
 - **现象**: `/var/mail/guan` 积 **262MB / 约 35.6 万封**（2026-03-22 起），其中两个条目**每分钟各失败一封**持续 4 个月：① `~/openclaw_watchdog.sh` 18.7 万封（`openclaw: command not found`）；② 本仓 `scripts/feishu_qa_bot_watchdog.sh` 17 万封（`Operation not permitted`）。用户侧无任何感知。
 - **根因**: ① openclaw 二进制已不存在（工具已卸载），watchdog 每分钟空踢；② QA bot 死于 7-03（lark-cli 丢失），其 watchdog 自 ~6-16 起被系统拒绝执行（文件权限 755、卷无 noexec、交互执行均正常 ⇒ 属 cron 进程对**外置盘/符号链路径**的特权限制；未逐层到底，留档）。
-- **处置**: 两条 cron 注释（**原因与原命令保留在注释内**，可 una 注释回滚）；launchd 三个僵尸（`com.marvis-bridge.monitor` / `.watcher` / `com.workbuddy.poller`）**bootout + disable 双动作**；262MB 邮件归档至 `_archive/cron-mail-spool-20261012.mbox`（cmp 校验）后清空，停止增长已实证（跨分钟边界 +0B）。
+- **处置**: 两条 cron 注释（**原因与原命令保留在注释内**，可取消注释回滚）；launchd 三个僵尸（`com.marvis-bridge.monitor` / `.watcher` / `com.workbuddy.poller`）**bootout + disable 双动作**；262MB 邮件归档至 `_archive/cron-mail-spool-20261012.mbox`（cmp 校验）后清空，停止增长已实证（跨分钟边界 +0B）。
 - **防复犯**: ① **launchd 退役必须 bootout + disable 双动作** —— 仅 bootout 会在重启/重登录后复活（8-22 条目只做了 bootout，本次发现三个僵尸又全回来了）；② 停用 cron **必须注释并留原因**（直接删除=无法回滚且无人知为何）；③ **本地 mail spool 是"静默失败最后会说话的地方"**——cron 错误不看≠没有，定期看一眼；④ 每分钟级 watchdog 仅当"被看护对象真的重要且命令真的存在"时才允许存在。
 - **去重**: 与 2026-08-22「僵尸 launchd 清理」同族（本条修正其"仅 bootout"的做法）。
